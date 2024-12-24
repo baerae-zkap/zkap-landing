@@ -1,0 +1,45 @@
+.hero {
+  margin-top: 95px;
+  text-align: center;
+  position: relative;
+  
+  h1 {
+    color: #FFF;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  p {
+    margin-top: 20px;
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &-blur {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 168px;
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 364.72px;
+    background: #1DE4D3;
+    filter: blur(50px);
+    z-index: 3;
+  }
+
+  &-image {
+    margin-top: 128px;
+    position: relative;
+    z-index: 2;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+} 

@@ -1,0 +1,115 @@
+// Variables
+$header-height: 68px;
+$wrapper-width: 1000px;
+$color-primary: #007bff;
+$color-background: #0A0D14;
+$color-text: #ffffff;
+$color-shadow: rgba(0, 0, 0, 0.3);
+$color-border: #161922;
+$color-mint: #6AF2DD;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin transition($property: all) {
+  transition: $property 0.3s ease;
+}
+
+// Header styles
+.header {
+  width: 100%;
+  height: $header-height;
+  border-bottom: 1px solid $color-border;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  &-container {
+    @include flex-center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: $wrapper-width;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+// Logo styles
+.logo {
+  img {
+    width: 91px;
+    height: 25px;
+    display: block;
+    object-fit: contain;
+  }
+}
+
+// Button styles
+.cta-button {
+  display: flex;
+  height: 40px;
+  padding: 11px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5000px;
+  background: $color-mint;
+  border: none;
+  color: $color-background;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+// Navigation styles
+.nav-menu {
+  ul {
+    @include flex-center;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  li {
+    padding: 0.5rem 0;
+    
+    // 마지막 li(버튼 포함)는 패딩 제거
+    &:last-child {
+      padding: 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-text;
+    font-weight: 500;
+    @include transition(color);
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 1040px) {
+  .header-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    ul {
+      gap: 1rem;
+    }
+  }
+}
