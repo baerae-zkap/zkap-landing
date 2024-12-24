@@ -1,9 +1,7 @@
-// Variables
 $font-family-base: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 $color-text: #ffffff;
 $color-background: #0A0D14;
 
-// Reset
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +9,6 @@ $color-background: #0A0D14;
   font-family: $font-family-base;
 }
 
-// Base styles
 body {
   font-family: $font-family-base;
   line-height: 1.6;
@@ -21,14 +18,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-// Layout
 .App {
   padding-top: 68px;
 }
 
-// Utility classes
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 32px;
 }
