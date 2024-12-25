@@ -26,20 +26,175 @@
     width: 300px;
     height: 300px;
     flex-shrink: 0;
-    border-radius: 364.72px;
+    border-radius: 365px;
     background: #1DE4D3;
-    filter: blur(50px);
+    filter: blur(40px);
     z-index: 3;
+    opacity: 0.7;
+    animation: glowPulse 8s ease-in-out infinite;
   }
 
   &-image {
     margin-top: 128px;
     position: relative;
     z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     img {
       max-width: 100%;
       height: auto;
     }
+
+    .hero-zkap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 4;
+      animation: floatMain 10s ease-in-out infinite;
+    }
+
+    .hero-security {
+      position: absolute;
+      top: calc(50% + 160px);
+      left: calc(30% - 225px);
+      transform: translateY(-50%);
+      z-index: 5;
+      transition: transform 0.3s ease;
+      animation: floatLeft 12s ease-in-out infinite;
+      
+      &:hover {
+        transform: scale(1.1) rotate(5deg);
+      }
+    }
+
+    .hero-tether {
+      position: absolute;
+      top: calc(50% - 180px);
+      left: calc(27% - 270px);
+      z-index: 5;
+      transition: transform 0.3s ease;
+      animation: floatRight 12s ease-in-out infinite;
+      animation-delay: 1s;
+      width: 180px;
+      height: 180px;
+      
+      &:hover {
+        transform: scale(1.1) rotate(-5deg);
+      }
+    }
+
+    .hero-lido {
+      position: absolute;
+      top: calc(50% - 60px);
+      left: calc(30% - 40px);
+      z-index: 5;
+      transition: transform 0.3s ease;
+      animation: floatLeft 12s ease-in-out infinite;
+      animation-delay: 2s;
+      width: 120px;
+      height: 120px;
+      
+      &:hover {
+        transform: scale(1.1) rotate(5deg);
+      }
+    }
+
+    .hero-coinone {
+      position: absolute;
+      top: calc(50% - 196px);
+      left: calc(32% + 40px);
+      z-index: 5;
+      transition: transform 0.3s ease;
+      animation: floatRight 12s ease-in-out infinite;
+      animation-delay: 3s;
+      width: 100px;
+      height: 100px;
+      
+      &:hover {
+        transform: scale(1.1) rotate(-5deg);
+      }
+    }
+
+    .hero-shibainu {
+      position: absolute;
+      top: calc(50% - 131px);
+      right: calc(30% - 44px);
+      z-index: 5;
+      transition: transform 0.3s ease;
+      animation: floatRight 12s ease-in-out infinite;
+      animation-delay: 1.5s;
+      width: 140px;
+      height: 140px;
+      
+      &:hover {
+        transform: scale(1.1) rotate(-5deg);
+      }
+    }
+
+    .hero-bithumb {
+      position: absolute;
+      bottom: calc(50% - 182px);
+      right: calc(25% - 114px);
+      z-index: 5;
+      transition: transform 0.3s ease;
+      animation: floatRight 12s ease-in-out infinite;
+      animation-delay: 2.5s;
+      width: 120px;
+      height: 120px;
+      
+      &:hover {
+        transform: scale(1.1) rotate(-5deg);
+      }
+    }
+
+    .hero-chart {
+      position: absolute;
+      top: calc(50% - 190px);
+      right: calc(20% - 144px);
+      z-index: 5;
+      transition: transform 0.3s ease;
+      animation: floatRight 12s ease-in-out infinite;
+      animation-delay: 3.5s;
+      
+      &:hover {
+        transform: scale(1.1) rotate(-5deg);
+      }
+    }
   }
+}
+
+@keyframes glowPulse {
+  0% { 
+    opacity: 0.5;
+    filter: blur(40px);
+  }
+  50% { 
+    opacity: 0.7;
+    filter: blur(50px);
+  }
+  100% { 
+    opacity: 0.5;
+    filter: blur(40px);
+  }
+}
+
+@keyframes floatMain {
+  0% { transform: translate(-50%, -50%); }
+  50% { transform: translate(-50%, -45%); }
+  100% { transform: translate(-50%, -50%); }
+}
+
+@keyframes floatLeft {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-10px, -10px) rotate(2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes floatRight {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(10px, -10px) rotate(-2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
 } 
