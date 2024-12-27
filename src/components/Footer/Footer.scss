@@ -1,0 +1,105 @@
+.footer {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 32.539px 32.539px 0px 0px;
+  background: rgba(196, 196, 196, 0.01);
+  box-shadow: 
+    0px 20.555px 29.514px -18.974px rgba(255, 255, 255, 0.50) inset,
+    0px 3.689px 5.797px -2.108px #FFF inset,
+    0px -43.218px 35.839px -33.731px rgba(96, 68, 144, 0.30) inset,
+    0px 51.65px 52.704px -25.298px rgba(202, 172, 255, 0.30) inset,
+    0px 2.108px 9.487px 0px rgba(154, 146, 210, 0.30) inset,
+    0px 0.527px 21.082px 0px rgba(227, 222, 255, 0.20) inset;
+  backdrop-filter: blur(26.35px);
+  overflow: hidden;
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-content {
+    position: relative;
+    max-width: calc(1100px - 64px);
+    margin: 0 auto;
+    padding: 40px 32px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 60px;
+  }
+
+  &-logo {
+    top: 60px;
+    left: 32px;
+    
+    img {
+      width: 91px;
+      height: 25px;
+      display: block;
+      object-fit: contain;
+    }
+  }
+
+  &-text {
+    width: 982px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%);
+    box-shadow: 0px 10px 120px 0px rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(5px);
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+
+    button {
+      display: flex;
+      height: 40px;
+      padding: 11px 20px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5000px;
+      background: #6AF2DD;
+      border: none;
+      color: #0A0D14;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      width: 100%;
+      flex-direction: column;
+      gap: 20px;
+      height: auto;
+      padding: 32px;
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+} 

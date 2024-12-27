@@ -6,6 +6,7 @@ import OneStopSection from './components/sections/OneStopSection';
 import PriceSection from './components/sections/PriceSection';
 import ZkproofSection from './components/sections/ZkproofSection';
 import DefiSection from './components/sections/DefiSection';
+import Footer from './components/Footer/Footer';
 import './styles/global.scss';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <PriceSection />
       <ZkproofSection />
       <DefiSection />
+      <Footer />
     </div>
   );
 }
