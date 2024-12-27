@@ -1,5 +1,6 @@
 .hero {
   margin-top: 95px;
+  padding-bottom: 300px;
   text-align: center;
   position: relative;
   
@@ -41,7 +42,7 @@
   &-blur {
     position: absolute;
     left: calc(50% - 150px);
-    top: calc(50% + 100px);
+    top: calc(45%);
     transform: translateY(-50%);
     width: 300px;
     height: 300px;
