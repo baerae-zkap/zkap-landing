@@ -2,6 +2,10 @@ import React from 'react';
 import Header from './components/Header/Header';
 import Background from './components/Background/Background';
 import HeroSection from './components/sections/HeroSection';
+import OneStopSection from './components/sections/OneStopSection';
+import PriceSection from './components/sections/PriceSection';
+import ZkproofSection from './components/sections/ZkproofSection';
+import DefiSection from './components/sections/DefiSection';
 import './styles/global.scss';
 
 function App() {
@@ -10,7 +14,10 @@ function App() {
       <Background />
       <Header />
       <HeroSection />
-      {/* 추후 다른 섹션들 추가 */}
+      <OneStopSection />
+      <PriceSection />
+      <ZkproofSection />
+      <DefiSection />
     </div>
   );
 }

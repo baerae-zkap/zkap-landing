@@ -24,6 +24,8 @@ $color-mint: #6AF2DD;
   top: 0;
   left: 0;
   z-index: 1000;
+  backdrop-filter: blur(8px);
+  background: rgba(10, 13, 20, 0.3);
 
   &-container {
     @include flex-center;
