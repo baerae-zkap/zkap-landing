@@ -39,8 +39,8 @@ const ZkproofSection = () => {
           </div>
           <div className="zkproof-text animate-slide-up">
             <h2>복잡한 개인키 관리,<br />이제는 잃어버려도 걱정마세요!</h2>
-            <p>핀스 쓰는 소셜계정으로 간단하게 복구해세요.<br />
-               이제 더이상 복잡한 개인키 저장할 필요 없어요!</p>
+            <p>평소 쓰는 소셜계정으로 간단하게 복구해세요.<br />
+               이제 더이상 복잡한 개인키를 저장할 필요 없어요!</p>
           </div>
         </div>
       </div>

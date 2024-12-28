@@ -243,3 +243,117 @@
   50% { transform: translate(10px, -10px) scale(var(--scale)) rotate(-2deg); }
   100% { transform: translate(0, 0) scale(var(--scale)) rotate(0deg); }
 }
+
+@media (max-width: 1023px) {
+  .hero-security {
+    top: calc(50% + 140px);
+    left: calc(35% - 100px);
+  }
+
+  .hero-tether {
+    top: calc(50% - 160px);
+    left: calc(32% - 120px);
+  }
+
+  .hero-lido {
+    top: calc(50% - 40px);
+    left: calc(35% + 40px);
+  }
+
+  .hero-coinone {
+    top: calc(50% - 176px);
+    left: calc(37% + 80px);
+  }
+
+  .hero-shibainu {
+    top: calc(50% - 111px);
+    right: calc(35% - 84px);
+  }
+
+  .hero-bithumb {
+    bottom: calc(50% - 162px);
+    right: calc(30% - 64px);
+  }
+
+  .hero-chart {
+    top: calc(50% - 170px);
+    right: calc(25% - 84px);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-security,
+  .hero-tether,
+  .hero-lido,
+  .hero-coinone,
+  .hero-shibainu,
+  .hero-bithumb,
+  .hero-chart {
+    --scale: 0.5;
+  }
+
+  .hero-security {
+    top: calc(50% + 120px);
+    left: calc(40% - 80px);
+  }
+
+  .hero-tether {
+    top: calc(50% - 140px);
+    left: calc(37% - 100px);
+  }
+
+  .hero-lido {
+    top: calc(50% - 30px);
+    left: calc(40% + 60px);
+  }
+
+  .hero-coinone {
+    top: calc(50% - 156px);
+    left: calc(42% + 100px);
+  }
+
+  .hero-shibainu {
+    top: calc(50% - 91px);
+    right: calc(40% - 104px);
+  }
+
+  .hero-bithumb {
+    bottom: calc(50% - 142px);
+    right: calc(35% - 84px);
+  }
+
+  .hero-chart {
+    top: calc(50% - 150px);
+    right: calc(30% - 104px);
+  }
+
+  .hero-image {
+    .hero-security {
+      transform-origin: calc(30% + 200px) calc(10% - 50px);
+    }
+
+    .hero-tether {
+      transform-origin: calc(37% + 220px) calc(100% - 100px);
+    }
+
+    .hero-lido {
+      transform-origin: calc(40% - 80px) calc(50% + 100px);
+    }
+
+    .hero-coinone {
+      transform-origin: calc(40% - 150px) calc(50% + 200px);
+    }
+
+    .hero-shibainu {
+      transform-origin: calc(10% + 104px) calc(80% - 91px);
+    }
+
+    .hero-bithumb {
+      transform-origin: calc(65% - 84px) calc(10% + 12px);
+    }
+
+    .hero-chart {
+      transform-origin: calc(10% + 10px) calc(50% + 200px);
+    }
+  }
+}

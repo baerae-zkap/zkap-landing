@@ -8,6 +8,7 @@ import ZkproofSection from './components/sections/ZkproofSection';
 import DefiSection from './components/sections/DefiSection';
 import Footer from './components/Footer/Footer';
 import './styles/global.scss';
+import NewsletterSection from './components/sections/NewsletterSection';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <PriceSection />
       <ZkproofSection />
       <DefiSection />
+      <NewsletterSection />
       <Footer />
     </div>
   );
