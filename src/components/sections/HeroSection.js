@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import './HeroSection.scss';
 import heroBg from '../../assets/images/hero-bg.png';
 import heroZkap from '../../assets/images/hero-zkap.svg';
@@ -11,6 +12,7 @@ import bithumb from '../../assets/images/Bithumb.svg';
 import chart from '../../assets/images/chart.svg';
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -40,13 +42,13 @@ const HeroSection = () => {
 
   return (
     <section className="hero" ref={sectionRef}>
-      <h1 className="animate-slide-up">99%가 모르는 크립토 수익의 비밀</h1>
-      <p className="animate-slide-up">해외 코인부터 이자 수익까지, 이제 클릭 한 번으로 시작하세요</p>
+      <h1 className="animate-slide-up">{t('hero.title')}</h1>
+      <p className="animate-slide-up">{t('hero.subtitle')}</p>
       <div className="hero-blur animate-slide-up"></div>
       <div className="hero-image animate-slide-up">
-        <img src={heroBg} alt="히어로 이미지" />
+        <img src={heroBg} alt={t('hero.title')} />
         <img src={heroZkap} alt="ZKAP" className="hero-zkap" />
-        <img src={heroSecurity} alt="보안" className="hero-security animate-slide-up" />
+        <img src={heroSecurity} alt={t('hero.security')} className="hero-security animate-slide-up" />
         <img src={tether} alt="Tether" className="hero-tether animate-slide-up" />
         <img src={lido} alt="Lido" className="hero-lido animate-slide-up" />
         <img src={coinone} alt="Coinone" className="hero-coinone animate-slide-up" />

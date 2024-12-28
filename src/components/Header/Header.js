@@ -1,13 +1,29 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './Header.scss';
 import logo from '../../assets/images/logo.svg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { i18n, t } = useTranslation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     document.body.style.overflow = !isMenuOpen ? 'hidden' : 'auto';
+  };
+
+  const scrollToNewsletter = () => {
+    const newsletterSection = document.getElementById('newsletter');
+    if (newsletterSection) {
+      newsletterSection.scrollIntoView({ behavior: 'smooth' });
+      if (isMenuOpen) {
+        toggleMenu();
+      }
+    }
+  };
+
+  const toggleLanguage = (lang) => {
+    i18n.changeLanguage(lang);
   };
 
   return (
@@ -23,10 +39,24 @@ const Header = () => {
         </button>
         <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <ul>
-            <li><a href="#blog">블로그</a></li>
-            <li><a href="#contact">문의하기</a></li>
+            <li className="language-selector">
+              <button 
+                className={`lang-btn ${i18n.language === 'ko' ? 'active' : ''}`}
+                onClick={() => toggleLanguage('ko')}
+              >
+                한국어
+              </button>
+              <button 
+                className={`lang-btn ${i18n.language === 'en' ? 'active' : ''}`}
+                onClick={() => toggleLanguage('en')}
+              >
+                English
+              </button>
+            </li>
             <li>
-              <button className="cta-button">얼리버드 신청하기</button>
+              <button className="cta-button" onClick={scrollToNewsletter}>
+                {t('header.newsletter')}
+              </button>
             </li>
           </ul>
         </nav>

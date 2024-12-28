@@ -1,0 +1,26 @@
+section h2,
+section p,
+.footer-text {
+  white-space: pre-line;
+  word-break: keep-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+section h2 {
+  min-width: 280px;
+}
+
+section p {
+  min-width: 280px;
+}
+
+@media (max-width: 767px) {
+  section h2,
+  section p,
+  .footer-text {
+    width: 100%;
+    min-width: auto;
+    padding: 0 20px;
+  }
+} 

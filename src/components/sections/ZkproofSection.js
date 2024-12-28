@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import './ZkproofSection.scss';
 import zkproof from '../../assets/images/zkproof.png';
 
 const ZkproofSection = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -35,12 +37,11 @@ const ZkproofSection = () => {
       <div className="container">
         <div className="zkproof-content">
           <div className="zkproof-image animate-slide-up">
-            <img src={zkproof} alt="복잡한 개인키 관리" className="zkproof-main" />
+            <img src={zkproof} alt={t('zkproof.title')} className="zkproof-main" />
           </div>
           <div className="zkproof-text animate-slide-up">
-            <h2>복잡한 개인키 관리,<br />이제는 잃어버려도 걱정마세요!</h2>
-            <p>평소 쓰는 소셜계정으로 간단하게 복구해세요.<br />
-               이제 더이상 복잡한 개인키를 저장할 필요 없어요!</p>
+            <h2>{t('zkproof.title')}</h2>
+            <p>{t('zkproof.description')}</p>
           </div>
         </div>
       </div>

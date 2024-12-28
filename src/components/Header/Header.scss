@@ -179,3 +179,40 @@ $color-mint: #6AF2DD;
     }
   }
 }
+
+.language-selector {
+  display: flex;
+  gap: 8px;
+
+  .lang-btn {
+    background: none;
+    border: none;
+    color: $color-text;
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &.active {
+      color: $color-primary;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .language-selector {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 16px 0;
+    
+    .lang-btn {
+      font-size: 16px;
+    }
+  }
+}

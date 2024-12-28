@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import './DefiSection.scss';
 import defi from '../../assets/images/defi.png';
 
 const DefiSection = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -35,14 +37,11 @@ const DefiSection = () => {
       <div className="container">
         <div className="defi-content">
           <div className="defi-image animate-slide-up">
-            <img src={defi} alt="디파이 수익" className="defi-main" />
+            <img src={defi} alt={t('defi.title')} className="defi-main" />
           </div>
           <div className="defi-text animate-slide-up">
-            <h2>코인만 사두면 뭐해요?<br />이제는 이자도 받으세요!</h2>
-            <p>코인, 아직도 들고만 계시나요?<br />
-               가만히 두기만 해도 이자가 쏙쏙 들어와요.<br />
-               복잡한 건 전부 알아서 해드리고,<br />
-               수익률 변동이 클 땐 카톡으로 슝~ 알려드려요!</p>
+            <h2>{t('defi.title')}</h2>
+            <p>{t('defi.description')}</p>
           </div>
         </div>
       </div>

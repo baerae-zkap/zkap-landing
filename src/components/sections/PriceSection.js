@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import './PriceSection.scss';
 import priceComparison from '../../assets/images/price-comparison.png';
 
 const PriceSection = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -35,13 +37,11 @@ const PriceSection = () => {
       <div className="container">
         <div className="price-content">
           <div className="price-image animate-slide-up">
-            <img src={priceComparison} alt="가격 비교" className="price-main" />
+            <img src={priceComparison} alt={t('price.title')} className="price-main" />
           </div>
           <div className="price-text animate-slide-up">
-            <h2>비싸게 살 필요 없어요!<br />여기가 제일 싸요</h2>
-            <p>모든 거래소의 실시간 가격을 한 곳에서 확인하세요.<br />
-               최저가를 찾아 헤매지 않아도 돼요.<br />
-               가장 저렴한 가격에 투자할 수 있도록 도와드립니다.</p>
+            <h2>{t('price.title')}</h2>
+            <p>{t('price.description')}</p>
           </div>
         </div>
       </div>

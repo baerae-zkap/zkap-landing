@@ -1,8 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './NewsletterSection.scss';
 import Toast from '../Toast/Toast';
 
 const NewsletterSection = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [toastVisible, setToastVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -57,26 +59,26 @@ const NewsletterSection = () => {
 
   return (
     <>
-      <section className="newsletter" ref={sectionRef}>
+      <section className="newsletter" ref={sectionRef} id="newsletter">
         <div className="container">
           <div className="newsletter-content animate-slide-up">
-            <h2>투자 경험을 위한 새로운 시작,<br />지캅의 소식 받아보기</h2>
-            <p>구독을 진행하면 뉴스레터 수신을 위한<br />개인정보 수집 및 이용에 동의하는 것으로 간주합니다.</p>
+            <h2>{t('newsletter.title')}</h2>
+            <p>{t('newsletter.description')}</p>
             <form onSubmit={handleSubmit} className="newsletter-form">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="이메일 주소를 입력해 주세요"
+                placeholder={t('newsletter.placeholder')}
                 required
               />
-              <button type="submit">구독하기</button>
+              <button type="submit">{t('newsletter.button')}</button>
             </form>
           </div>
         </div>
       </section>
       <Toast 
-        message="구독해 주셔서 감사합니다!" 
+        message={t('newsletter.success')} 
         visible={toastVisible}
         onClose={() => setToastVisible(false)}
       />

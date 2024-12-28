@@ -9,6 +9,8 @@ import DefiSection from './components/sections/DefiSection';
 import Footer from './components/Footer/Footer';
 import './styles/global.scss';
 import NewsletterSection from './components/sections/NewsletterSection';
+import './i18n';
+import './styles/common.scss';
 
 function App() {
   return (
