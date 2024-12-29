@@ -78,7 +78,7 @@ const NewsletterSection = () => {
         </div>
       </section>
       <Toast 
-        message={t('newsletter.success')} 
+        message={t('newsletter.toast')} 
         visible={toastVisible}
         onClose={() => setToastVisible(false)}
       />

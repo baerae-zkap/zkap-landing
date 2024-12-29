@@ -1,6 +1,6 @@
 export default {
   header: {
-    newsletter: '소식 먼저 받기'
+    newsletter: '사전예약하기'
   },
   hero: {
     title: '99%가 모르는 크립토 수익의 비밀',
@@ -23,8 +23,8 @@ export default {
     description: '모든 거래소의 실시간 가격을 한 곳에서 확인하세요. 최저가를 찾아 헤매지 않아도 돼요. 가장 저렴한 가격에 투자할 수 있도록 도와드립니다.'
   },
   newsletter: {
-    title: '투자 경험을 위한 새로운 시작, 지캅의 소식 받아보기',
-    description: '구독을 진행하면 뉴스레터 수신을 위한 개인정보 수집 및 이용에 동의하는 것으로 간주합니다.',
+    title: '이메일만 남기시면 지캅의 모든 소식을 가장 먼저 알려드려요! 🎉',
+    description: '지캅의 새로운 서비스와 업데이트 소식을 가장 먼저 받아보세요',
     placeholder: '이메일 주소를 입력해 주세요',
     button: '구독하기',
     toast: '구독해 주셔서 감사합니다!'

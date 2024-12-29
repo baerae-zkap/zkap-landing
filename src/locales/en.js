@@ -23,11 +23,11 @@ export default {
     description: 'Why pay more? Compare prices across all exchanges instantly and grab the best deals. We make sure you never overpay for your crypto investments.'
   },
   newsletter: {
-    title: 'Join the Future of Smart Investing',
-    description: 'Subscribe to stay ahead of the curve. By subscribing, you agree to receive our newsletter updates.',
-    placeholder: 'Your email here',
-    button: 'Join Now',
-    toast: 'Welcome to the ZKAP family!'
+    title: 'Leave your email to be the first to hear ZKAP news! 🎉',
+    description: 'Be the first to receive updates about ZKAP\'s new services and features',
+    placeholder: 'Enter your email address',
+    button: 'Subscribe',
+    toast: 'Thank you for subscribing!'
   },
   footer: {
     text: 'Transforming crypto investing into a seamless experience',
