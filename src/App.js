@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header/Header';
 import Background from './components/Background/Background';
 import HeroSection from './components/sections/HeroSection';
@@ -11,8 +11,18 @@ import './styles/global.scss';
 import NewsletterSection from './components/sections/NewsletterSection';
 import './i18n';
 import './styles/common.scss';
+import ReactGA from 'react-ga4';
+
+ReactGA.initialize('G-2TB2G9PKB0');
 
 function App() {
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname
+    });
+  }, []);
+
   return (
     <div className="App">
       <Background />
