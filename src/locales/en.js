@@ -31,6 +31,6 @@ export default {
   },
   footer: {
     text: 'Transforming crypto investing into a seamless experience',
-    copyright: '©2024 ZKAP. All rights reserved.'
+    copyright: '©2024 Baerae Co., Ltd. All rights reserved.'
   }
 }; 
