@@ -30,6 +30,9 @@ const Footer = () => {
               <img src={iconMedium} alt="Medium" />
             </a>
           </div>
+          <div className="footer-copyright">
+            {t('footer.copyright')}
+          </div>
         </div>
       </div>
     </footer>
