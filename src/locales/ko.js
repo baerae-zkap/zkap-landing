@@ -31,6 +31,6 @@ export default {
   },
   footer: {
     text: '모든 크립토 투자가 쉬워지는 순간, 당신의 지갑이 달라집니다',
-    copyright: '©2024 Baerae Co., Ltd. All rights reserved.'
+    copyright: '© 2024 Baerae Co., Ltd. All rights reserved.'
   }
 }; 
