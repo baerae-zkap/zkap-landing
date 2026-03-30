@@ -1,0 +1,14 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ZKAP - 해외 가상자산 세금 신고",
+  description: "해외 거래소 자산, 쉽고 정확하게 신고하세요. Binance, Bybit, OKX, Coinbase 자동 연동.",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return children;
+}
