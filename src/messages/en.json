@@ -1,0 +1,81 @@
+{
+  "header": {
+    "cta": "Download App",
+    "langToggle": "KR"
+  },
+  "hero": {
+    "title": "Overseas Exchange Assets?\n'I Didn't Know' Won't Cut It",
+    "subtitle": "Reporting overseas financial assets over 500M KRW is mandatory",
+    "cta": "Get Started Free"
+  },
+  "risk": {
+    "title": "What Happens If You Don't Report?",
+    "penalty": "Penalty for non-reporting",
+    "penaltyRate": "Up to 20%",
+    "criminal": "Up to 2 years imprisonment or 200M KRW fine",
+    "example": "1B KRW unreported",
+    "exampleResult": "Penalty up to 200M KRW",
+    "source": "International Tax Coordination Act, Articles 34 & 35"
+  },
+  "diagnosis": {
+    "title": "Could You Be Required to Report?",
+    "items": [
+      "You hold assets on overseas exchanges",
+      "Your total assets exceeded 500M KRW last year",
+      "Assets are spread across multiple exchanges, making totals hard to track"
+    ],
+    "conclusion": "If any of these apply, it's time to check now"
+  },
+  "relief": {
+    "title": "Complex overseas asset reporting?\nZKAP makes it simple",
+    "subtitle": "View all exchange assets in one place and file with an expert"
+  },
+  "exchange": {
+    "title": "One Login, All Connected",
+    "subtitle": "View assets across 4 major exchanges at a glance",
+    "exchanges": ["Binance", "Bybit", "OKX", "Coinbase"],
+    "dashboardTitle": "My Overseas Assets",
+    "totalLabel": "Total Overseas Assets",
+    "totalAmount": "₩ 823,450,000",
+    "monthEnd": "As of end of December 2025"
+  },
+  "process": {
+    "title": "File Your Taxes in 3 Steps",
+    "steps": [
+      { "number": "1", "title": "Connect Exchange", "description": "One login to sync" },
+      { "number": "2", "title": "Review Assets", "description": "See everything at a glance" },
+      { "number": "3", "title": "File with Expert", "description": "Tax pro handles the rest" }
+    ]
+  },
+  "trust": {
+    "title": "Expert Tax Professionals Handle Everything",
+    "subtitle": "Leave the complex paperwork to the experts",
+    "badges": [
+      { "title": "Matched Tax Expert", "description": "Crypto-specialized tax professionals handle your filing" },
+      { "title": "Data Protection", "description": "Financial-grade encryption keeps your data safe" },
+      { "title": "Accurate Filing", "description": "Auto-collected data ensures nothing is missed" }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "question": "How do I know if I need to report?", "answer": "If your combined overseas financial account balances exceed 500 million KRW as of June 1st each year, you are required to report. Link your exchanges on ZKAP to check automatically." },
+      { "question": "Which exchanges are supported?", "answer": "We currently support Binance, Bybit, OKX, and Coinbase." },
+      { "question": "How much does it cost?", "answer": "The app download, exchange linking, and asset viewing are free. Tax filing service fees are provided separately." },
+      { "question": "Is my data safe?", "answer": "ZKAP applies financial-grade encryption. Collected data is used solely for tax reporting purposes." },
+      { "question": "When is the reporting deadline?", "answer": "Overseas financial account reporting is from June 1 to June 30 each year. Failure to report within the deadline results in penalties." }
+    ]
+  },
+  "finalCta": {
+    "title": "The Easiest Way to\nAvoid Penalties",
+    "subtitle": "Start with ZKAP today",
+    "cta": "Download App"
+  },
+  "footer": {
+    "companyName": "Baerae Co., Ltd.",
+    "companyNameEn": "Baerae Co., Ltd.",
+    "copyright": "© 2026 Baerae Co., Ltd. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}
