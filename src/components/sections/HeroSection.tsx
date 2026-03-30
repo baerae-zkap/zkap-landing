@@ -27,7 +27,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block px-3 py-1 mb-6 text-xs font-semibold text-primary-600 bg-primary-50 border border-primary-200 rounded-full">
-              세금 신고 시즌 오픈
+              {t("badge")}
             </span>
           </motion.div>
 

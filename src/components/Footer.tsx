@@ -15,10 +15,10 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-6 text-sm">
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="#" className="hover:text-white transition-colors opacity-50 cursor-default">
               {t("privacy")}
             </a>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="#" className="hover:text-white transition-colors opacity-50 cursor-default">
               {t("terms")}
             </a>
             <a

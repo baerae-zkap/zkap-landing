@@ -4,6 +4,7 @@
     "langToggle": "KR"
   },
   "hero": {
+    "badge": "Tax Season Open",
     "title": "Overseas Exchange Assets?\n'I Didn't Know' Won't Cut It",
     "subtitle": "Reporting overseas financial assets over 500M KRW is mandatory",
     "cta": "Get Started Free"
@@ -11,7 +12,6 @@
   "risk": {
     "title": "What Happens If You Don't Report?",
     "penalty": "Penalty for non-reporting",
-    "penaltyRate": "Up to 20%",
     "criminal": "Up to 2 years imprisonment or 200M KRW fine",
     "example": "1B KRW unreported",
     "exampleResult": "Penalty up to 200M KRW",
@@ -33,11 +33,7 @@
   "exchange": {
     "title": "One Login, All Connected",
     "subtitle": "View assets across 4 major exchanges at a glance",
-    "exchanges": ["Binance", "Bybit", "OKX", "Coinbase"],
-    "dashboardTitle": "My Overseas Assets",
-    "totalLabel": "Total Overseas Assets",
-    "totalAmount": "₩ 823,450,000",
-    "monthEnd": "As of end of December 2025"
+    "exchanges": ["Binance", "Bybit", "OKX", "Coinbase"]
   },
   "process": {
     "title": "File Your Taxes in 3 Steps",

@@ -13,7 +13,7 @@ export default function Header() {
 
   const toggleLocale = () => {
     const newLocale = locale === "ko" ? "en" : "ko";
-    const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
+    const newPath = pathname.replace(new RegExp(`^/${locale}`), `/${newLocale}`);
     router.push(newPath);
   };
 

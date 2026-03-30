@@ -40,7 +40,7 @@ export default function ScrollFrameSequence({
     <div
       ref={containerRef}
       className={`relative ${className}`}
-      style={{ height: `${frames.length * 60 + 100}vh` }}
+      style={{ height: `${frames.length * 8 + 100}vh` }}
     >
       <div className="sticky top-1/2 -translate-y-1/2 flex justify-center">
         <div className="relative w-[280px] sm:w-[320px] h-[580px] sm:h-[660px] bg-slate-900 rounded-[40px] p-3 shadow-2xl">
