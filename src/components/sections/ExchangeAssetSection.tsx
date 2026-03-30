@@ -53,6 +53,7 @@ export default function ExchangeAssetSection() {
         </div>
       </div>
 
+      <div className="h-24" />
       <ScrollFrameSequence frames={MOCKUP_FRAMES} />
     </section>
   );

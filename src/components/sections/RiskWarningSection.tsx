@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 import { useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import { AlertTriangle } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 function CountUp({ target, suffix = "" }: { target: number; suffix?: string }) {
@@ -50,35 +49,25 @@ export default function RiskWarningSection() {
 
         <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto mb-10">
           <ScrollReveal delay={0.1}>
-            <div className="bg-white rounded-2xl border border-danger-100 p-8">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-danger-50 rounded-full flex items-center justify-center">
-                  <AlertTriangle className="w-5 h-5 text-danger-500" />
-                </div>
-                <span className="text-sm text-slate-500 font-medium">
-                  {t("penalty")}
-                </span>
-              </div>
-              <div className="text-4xl sm:text-5xl font-extrabold text-danger-600">
+            <div className="bg-white rounded-2xl border border-slate-200 p-8">
+              <span className="text-sm text-slate-500 font-medium">
+                {t("penalty")}
+              </span>
+              <div className="text-4xl sm:text-5xl font-extrabold text-slate-900 mt-3">
                 <CountUp target={20} suffix="%" />
               </div>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="bg-white rounded-2xl border border-danger-100 p-8">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-danger-50 rounded-full flex items-center justify-center">
-                  <AlertTriangle className="w-5 h-5 text-danger-500" />
-                </div>
-                <span className="text-sm text-slate-500 font-medium">
-                  {t("criminal")}
-                </span>
-              </div>
-              <div className="text-lg font-bold text-slate-900">
+            <div className="bg-white rounded-2xl border border-slate-200 p-8">
+              <span className="text-sm text-slate-500 font-medium">
+                {t("criminal")}
+              </span>
+              <div className="text-lg font-bold text-slate-900 mt-3">
                 {t("example")}
               </div>
-              <div className="text-3xl sm:text-4xl font-extrabold text-danger-600 mt-1">
+              <div className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">
                 {t("exampleResult")}
               </div>
             </div>

@@ -20,55 +20,58 @@ export default function HeroSection() {
       />
 
       <div className="relative max-w-content mx-auto px-5 py-24 w-full">
-        <div className="max-w-2xl">
+        <div className="flex items-center justify-center gap-12 lg:gap-20">
+          {/* Text content */}
+          <div className="max-w-lg">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="inline-block px-3 py-1 mb-6 text-xs font-semibold text-primary-600 bg-primary-50 border border-primary-200 rounded-full">
+                {t("badge")}
+              </span>
+            </motion.div>
+
+            <motion.h1
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight whitespace-pre-line mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+            >
+              {t("title")}
+            </motion.h1>
+
+            <motion.p
+              className="text-lg sm:text-xl text-slate-500 mb-10"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              {t("subtitle")}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.45 }}
+            >
+              <AppDownloadButtons size="lg" />
+            </motion.div>
+          </div>
+
+          {/* App mockup placeholder */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            className="hidden lg:block flex-shrink-0"
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <span className="inline-block px-3 py-1 mb-6 text-xs font-semibold text-primary-600 bg-primary-50 border border-primary-200 rounded-full">
-              {t("badge")}
-            </span>
-          </motion.div>
-
-          <motion.h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight whitespace-pre-line mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-          >
-            {t("title")}
-          </motion.h1>
-
-          <motion.p
-            className="text-lg sm:text-xl text-slate-500 mb-10"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            {t("subtitle")}
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.45 }}
-          >
-            <AppDownloadButtons size="lg" />
+            <div className="w-64 h-[520px] bg-slate-100 rounded-[40px] border-4 border-slate-200 flex items-center justify-center">
+              <span className="text-slate-400 text-sm">App Mockup</span>
+            </div>
           </motion.div>
         </div>
-
-        {/* App mockup placeholder */}
-        <motion.div
-          className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2"
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
-          <div className="w-72 h-[580px] bg-slate-100 rounded-[40px] border-4 border-slate-200 flex items-center justify-center">
-            <span className="text-slate-400 text-sm">App Mockup</span>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

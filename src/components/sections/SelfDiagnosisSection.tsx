@@ -25,7 +25,7 @@ export default function SelfDiagnosisSection() {
           {items.map((item: string, i: number) => (
             <motion.div
               key={i}
-              className="flex items-start gap-4 bg-amber-50/50 border border-amber-200/50 rounded-xl p-5"
+              className="flex items-start gap-4 bg-primary-50/30 border border-slate-200 rounded-xl p-5"
               initial={{ opacity: 0, x: -30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.3 }}
@@ -35,7 +35,7 @@ export default function SelfDiagnosisSection() {
                 animate={isInView ? { scale: 1 } : {}}
                 transition={{ duration: 0.3, delay: i * 0.3 + 0.2 }}
               >
-                <CheckSquare className="w-6 h-6 text-amber-500 mt-0.5 flex-shrink-0" />
+                <CheckSquare className="w-6 h-6 text-primary-500 mt-0.5 flex-shrink-0" />
               </motion.div>
               <span className="text-base sm:text-lg text-slate-700">
                 {item}
@@ -44,7 +44,7 @@ export default function SelfDiagnosisSection() {
           ))}
 
           <motion.p
-            className="text-center text-lg font-semibold text-amber-700 pt-6"
+            className="text-center text-lg font-semibold text-primary-700 pt-6"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: items.length * 0.3 + 0.2 }}

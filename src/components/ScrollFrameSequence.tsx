@@ -42,8 +42,8 @@ export default function ScrollFrameSequence({
       className={`relative ${className}`}
       style={{ height: `${frames.length * 8 + 100}vh` }}
     >
-      <div className="sticky top-1/2 -translate-y-1/2 flex justify-center">
-        <div className="relative w-[280px] sm:w-[320px] h-[580px] sm:h-[660px] bg-slate-900 rounded-[40px] p-3 shadow-2xl">
+      <div className="sticky top-[10vh] flex justify-center pt-8">
+        <div className="relative w-[280px] sm:w-[320px] h-[540px] sm:h-[600px] bg-slate-900 rounded-[40px] p-3 shadow-2xl">
           <div className="w-full h-full rounded-[32px] overflow-hidden bg-slate-100 relative">
             {frames.map((frame, i) => (
               <Image
