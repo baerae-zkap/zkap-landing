@@ -6,7 +6,6 @@ import SelfDiagnosisSection from "@/components/sections/SelfDiagnosisSection";
 import ReliefSection from "@/components/sections/ReliefSection";
 import ExchangeAssetSection from "@/components/sections/ExchangeAssetSection";
 import ProcessSection from "@/components/sections/ProcessSection";
-import TrustSection from "@/components/sections/TrustSection";
 import FAQSection from "@/components/sections/FAQSection";
 import FinalCTASection from "@/components/sections/FinalCTASection";
 
@@ -21,7 +20,6 @@ export default function Home() {
         <ReliefSection />
         <ExchangeAssetSection />
         <ProcessSection />
-        <TrustSection />
         <FAQSection />
         <FinalCTASection />
       </main>

@@ -20,9 +20,11 @@
   "diagnosis": {
     "title": "Could You Be Required to Report?",
     "items": [
-      "You hold assets on overseas exchanges",
-      "Your total assets exceeded 500M KRW last year",
-      "Assets are spread across multiple exchanges, making totals hard to track"
+      { "title": "Overseas Exchange Assets", "description": "You hold crypto assets on exchanges like Binance, Bybit, or OKX" },
+      { "title": "Assets Over 500M KRW", "description": "Your total overseas financial assets exceeded 500M KRW at any point last year" },
+      { "title": "Spread Across Exchanges", "description": "Assets are scattered across multiple exchanges, making totals hard to track" },
+      { "title": "Currency Conversion", "description": "Complex USD/USDT exchange rates make it hard to know exact KRW amounts" },
+      { "title": "Never Filed Before", "description": "You have never reported overseas financial assets to the tax office" }
     ],
     "conclusion": "If any of these apply, it's time to check now"
   },
