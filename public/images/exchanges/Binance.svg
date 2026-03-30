@@ -1,1 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40" fill="none"><rect width="120" height="40" rx="8" fill="#F3BA2F" fill-opacity="0.1"/><text x="60" y="24" text-anchor="middle" fill="#F3BA2F" font-family="system-ui" font-size="14" font-weight="700">Binance</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+  <!-- Binance diamond/rhombus logo -->
+  <!-- Center diamond -->
+  <polygon points="30,14 36,20 30,26 24,20" fill="white"/>
+  <!-- Top diamond -->
+  <polygon points="30,4 34,8 30,12 26,8" fill="white"/>
+  <!-- Bottom diamond -->
+  <polygon points="30,48 34,52 30,56 26,52" fill="white"/>
+  <!-- Left diamond -->
+  <polygon points="14,30 18,26 22,30 18,34" fill="white"/>
+  <!-- Right diamond -->
+  <polygon points="38,30 42,26 46,30 42,34" fill="white"/>
+  <!-- Top-left arm -->
+  <polygon points="20,22 24,18 30,24 26,28" fill="white"/>
+  <polygon points="14,16 18,12 24,18 20,22" fill="white"/>
+  <!-- Top-right arm -->
+  <polygon points="36,18 40,22 34,28 30,24" fill="white"/>
+  <polygon points="42,12 46,16 40,22 36,18" fill="white"/>
+  <!-- Bottom-left arm -->
+  <polygon points="20,38 24,42 18,48 14,44" fill="white"/>
+  <polygon points="26,32 30,36 24,42 20,38" fill="white"/>
+  <!-- Bottom-right arm -->
+  <polygon points="40,38 46,44 42,48 36,42" fill="white"/>
+  <polygon points="30,36 34,32 40,38 36,42" fill="white"/>
+</svg>

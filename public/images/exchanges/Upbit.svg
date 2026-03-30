@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="40" viewBox="0 0 80 40" fill="none">
+  <!-- UPbit text mark -->
+  <text x="3" y="28" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="900" letter-spacing="0.5">UP</text>
+  <text x="33" y="28" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" letter-spacing="0.5">bit</text>
+  <!-- Orange accent arrow (upward triangle) rendered in white -->
+  <polygon points="67,12 73,24 61,24" fill="white"/>
+</svg>
