@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import GAProvider from "@/components/GAProvider";
 import "../globals.css";
 
 export default async function LocaleLayout({
@@ -22,6 +23,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className="font-sans antialiased">
+        <GAProvider />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
