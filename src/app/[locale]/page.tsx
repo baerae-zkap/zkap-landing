@@ -1,13 +1,19 @@
-import { useTranslations } from "next-intl";
+import Header from "@/components/Header";
+import HeroSection from "@/components/sections/HeroSection";
+import RiskWarningSection from "@/components/sections/RiskWarningSection";
+import SelfDiagnosisSection from "@/components/sections/SelfDiagnosisSection";
+import ReliefSection from "@/components/sections/ReliefSection";
 
 export default function Home() {
-  const t = useTranslations("hero");
-
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-4xl font-bold whitespace-pre-line text-center">
-        {t("title")}
-      </h1>
-    </main>
+    <>
+      <Header />
+      <main className="pt-16">
+        <HeroSection />
+        <RiskWarningSection />
+        <SelfDiagnosisSection />
+        <ReliefSection />
+      </main>
+    </>
   );
 }
