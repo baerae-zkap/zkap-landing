@@ -142,7 +142,7 @@ export default function ExchangeAssetSection() {
   const step = progress < 3.2 ? 1 : progress < 7 ? 2 : 3;
 
   return (
-    <div ref={containerRef} style={{ height: mobile ? "420vh" : "300vh" }}>
+    <div ref={containerRef} style={{ height: mobile ? "420vh" : "380vh" }}>
       <div className="sticky top-0 overflow-hidden flex flex-col items-center justify-center" style={{ height: "100dvh" }}>
         {/* Grid bg */}
         <div

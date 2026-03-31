@@ -151,7 +151,7 @@ export default function HeroSection() {
   const cardH = mobile ? 150 : 175;
 
   return (
-    <div ref={containerRef} style={{ height: "400vh" }}>
+    <div ref={containerRef} style={{ height: "500vh" }}>
       <div className="sticky top-0 overflow-hidden" style={{ height: "100dvh" }}>
         <div
           className="absolute inset-0"
