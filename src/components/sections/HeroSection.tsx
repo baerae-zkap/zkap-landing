@@ -112,7 +112,7 @@ export default function HeroSection() {
   });
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    if (autoDone) setScrollP(v * 2);
+    if (autoDone) setScrollP(v * 1.5);
   });
 
   useEffect(() => {
