@@ -147,19 +147,19 @@ export default function ReliefFolderSection() {
                   <span className="text-[12px] font-bold text-red-400 leading-none">{t("overBadge")}</span>
                 </div>
               </div>
-              <div className="px-4 md:px-5 pb-4 md:pb-5">
+              <div className="px-3 md:px-5 pb-3 md:pb-5">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
                   {BINANCE_CARDS.map((card, i) => {
                     const p = Math.min(1, Math.max(0, (frontP - 0.15 - i * 0.08) / 0.3));
                     return (
                       <div key={i} style={{ opacity: p, transform: `translateY(${8 * (1 - p)}px)` }}>
-                        <ExchangeCard {...card} style={{ width: "100%", height: mobile ? 90 : 130 }} />
+                        <ExchangeCard {...card} style={{ width: "100%", height: mobile ? 70 : 130 }} />
                       </div>
                     );
                   })}
                 </div>
               </div>
-              <div className="mx-4 md:mx-5 mb-4 md:mb-5 px-4 md:px-5 py-3 md:py-4 bg-white/5 rounded-xl flex items-center justify-center">
+              <div className="mx-3 md:mx-5 mb-3 md:mb-5 px-3 md:px-5 py-2 md:py-4 bg-white/5 rounded-xl flex items-center justify-center">
                 <span className="text-lg md:text-xl font-bold text-white">₩ 578,050,000</span>
               </div>
               <div className="h-2 md:h-0" />
