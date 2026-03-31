@@ -3,63 +3,69 @@
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useRef, useState } from "react";
+import ExchangeCard from "@/components/ExchangeCard";
+import { EXCHANGE_DATA } from "@/components/sections/ExchangeAssetSection";
+import useIsMobile from "@/hooks/useIsMobile";
 
-// Back folder — Bybit
-const BYBIT_ASSETS = [
-  { label: "BTC", color: "#F7931A", amount: "3.21", krw: "₩ 51,200,000" },
-  { label: "ETH", color: "#627EEA", amount: "28.5", krw: "₩ 104,300,000" },
-  { label: "SOL", color: "#9945FF", amount: "120", krw: "₩ 27,500,000" },
-];
+const E = EXCHANGE_DATA;
 
-// Front folder — Binance
-const BINANCE_ASSETS = [
-  { label: "BTC", color: "#F7931A", amount: "9.24", krw: "₩ 147,000,000" },
-  { label: "ETH", color: "#627EEA", amount: "56.7", krw: "₩ 208,200,000" },
-  { label: "SOL", color: "#9945FF", amount: "222", krw: "₩ 50,900,000" },
-  { label: "USDT", color: "#26A17B", amount: "50,000", krw: "₩ 68,350,000" },
-  { label: "XRP", color: "#23292F", amount: "24,500", krw: "₩ 46,000,000" },
-  { label: "ADA", color: "#0033AD", amount: "18,200", krw: "₩ 12,500,000" },
+const COIN_DATA = {
+  btc:  { label: "BTC",  color: "#f7931a", logo: "/images/coins/btc.png" },
+  eth:  { label: "ETH",  color: "#627eea", logo: "/images/coins/eth.webp" },
+  sol:  { label: "SOL",  color: "#000000", logo: "/images/coins/sol.jpeg" },
+  usdt: { label: "USDT", color: "#26a17b", logo: "/images/coins/usdt.png" },
+  xrp:  { label: "XRP",  color: "#000000", logo: "/images/coins/xrp.webp" },
+  kaia: { label: "KAIA", color: "#040404", logo: "/images/coins/kaia.png" },
+};
+
+const C = COIN_DATA;
+
+const BINANCE_CARDS = [
+  { ...C.btc,  balance: "₩ 147,000,000", sub: " " },
+  { ...C.sol,  balance: "₩ 50,900,000",  sub: " " },
+  { ...C.eth,  balance: "₩ 208,200,000", sub: " " },
+  { ...C.kaia, balance: "₩ 12,500,000",  sub: " " },
+  { ...C.usdt, balance: "₩ 68,350,000",  sub: " " },
+  { ...C.xrp,  balance: "₩ 46,000,000",  sub: " " },
 ];
 
 export default function ReliefFolderSection() {
   const t = useTranslations("relief");
   const containerRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
+  const mobile = useIsMobile();
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end end"],
+    offset: ["start 60%", "end end"],
   });
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    setProgress(v * 3);
+    setProgress(v * 4);
   });
 
-  // === Phase 1: Diagnosis + Folder (0→1.8) ===
-  // Slow fade in over 0→0.5
   const diagFadeIn = Math.min(1, Math.max(0, progress / 0.5));
-  const backP = Math.max(0, Math.min(1, (progress - 0.2) / 0.5));
-  const frontP = Math.max(0, Math.min(1, (progress - 0.5) / 0.5));
+  const frontP = Math.max(0, Math.min(1, (progress - 0.2) / 0.5));
+  const backP = Math.max(0, Math.min(1, (progress - 0.5) / 0.5));
   const diagOpacity = diagFadeIn;
 
-  // === Phase 2: Folder fades out slowly (1.6→2.2) ===
-  const folderFadeOut = Math.max(0, Math.min(1, (progress - 1.6) / 0.6));
+  const folderFadeOut = Math.max(0, Math.min(1, (progress - 2.0) / 0.4));
   const sectionOneOpacity = 1 - folderFadeOut;
 
-  // === Phase 3: Relief text (2.1→3) ===
-  const reliefFadeIn = Math.max(0, Math.min(1, (progress - 2.1) / 0.4));
-  const reliefFadeOut = Math.max(0, Math.min(1, (progress - 2.8) / 0.2));
+  const reliefFadeIn = Math.max(0, Math.min(1, (progress - 2.3) / 0.4));
+  const reliefFadeOut = Math.max(0, Math.min(1, (progress - 3.7) / 0.3));
   const reliefOpacity = reliefFadeIn * (1 - reliefFadeOut);
-  const reliefY = progress < 2.1
+  const reliefY = progress < 2.3
     ? 60
-    : progress > 2.8
-      ? -(progress - 2.8) * 100
+    : progress > 3.7
+      ? -(progress - 3.7) * 100
       : (1 - reliefFadeIn) * 60;
 
+  const folderScale = mobile ? 0.7 : 1;
+
   return (
-    <div ref={containerRef} style={{ height: "350vh" }}>
-      <div className="sticky top-0 h-screen overflow-hidden">
-        {/* Grid bg */}
+    <div ref={containerRef} style={{ height: "250vh" }}>
+      <div className="sticky top-0 overflow-hidden" style={{ height: "100dvh" }}>
         <div
           className="absolute inset-0"
           style={{
@@ -71,146 +77,92 @@ export default function ReliefFolderSection() {
 
         {/* === Section 1: Diagnosis + Folder === */}
         <div
-          className="absolute inset-0 z-20 flex items-center justify-center gap-16 px-12 pointer-events-none"
+          className="absolute inset-0 z-20 flex items-center justify-center md:justify-between gap-6 md:gap-0 px-5 md:px-6 pointer-events-none flex-col md:flex-row pt-6 md:pt-0 max-w-[1100px] mx-auto"
           style={{ opacity: sectionOneOpacity }}
         >
           {/* Left — diagnosis text */}
           <div
-            className="max-w-[340px] shrink-0"
+            className="max-w-[340px] shrink-0 text-center md:text-left"
             style={{
               opacity: diagOpacity,
               transform: `translateY(${(1 - Math.min(1, diagOpacity)) * 30}px)`,
               pointerEvents: diagOpacity > 0.5 && sectionOneOpacity > 0.5 ? "auto" : "none",
             }}
           >
-            <div
-              style={{
-                display: "inline-flex",
-                padding: "6px 16px",
-                borderRadius: 100,
-                backgroundColor: "#f2f4f6",
-                marginBottom: 16,
-              }}
-            >
-              <span style={{ fontWeight: "bold", color: "rgba(0,12,30,0.8)", fontSize: 15 }}>
-                자산 현황
-              </span>
-            </div>
             <h2
-              className="whitespace-pre-line"
-              style={{ fontWeight: "bold", color: "#333d4b", lineHeight: 1.3, fontSize: 36, marginBottom: 16 }}
+              className="whitespace-pre-line text-[28px] md:text-[44px]"
+              style={{ fontWeight: "bold", color: "#333d4b", lineHeight: 1.3, marginBottom: 12 }}
             >
-              {"내 해외 자산,\n한눈에 파악"}
+              {t("diagTitle")}
             </h2>
-            <p style={{ fontWeight: 500, color: "#4e5968", lineHeight: 1.6, fontSize: 15 }}>
-              여러 거래소에 흩어진 자산을{"\n"}
-              자동으로 모아 총액을 확인합니다.{"\n"}
-              5억 초과 여부도 바로 알 수 있어요.
+            <p className="text-[15px] md:text-[17px] whitespace-pre-line" style={{ fontWeight: 500, color: "#4e5968", lineHeight: 1.7 }}>
+              {t("diagSubtitle")}
             </p>
           </div>
 
-          {/* Right — stacked exchange folders */}
+          {/* Right — stacked exchange cards + Binance folder */}
           <div
             className="shrink-0 relative"
-            style={{ width: 480, height: 520 }}
+            style={mobile ? { width: "88vw", maxWidth: 420 } : { width: 480, height: 560 }}
           >
-            {/* Back folder — Bybit (white) */}
+            {/* Back folder — Bithumb */}
             <div
-              className="absolute top-0 left-0 right-0 rounded-[28px] bg-[#f8f9fa] border border-slate-200"
+              className={mobile ? "rounded-[20px]" : "absolute left-[10px] right-[10px] rounded-[28px]"}
               style={{
+                ...(mobile ? {} : { top: 0 }),
                 opacity: backP,
-                transform: `translateX(${(1 - backP) * 60}px)`,
-                boxShadow: "0 4px 30px rgba(0,0,0,0.06)",
+                transform: `translateX(${(1 - backP) * 40}px)`,
+                zIndex: 5,
+                backgroundColor: E.bithumb.color,
+                boxShadow: "0 4px 30px rgba(0,0,0,0.15)",
+                ...(mobile ? { marginBottom: -40, paddingBottom: 40 } : {}),
               }}
             >
-              <div className="px-7 pt-6 pb-4 flex items-center justify-between">
+              <div className="px-5 md:px-7 pt-5 md:pt-6 pb-3 md:pb-4 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-[#F7A600] flex items-center justify-center">
-                    <span className="text-white text-[10px] font-bold">B</span>
-                  </div>
-                  <span className="text-[17px] font-bold text-slate-800">Bybit</span>
-                </div>
-                <span className="text-xs text-slate-400 font-medium">₩ 183,000,000</span>
-              </div>
-              <div className="px-5 pb-6">
-                <div className="grid grid-cols-3 gap-3">
-                  {BYBIT_ASSETS.map((coin, i) => {
-                    const p = Math.min(1, Math.max(0, (backP - 0.3 - i * 0.12) / 0.3));
-                    return (
-                      <div
-                        key={coin.label}
-                        className="rounded-2xl aspect-square flex flex-col items-center justify-center gap-1"
-                        style={{
-                          backgroundColor: coin.color,
-                          opacity: p,
-                          transform: `scale(${0.9 + 0.1 * p})`,
-                        }}
-                      >
-                        <span className="text-white/60 text-[10px] font-medium">{coin.label}</span>
-                        <span className="text-white text-base font-bold">{coin.amount}</span>
-                        <span className="text-white/40 text-[9px]">{coin.krw}</span>
-                      </div>
-                    );
-                  })}
+                  <img src={E.bithumb.logo} alt="Bithumb" className="w-7 h-7 md:w-8 md:h-8 rounded-lg object-cover" />
+                  <span className="text-[15px] md:text-[17px] font-bold text-white">Bithumb</span>
                 </div>
               </div>
+              {!mobile && <div style={{ height: 340 }} />}
             </div>
 
-            {/* Front folder — Binance (dark) */}
+            {/* Front folder — Binance */}
             <div
-              className="absolute left-[-16px] right-[-16px] rounded-[28px] bg-[#18181b]"
+              className={mobile ? "relative rounded-[20px] bg-[#18181b]" : "absolute left-0 right-0 rounded-[28px] bg-[#18181b]"}
               style={{
-                top: 160,
+                ...(mobile ? {} : { top: 55 }),
                 opacity: frontP,
                 transform: `translateY(${(1 - frontP) * 50}px)`,
-                boxShadow: "0 -8px 40px rgba(0,0,0,0.2), 0 20px 60px rgba(0,0,0,0.3)",
+                zIndex: 10,
+                boxShadow: "0 -8px 40px rgba(0,0,0,0.25), 0 20px 60px rgba(0,0,0,0.3)",
               }}
             >
-              <div className="px-7 pt-6 pb-4 flex items-center justify-between">
+              <div className="px-5 md:px-7 pt-5 md:pt-6 pb-3 md:pb-4 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-[#F3BA2F] flex items-center justify-center">
-                    <span className="text-white text-[10px] font-bold">B</span>
-                  </div>
-                  <span className="text-[17px] font-bold text-white">Binance</span>
+                  <img src={E.binance.logo} alt="Binance" className="w-7 h-7 md:w-8 md:h-8 rounded-lg object-cover" />
+                  <span className="text-[15px] md:text-[17px] font-bold text-white">Binance</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-xs text-slate-500 font-medium">₩ 532,950,000</span>
-                  <div className="px-2.5 py-1 bg-red-500/15 border border-red-500/20 rounded-lg">
-                    <span className="text-[10px] font-bold text-red-400">5억 초과</span>
-                  </div>
+                <div className="px-3 py-1.5 bg-red-500/15 border border-red-500/20 rounded-lg flex items-center">
+                  <span className="text-[12px] font-bold text-red-400 leading-none">{t("overBadge")}</span>
                 </div>
               </div>
-              <div className="px-5 pb-5">
-                <div className="grid grid-cols-3 gap-3">
-                  {BINANCE_ASSETS.map((coin, i) => {
+              <div className="px-4 md:px-5 pb-4 md:pb-5">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
+                  {BINANCE_CARDS.map((card, i) => {
                     const p = Math.min(1, Math.max(0, (frontP - 0.15 - i * 0.08) / 0.3));
                     return (
-                      <div
-                        key={coin.label}
-                        className="rounded-2xl aspect-square flex flex-col items-center justify-center gap-1"
-                        style={{
-                          backgroundColor: coin.color + "20",
-                          opacity: p,
-                          transform: `translateY(${8 * (1 - p)}px)`,
-                        }}
-                      >
-                        <div
-                          className="w-7 h-7 rounded-full flex items-center justify-center mb-1"
-                          style={{ backgroundColor: coin.color }}
-                        >
-                          <span className="text-white text-[9px] font-bold">{coin.label.charAt(0)}</span>
-                        </div>
-                        <span className="text-white text-sm font-bold">{coin.amount}</span>
-                        <span className="text-white/30 text-[9px]">{coin.krw}</span>
+                      <div key={i} style={{ opacity: p, transform: `translateY(${8 * (1 - p)}px)` }}>
+                        <ExchangeCard {...card} style={{ width: "100%", height: mobile ? 90 : 130 }} />
                       </div>
                     );
                   })}
                 </div>
               </div>
-              <div className="mx-5 mb-5 px-5 py-3.5 bg-white/5 rounded-xl flex items-center justify-between">
-                <span className="text-xs text-slate-500">총 해외 자산</span>
-                <span className="text-[15px] font-bold text-white">₩ 823,450,000</span>
+              <div className="mx-4 md:mx-5 mb-4 md:mb-5 px-4 md:px-5 py-3 md:py-4 bg-white/5 rounded-xl flex items-center justify-center">
+                <span className="text-lg md:text-xl font-bold text-white">₩ 578,050,000</span>
               </div>
+              <div className="h-2 md:h-0" />
             </div>
           </div>
         </div>
@@ -218,17 +170,17 @@ export default function ReliefFolderSection() {
         {/* === Section 2: Relief text === */}
         <motion.div
           className="absolute inset-0 flex flex-col items-center z-10 pointer-events-none px-5"
-          style={{ opacity: reliefOpacity, y: reliefY, paddingTop: "28vh" }}
+          style={{ opacity: reliefOpacity, y: reliefY, paddingTop: "35vh" }}
         >
           <h2
-            className="text-center whitespace-pre-line"
-            style={{ fontWeight: "bold", color: "#333d4b", lineHeight: 1.3, fontSize: 48 }}
+            className="text-center whitespace-pre-line text-[32px] sm:text-[40px] md:text-[48px]"
+            style={{ fontWeight: "bold", color: "#333d4b", lineHeight: 1.3 }}
           >
             {t("title")}
           </h2>
           <p
-            className="text-center mt-5"
-            style={{ fontWeight: 600, color: "#4e5968", lineHeight: 1.6, fontSize: 15 }}
+            className="text-center mt-5 text-[15px] md:text-[17px] whitespace-pre-line"
+            style={{ fontWeight: 500, color: "#4e5968", lineHeight: 1.7 }}
           >
             {t("subtitle")}
           </p>

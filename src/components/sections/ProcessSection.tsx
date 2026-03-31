@@ -125,7 +125,7 @@ export default function ProcessSection() {
 
   return (
     <div ref={containerRef} style={{ height: `${steps.length * 100}vh` }}>
-      <div className="sticky top-0 h-screen flex items-center overflow-hidden" style={{ padding: "0 24px" }}>
+      <div className="sticky top-0 flex items-center overflow-hidden" style={{ height: "100dvh", padding: "0 24px" }}>
         <div className="max-w-[1100px] mx-auto w-full flex items-center gap-20 max-lg:flex-col max-lg:gap-8 max-lg:justify-center">
           {/* Phone mockup — left */}
           <div className="shrink-0">

@@ -1,3 +1,7 @@
+"use client";
+
+import useIsMobile from "@/hooks/useIsMobile";
+
 interface AppDownloadButtonsProps {
   className?: string;
   size?: "sm" | "md" | "lg";
@@ -34,20 +38,43 @@ function GooglePlayIcon({ size }: { size: number }) {
   );
 }
 
+function getStoreUrl() {
+  if (typeof navigator === "undefined") return "https://apps.apple.com";
+  const ua = navigator.userAgent.toLowerCase();
+  if (/android/i.test(ua)) return "https://play.google.com";
+  return "https://apps.apple.com";
+}
+
 export default function AppDownloadButtons({
   className = "",
   size = "md",
 }: AppDownloadButtonsProps) {
   const btnClass = sizeMap[size];
   const iconSize = iconSizeMap[size];
+  const mobile = useIsMobile();
+
+  if (mobile) {
+    return (
+      <div className={`flex items-center ${className}`}>
+        <a
+          href={getStoreUrl()}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`inline-flex items-center justify-center ${btnClass} bg-white border-2 border-primary-600 text-primary-700 font-semibold rounded-xl hover:bg-primary-50 transition-colors min-w-[200px]`}
+        >
+          앱 다운로드
+        </a>
+      </div>
+    );
+  }
 
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <div className={`flex flex-row items-center gap-3 ${className}`}>
       <a
         href="https://apps.apple.com"
         target="_blank"
         rel="noopener noreferrer"
-        className={`inline-flex items-center ${btnClass} bg-white border-2 border-primary-600 text-primary-700 font-semibold rounded-xl hover:bg-primary-50 transition-colors`}
+        className={`inline-flex items-center justify-center ${btnClass} bg-white border-2 border-primary-600 text-primary-700 font-semibold rounded-xl hover:bg-primary-50 transition-colors min-w-[160px]`}
       >
         <AppleIcon size={iconSize} />
         App Store
@@ -56,7 +83,7 @@ export default function AppDownloadButtons({
         href="https://play.google.com"
         target="_blank"
         rel="noopener noreferrer"
-        className={`inline-flex items-center ${btnClass} bg-white border-2 border-primary-600 text-primary-700 font-semibold rounded-xl hover:bg-primary-50 transition-colors`}
+        className={`inline-flex items-center justify-center ${btnClass} bg-white border-2 border-primary-600 text-primary-700 font-semibold rounded-xl hover:bg-primary-50 transition-colors min-w-[160px]`}
       >
         <GooglePlayIcon size={iconSize} />
         Google Play

@@ -9,14 +9,16 @@ import ScrollReveal from "@/components/ScrollReveal";
 function FAQItem({
   question,
   answer,
+  isLast = false,
 }: {
   question: string;
   answer: string;
+  isLast?: boolean;
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-slate-200">
+    <div className={isLast ? "" : "border-b border-slate-200"}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between py-5 text-left"
@@ -69,7 +71,7 @@ export default function FAQSection() {
         <div className="max-w-2xl mx-auto">
           {items.map((item, i) => (
             <ScrollReveal key={i} delay={i * 0.05}>
-              <FAQItem question={item.question} answer={item.answer} />
+              <FAQItem question={item.question} answer={item.answer} isLast={i === items.length - 1} />
             </ScrollReveal>
           ))}
         </div>
