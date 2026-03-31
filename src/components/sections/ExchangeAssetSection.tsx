@@ -114,7 +114,7 @@ export default function ExchangeAssetSection() {
 
   // === Phase 5: "전문가 신고" (7→9) ===
   const filingP = Math.min(1, Math.max(0, (progress - 7.0) / 0.5));
-  const stepsP = Math.min(1, Math.max(0, (progress - 7.0) / 0.8));
+  const stepsP = Math.min(1, Math.max(0, (progress - 7.0) / 1.2));
 
   // Center card position through phases
   const phase12Scale = centerGrow;
