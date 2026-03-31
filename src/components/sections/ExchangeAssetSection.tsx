@@ -114,7 +114,7 @@ export default function ExchangeAssetSection() {
 
   // === Phase 5: "전문가 신고" (7→9) ===
   const filingP = Math.min(1, Math.max(0, (progress - 7.0) / 0.5));
-  const stepsP = Math.min(1, Math.max(0, (progress - 7.0) / 1.0));
+  const stepsP = Math.min(1, Math.max(0, (progress - 7.6) / 1.0));
 
   // Center card position through phases
   const phase12Scale = centerGrow;
@@ -123,7 +123,7 @@ export default function ExchangeAssetSection() {
   const phase3Scale = lerp(phase12Scale, 1.0, fadeOutP);
 
   // Phase 5: card flies away
-  const flyP = Math.min(1, Math.max(0, (progress - 7.0) / 1.8));
+  const flyP = Math.min(1, Math.max(0, (progress - 7.0) / 1.2));
   const flyX = lerp(phase3X, 600, flyP);
   const flyY = lerp(0, -400, flyP);
   const flyScale = lerp(phase3Scale, 0.3, flyP);
