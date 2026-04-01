@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.baerae.com/sitemap.xml
+Sitemap: https://zkap-landing.vercel.app/sitemap.xml

@@ -4,8 +4,6 @@ import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import { useRef, useState } from "react";
 
-const STEPS = 3;
-
 const STEP_IMAGES = [
   null,
   "/images/risk/fine.jpg",

@@ -61,8 +61,6 @@ export default function ReliefFolderSection() {
       ? -(progress - 2.8) * 100
       : (1 - reliefFadeIn) * 60;
 
-  const folderScale = mobile ? 0.7 : 1;
-
   return (
     <div ref={containerRef} style={{ height: "280vh" }}>
       <div className="sticky top-0 overflow-hidden" style={{ height: "100dvh" }}>

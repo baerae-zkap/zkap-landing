@@ -1,16 +1,13 @@
-import { routing } from "@/i18n/routing";
+import dynamic from "next/dynamic";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import HeroSection from "@/components/sections/HeroSection";
-import RiskWarningSection from "@/components/sections/RiskWarningSection";
-import ReliefFolderSection from "@/components/sections/ReliefFolderSection";
-import ExchangeAssetSection from "@/components/sections/ExchangeAssetSection";
-import FAQSection from "@/components/sections/FAQSection";
-import FinalCTASection from "@/components/sections/FinalCTASection";
 
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
+const HeroSection = dynamic(() => import("@/components/sections/HeroSection"));
+const RiskWarningSection = dynamic(() => import("@/components/sections/RiskWarningSection"));
+const ReliefFolderSection = dynamic(() => import("@/components/sections/ReliefFolderSection"));
+const ExchangeAssetSection = dynamic(() => import("@/components/sections/ExchangeAssetSection"));
+const FAQSection = dynamic(() => import("@/components/sections/FAQSection"));
+const FinalCTASection = dynamic(() => import("@/components/sections/FinalCTASection"));
 
 export default function Home() {
   return (
