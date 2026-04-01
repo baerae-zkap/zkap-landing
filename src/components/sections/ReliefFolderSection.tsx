@@ -22,11 +22,11 @@ const C = COIN_DATA;
 
 const BINANCE_CARDS = [
   { ...C.btc,  balance: "₩ 147,000,000", sub: " " },
-  { ...C.sol,  balance: "₩ 50,900,000",  sub: " " },
   { ...C.eth,  balance: "₩ 208,200,000", sub: " " },
-  { ...C.kaia, balance: "₩ 12,500,000",  sub: " " },
+  { ...C.sol,  balance: "₩ 50,900,000",  sub: " " },
   { ...C.usdt, balance: "₩ 68,350,000",  sub: " " },
   { ...C.xrp,  balance: "₩ 46,000,000",  sub: " " },
+  { ...C.kaia, balance: "₩ 12,500,000",  sub: " " },
 ];
 
 export default function ReliefFolderSection() {
