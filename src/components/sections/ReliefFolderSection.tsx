@@ -153,7 +153,7 @@ export default function ReliefFolderSection() {
                     const p = Math.min(1, Math.max(0, (frontP - 0.15 - i * 0.08) / 0.3));
                     return (
                       <div key={i} style={{ opacity: p, transform: `translateY(${8 * (1 - p)}px)` }}>
-                        <ExchangeCard {...card} style={{ width: "100%", height: mobile ? 70 : 130 }} />
+                        <ExchangeCard {...card} style={{ width: "100%", height: mobile ? 85 : 130 }} />
                       </div>
                     );
                   })}
