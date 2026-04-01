@@ -49,7 +49,7 @@ export default function ReliefFolderSection() {
   const backP = Math.max(0, Math.min(1, (progress - 0.5) / 0.5));
   const diagOpacity = diagFadeIn;
 
-  const folderFadeOut = Math.max(0, Math.min(1, (progress - 1.7) / 0.4));
+  const folderFadeOut = Math.max(0, Math.min(1, (progress - 2.0) / 0.4));
   const sectionOneOpacity = 1 - folderFadeOut;
 
   const reliefFadeIn = Math.max(0, Math.min(1, (progress - 2.0) / 0.4));
