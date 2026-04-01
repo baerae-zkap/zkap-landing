@@ -57,7 +57,7 @@
       { "label": "Collect exchange assets", "sub": "4 exchanges · 12 coins" },
       { "label": "Convert & aggregate", "sub": "Total ₩823,450,000" },
       { "label": "Expert tax review", "sub": "Partner tax firm" },
-      { "label": "Submit to NTS", "sub": "Ref. 2026-XXXX-XXXX" }
+      { "label": "Tax accountant files to NTS", "sub": "Filed by our partner tax firm" }
     ],
     "stepDone": "Done",
     "stepActive": "In progress"
