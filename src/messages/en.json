@@ -58,8 +58,8 @@
     "filingSteps": [
       { "label": "Collect exchange assets", "sub": "4 exchanges · 12 coins" },
       { "label": "Convert & aggregate", "sub": "Total ₩823,450,000" },
-      { "label": "Expert tax review", "sub": "Partner tax firm" },
-      { "label": "Tax accountant files to NTS", "sub": "Filed by our partner tax firm" }
+      { "label": "Expert tax review", "sub": "Crypto-specialized CPA" },
+      { "label": "Tax accountant files to NTS", "sub": "CPA proxy filing" }
     ],
     "stepDone": "Done",
     "stepActive": "In progress"
