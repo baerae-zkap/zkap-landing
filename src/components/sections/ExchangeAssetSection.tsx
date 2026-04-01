@@ -108,13 +108,13 @@ export default function ExchangeAssetSection() {
   const fadeOutP = Math.min(1, Math.max(0, (progress - 2.8) / 0.6));
   const surroundOpacity = spreadP * (1 - fadeOutP);
 
-  // === Phase 4: "자산 확인" (3.5→7) ===
+  // === Phase 4: "자산 확인" (3.5→5.5) ===
   const assetP = Math.min(1, Math.max(0, (progress - 3.5) / 0.5));
-  const assetFadeOut = Math.min(1, Math.max(0, (progress - 6.5) / 0.4));
+  const assetFadeOut = Math.min(1, Math.max(0, (progress - 5.0) / 0.4));
 
-  // === Phase 5: "전문가 신고" (7→9) ===
-  const filingP = Math.min(1, Math.max(0, (progress - 7.0) / 0.5));
-  const stepsP = Math.min(1, Math.max(0, (progress - 7.6) / 1.0));
+  // === Phase 5: "전문가 신고" (5.5→9) ===
+  const filingP = Math.min(1, Math.max(0, (progress - 5.5) / 0.5));
+  const stepsP = Math.min(1, Math.max(0, (progress - 6.1) / 1.0));
 
   // Center card position through phases
   const phase12Scale = centerGrow;
@@ -123,23 +123,23 @@ export default function ExchangeAssetSection() {
   const phase3Scale = lerp(phase12Scale, 1.0, fadeOutP);
 
   // Phase 5: card flies away
-  const flyP = Math.min(1, Math.max(0, (progress - 7.0) / 1.2));
+  const flyP = Math.min(1, Math.max(0, (progress - 5.5) / 1.2));
   const flyX = lerp(phase3X, 600, flyP);
   const flyY = lerp(0, -400, flyP);
   const flyScale = lerp(phase3Scale, 0.3, flyP);
   const flyRotate = lerp(0, 15, flyP);
   const flyOpacity = 1 - Math.min(1, Math.max(0, (flyP - 0.5) / 0.5));
 
-  const finalX = progress < 2.8 ? 0 : progress < 7 ? phase3X : flyX;
-  const finalY = progress < 7 ? 0 : flyY;
-  const finalScale = progress < 2.8 ? phase12Scale : progress < 7 ? phase3Scale : flyScale;
-  const finalRotate = progress < 7 ? 0 : flyRotate;
-  const cardOpacity = progress < 7 ? 1 : flyOpacity;
+  const finalX = progress < 2.8 ? 0 : progress < 5.5 ? phase3X : flyX;
+  const finalY = progress < 5.5 ? 0 : flyY;
+  const finalScale = progress < 2.8 ? phase12Scale : progress < 5.5 ? phase3Scale : flyScale;
+  const finalRotate = progress < 5.5 ? 0 : flyRotate;
+  const cardOpacity = progress < 5.5 ? 1 : flyOpacity;
 
   // Check badge & glow appear during selection
   const selectVisuals = selectP;
 
-  const step = progress < 3.2 ? 1 : progress < 7 ? 2 : 3;
+  const step = progress < 3.2 ? 1 : progress < 5.5 ? 2 : 3;
 
   return (
     <div ref={containerRef} style={{ height: mobile ? "640vh" : "600vh" }}>
