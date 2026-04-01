@@ -75,7 +75,7 @@ export default function RiskWarningSection() {
           </h2>
         </motion.div>
 
-        {/* Step 1: 징역형 최대 2년 */}
+        {/* Step 1: 과태료 */}
         <motion.div
           className="absolute inset-0 px-8"
           initial={{ opacity: 0 }}
@@ -102,7 +102,7 @@ export default function RiskWarningSection() {
           </motion.p>
         </motion.div>
 
-        {/* Step 2: 과태료 + 벌금 */}
+        {/* Step 2: 형사처벌 (50억 초과) */}
         <motion.div
           className="absolute inset-0 px-8"
           initial={{ opacity: 0 }}
@@ -119,7 +119,7 @@ export default function RiskWarningSection() {
             {t("step2Label")}
           </motion.p>
           <motion.p
-            className="absolute left-0 right-0 text-center text-6xl sm:text-7xl lg:text-8xl font-black text-white leading-tight"
+            className="absolute left-0 right-0 text-center text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight whitespace-pre-line"
             style={{ top: "50%", transform: "translateY(-50%)" }}
             initial={{ opacity: 0, scale: 0.3 }}
             animate={currentStep === 2 ? { scale: 1, opacity: 1 } : { scale: 0.3, opacity: 0 }}

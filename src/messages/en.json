@@ -13,12 +13,12 @@
   "risk": {
     "title": "What Happens\nIf You Don't Report?",
     "penalty": "Penalty for non-reporting",
-    "criminal": "Up to 2 years imprisonment or ₩200M fine",
-    "source": "International Tax Coordination Act, Articles 34 & 35",
-    "step1Label": "Imprisonment",
-    "step1Value": "Up to 2 Years",
-    "step2Label": "Penalty · Up to 20% of unreported amount",
-    "step2Value": "Up to ₩200M"
+    "criminal": "10~20% penalty on unreported amount, criminal charges if over ₩5B",
+    "source": "International Tax Coordination Act Art. 62, Tax Crime Punishment Act Art. 16",
+    "step1Label": "Penalty",
+    "step1Value": "10~20% of\nunreported amount",
+    "step2Label": "Criminal · Over ₩5B unreported",
+    "step2Value": "Up to 2 years imprisonment or\n13~20% fine"
   },
   "diagnosis": {
     "title": "Could You Be Required to Report?",
@@ -87,7 +87,7 @@
       { "question": "How much does it cost?", "answer": "The app download, exchange linking, and asset viewing are all free. Tax filing service fees are provided separately." },
       { "question": "Is my data safe?", "answer": "Absolutely. ZKAP can only view your assets — it's impossible to move or trade your coins." },
       { "question": "When is the reporting deadline?", "answer": "Every June. Missing the deadline results in immediate penalties, so start early." },
-      { "question": "What happens if I don't report?", "answer": "You could face penalties up to 20% of the unreported amount, plus up to 2 years imprisonment or a ₩200M fine." }
+      { "question": "What happens if I don't report?", "answer": "You could face penalties of 10~20% of the unreported amount. If unreported amount exceeds ₩5B, criminal charges (up to 2 years imprisonment or 13~20% fine) may apply." }
     ]
   },
   "finalCta": {
