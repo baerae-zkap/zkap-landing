@@ -113,8 +113,8 @@ export default function ProcessSection() {
   });
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    // Step 1: 0~0.33, Step 2: 0.33~0.55, Step 3: 0.55~1.0
-    const step = v < 0.33 ? 0 : v < 0.55 ? 1 : 2;
+    // Step 1: 0~0.2, Step 2: 0.2~0.3, Step 3: 0.3~1.0 (긴 유지)
+    const step = v < 0.2 ? 0 : v < 0.3 ? 1 : 2;
     setCurrentStep(step);
   });
 
@@ -125,7 +125,7 @@ export default function ProcessSection() {
   ];
 
   return (
-    <div ref={containerRef} style={{ height: `${steps.length * 100}vh` }}>
+    <div ref={containerRef} style={{ height: "450vh" }}>
       <div className="sticky top-0 flex items-center overflow-hidden" style={{ height: "100dvh", padding: "0 24px" }}>
         <div className="max-w-[1100px] mx-auto w-full flex items-center gap-20 max-lg:flex-col max-lg:gap-8 max-lg:justify-center">
           {/* Phone mockup — left */}
