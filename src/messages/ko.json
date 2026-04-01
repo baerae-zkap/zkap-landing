@@ -38,7 +38,7 @@
     "subtitle": "거래소 연결부터 세무사 신고 접수까지,\n복잡한 건 앱이 알아서 처리해요",
     "diagTitle": "혹시 나도\n신고 대상일까?",
     "diagSubtitle": "여러 거래소에 흩어진 자산,\n합치면 5억이 넘는데... 어떡하지?",
-    "overBadge": "5억 초과"
+    "overBadge": "Reportable"
   },
   "exchange": {
     "title": "거래소 연결은\n딱 한 번이면 돼요",
