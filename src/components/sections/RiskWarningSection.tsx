@@ -92,7 +92,7 @@ export default function RiskWarningSection() {
             {t("step1Label")}
           </motion.p>
           <motion.p
-            className="absolute left-0 right-0 text-center text-6xl sm:text-7xl lg:text-8xl font-black text-white"
+            className="absolute left-0 right-0 text-center text-3xl sm:text-5xl lg:text-6xl font-black text-white whitespace-pre-line leading-tight"
             style={{ top: "50%", transform: "translateY(-50%)" }}
             initial={{ opacity: 0, scale: 0.3 }}
             animate={currentStep === 1 ? { scale: 1, opacity: 1 } : { scale: 0.3, opacity: 0 }}
