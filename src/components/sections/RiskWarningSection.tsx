@@ -23,8 +23,8 @@ export default function RiskWarningSection() {
   });
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    // step 0: 0→0.2, step 1(징역): 0.2→0.7, step 2(과태료): 0.7→1
-    const step = v < 0.2 ? 0 : v < 0.7 ? 1 : 2;
+    // step 0: 0→0.15, step 1(과태료): 0.15→0.50, step 2(형사처벌): 0.50→1
+    const step = v < 0.15 ? 0 : v < 0.50 ? 1 : 2;
     setCurrentStep(step);
   });
 
@@ -35,7 +35,7 @@ export default function RiskWarningSection() {
   );
 
   return (
-    <div ref={containerRef} data-risk-section style={{ height: `${STEPS * 110}vh` }}>
+    <div ref={containerRef} data-risk-section style={{ height: "310vh" }}>
       <motion.div
         className="sticky top-0 overflow-hidden"
         style={{ backgroundColor: bgColor, height: "100dvh" }}

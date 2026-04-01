@@ -37,34 +37,34 @@ export default function ReliefFolderSection() {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 60%", "end end"],
+    offset: ["start start", "end end"],
   });
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    setProgress(v * 4);
+    setProgress(v * 3);
   });
 
-  const diagFadeIn = Math.min(1, Math.max(0, progress / 0.5));
-  const frontP = Math.max(0, Math.min(1, (progress - 0.2) / 0.5));
-  const backP = Math.max(0, Math.min(1, (progress - 0.5) / 0.5));
+  const diagFadeIn = Math.min(1, Math.max(0, progress / 0.4));
+  const frontP = Math.max(0, Math.min(1, (progress - 0.15) / 0.5));
+  const backP = Math.max(0, Math.min(1, (progress - 0.4) / 0.5));
   const diagOpacity = diagFadeIn;
 
-  const folderFadeOut = Math.max(0, Math.min(1, (progress - 2.0) / 0.4));
+  const folderFadeOut = Math.max(0, Math.min(1, (progress - 1.5) / 0.4));
   const sectionOneOpacity = 1 - folderFadeOut;
 
-  const reliefFadeIn = Math.max(0, Math.min(1, (progress - 2.0) / 0.4));
-  const reliefFadeOut = Math.max(0, Math.min(1, (progress - 3.8) / 0.2));
+  const reliefFadeIn = Math.max(0, Math.min(1, (progress - 1.5) / 0.5));
+  const reliefFadeOut = Math.max(0, Math.min(1, (progress - 2.8) / 0.2));
   const reliefOpacity = reliefFadeIn * (1 - reliefFadeOut);
-  const reliefY = progress < 2.0
+  const reliefY = progress < 1.5
     ? 60
-    : progress > 3.8
-      ? -(progress - 3.8) * 100
+    : progress > 2.8
+      ? -(progress - 2.8) * 100
       : (1 - reliefFadeIn) * 60;
 
   const folderScale = mobile ? 0.7 : 1;
 
   return (
-    <div ref={containerRef} style={{ height: "250vh" }}>
+    <div ref={containerRef} style={{ height: "280vh" }}>
       <div className="sticky top-0 overflow-hidden" style={{ height: "100dvh" }}>
         <div
           className="absolute inset-0"

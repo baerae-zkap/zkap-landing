@@ -70,7 +70,7 @@ export default function ExchangeAssetSection() {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 40%", "end end"],
+    offset: ["start start", "end end"],
   });
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
@@ -81,8 +81,8 @@ export default function ExchangeAssetSection() {
   const spreadP = Math.min(1, Math.max(0, (progress - 0.2) / 1.0));
   const titleOpacity = Math.min(1, progress / 0.3);
 
-  // === Phase 2: Selection (1.8→3) — Binance grows, then click ===
-  const selectP = Math.min(1, Math.max(0, (progress - 1.8) / 1.0));
+  // === Phase 2: Selection (1.3→2.3) — Binance grows, then click ===
+  const selectP = Math.min(1, Math.max(0, (progress - 1.3) / 1.0));
   const surroundDim = lerp(0.6, 0.25, selectP);
 
   // Selection: hold → click(dip) → grow continuously while balance animates
@@ -104,17 +104,17 @@ export default function ExchangeAssetSection() {
     ? Math.min(1, (selectP - 0.33) / 0.06) * Math.max(0, 1 - (selectP - 0.39) / 0.46)
     : 0;
 
-  // === Phase 3: Others fade, card moves left (2.8→3.6) ===
-  const fadeOutP = Math.min(1, Math.max(0, (progress - 2.8) / 0.6));
+  // === Phase 3: Others fade, card moves left (2.3→2.9) ===
+  const fadeOutP = Math.min(1, Math.max(0, (progress - 2.3) / 0.6));
   const surroundOpacity = spreadP * (1 - fadeOutP);
 
-  // === Phase 4: "자산 확인" (3.5→5.5) ===
-  const assetP = Math.min(1, Math.max(0, (progress - 3.5) / 0.5));
-  const assetFadeOut = Math.min(1, Math.max(0, (progress - 5.0) / 0.4));
+  // === Phase 4: "자산 확인" (2.9→4.5) ===
+  const assetP = Math.min(1, Math.max(0, (progress - 2.9) / 0.5));
+  const assetFadeOut = Math.min(1, Math.max(0, (progress - 4.0) / 0.4));
 
-  // === Phase 5: "전문가 신고" (5.5→9) ===
-  const filingP = Math.min(1, Math.max(0, (progress - 5.5) / 0.5));
-  const stepsP = Math.min(1, Math.max(0, (progress - 6.1) / 1.0));
+  // === Phase 5: "전문가 신고" (4.5→8.5) ===
+  const filingP = Math.min(1, Math.max(0, (progress - 4.5) / 0.5));
+  const stepsP = Math.min(1, Math.max(0, (progress - 5.1) / 2.8));
 
   // Center card position through phases
   const phase12Scale = centerGrow;
@@ -123,26 +123,26 @@ export default function ExchangeAssetSection() {
   const phase3Scale = lerp(phase12Scale, 1.0, fadeOutP);
 
   // Phase 5: card flies away
-  const flyP = Math.min(1, Math.max(0, (progress - 5.5) / 1.2));
+  const flyP = Math.min(1, Math.max(0, (progress - 4.5) / 1.2));
   const flyX = lerp(phase3X, 600, flyP);
   const flyY = lerp(0, -400, flyP);
   const flyScale = lerp(phase3Scale, 0.3, flyP);
   const flyRotate = lerp(0, 15, flyP);
   const flyOpacity = 1 - Math.min(1, Math.max(0, (flyP - 0.5) / 0.5));
 
-  const finalX = progress < 2.8 ? 0 : progress < 5.5 ? phase3X : flyX;
-  const finalY = progress < 5.5 ? 0 : flyY;
-  const finalScale = progress < 2.8 ? phase12Scale : progress < 5.5 ? phase3Scale : flyScale;
-  const finalRotate = progress < 5.5 ? 0 : flyRotate;
-  const cardOpacity = progress < 5.5 ? 1 : flyOpacity;
+  const finalX = progress < 2.3 ? 0 : progress < 4.5 ? phase3X : flyX;
+  const finalY = progress < 4.5 ? 0 : flyY;
+  const finalScale = progress < 2.3 ? phase12Scale : progress < 4.5 ? phase3Scale : flyScale;
+  const finalRotate = progress < 4.5 ? 0 : flyRotate;
+  const cardOpacity = progress < 4.5 ? 1 : flyOpacity;
 
   // Check badge & glow appear during selection
   const selectVisuals = selectP;
 
-  const step = progress < 3.2 ? 1 : progress < 5.5 ? 2 : 3;
+  const step = progress < 2.6 ? 1 : progress < 4.5 ? 2 : 3;
 
   return (
-    <div ref={containerRef} style={{ height: mobile ? "640vh" : "600vh" }}>
+    <div ref={containerRef} style={{ height: mobile ? "440vh" : "420vh" }}>
       <div className="sticky top-0 overflow-hidden flex flex-col items-center justify-center" style={{ height: "100dvh" }}>
         {/* Grid bg */}
         <div

@@ -113,7 +113,7 @@ export default function HeroSection() {
   });
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    if (autoDone) setScrollP(v * 3.2);
+    if (autoDone) setScrollP(v * 2.5);
   });
 
   useEffect(() => {
@@ -155,7 +155,7 @@ export default function HeroSection() {
   const cardH = mobile ? 150 : 175;
 
   return (
-    <div ref={containerRef} style={{ height: "400vh" }}>
+    <div ref={containerRef} style={{ height: "320vh" }}>
       <div className="sticky top-0 overflow-hidden" style={{ height: "100dvh" }}>
         <div
           className="absolute inset-0"
