@@ -113,8 +113,9 @@ export default function ProcessSection() {
   });
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    const step = Math.floor(v * steps.length);
-    setCurrentStep(Math.min(step, steps.length - 1));
+    // Step 1: 0~0.33, Step 2: 0.33~0.55, Step 3: 0.55~1.0
+    const step = v < 0.33 ? 0 : v < 0.55 ? 1 : 2;
+    setCurrentStep(step);
   });
 
   const stepDetails = [
