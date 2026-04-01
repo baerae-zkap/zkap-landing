@@ -19,7 +19,7 @@ export default function Footer() {
           </div>
 
           {/* Right — Links + Social */}
-          <div className="flex flex-col items-start lg:items-end gap-4">
+          <div className="flex flex-col items-start lg:items-end lg:justify-end gap-4">
             <div className="flex items-center gap-6 text-sm">
               <a href="#" className="text-slate-600 font-medium hover:text-slate-800 transition-colors">
                 {t("privacy")}
