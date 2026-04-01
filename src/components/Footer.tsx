@@ -36,7 +36,9 @@ export default function Footer() {
               className="hover:text-slate-700 transition-colors"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M22.539 8.242H1.46V5.406l10.54-4.338L22.539 5.406zM1.46 9.896h21.079v1.654H1.46zM1.46 13.204h21.079v1.654H1.46zM1.46 16.681h21.079V24H1.46z"/>
+                <rect x="3" y="2" width="18" height="3.5"/>
+                <rect x="3" y="8" width="18" height="3.5"/>
+                <path d="M3 14h18v9.5l-9-5.5-9 5.5V14z"/>
               </svg>
             </a>
           </div>
