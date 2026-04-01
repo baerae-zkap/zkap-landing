@@ -77,7 +77,7 @@ export default function ReliefFolderSection() {
 
         {/* === Section 1: Diagnosis + Folder === */}
         <div
-          className="absolute inset-0 z-20 flex items-center justify-center md:justify-between gap-6 md:gap-0 px-5 md:px-6 pointer-events-none flex-col md:flex-row pt-6 md:pt-0 max-w-[1100px] mx-auto"
+          className="absolute inset-0 z-20 flex items-start md:items-center justify-start md:justify-between gap-6 md:gap-0 px-5 md:px-6 pointer-events-none flex-col md:flex-row pt-20 md:pt-0 max-w-[1100px] mx-auto"
           style={{ opacity: sectionOneOpacity }}
         >
           {/* Left — diagnosis text */}
