@@ -8,8 +8,8 @@ const STEPS = 3;
 
 const STEP_IMAGES = [
   null,
-  "/images/risk/prison.jpg",
   "/images/risk/fine.jpg",
+  "/images/risk/prison.jpg",
 ];
 
 export default function RiskWarningSection() {
