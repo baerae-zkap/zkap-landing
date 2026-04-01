@@ -64,24 +64,25 @@ const GATHERED_M: Pos[] = CARDS.map((_, i) => ({
   x: 0, y: 0, rotate: -6 + i * 2, scale: 0.90 - (CARDS.length - 1 - i) * 0.015,
 }));
 
+// Overseas cards (0-3): spread wider & larger, Domestic (4-6): drift down to fade out
 const SPREAD: Pos[] = [
-  { x: -180, y: 40, rotate: -4, scale: 0.92 },
-  { x: -60, y: 80, rotate: -2, scale: 0.94 },
-  { x: 60, y: 50, rotate: -1, scale: 0.96 },
-  { x: 180, y: 85, rotate: 0, scale: 0.98 },
-  { x: 300, y: 55, rotate: 2, scale: 0.96 },
-  { x: 420, y: 80, rotate: 3, scale: 0.94 },
-  { x: 540, y: 50, rotate: 5, scale: 0.92 },
+  { x: -120, y: 40, rotate: -4, scale: 1.02 },
+  { x: 60, y: 70, rotate: -1, scale: 1.05 },
+  { x: 240, y: 45, rotate: 1, scale: 1.02 },
+  { x: 420, y: 70, rotate: 3, scale: 1.05 },
+  { x: 200, y: 200, rotate: 2, scale: 0.8 },
+  { x: 350, y: 220, rotate: 3, scale: 0.8 },
+  { x: 500, y: 210, rotate: 5, scale: 0.8 },
 ];
 
 const SPREAD_M: Pos[] = [
-  { x: -145, y: -10, rotate: -4, scale: 0.82 },
-  { x: -95, y: 15, rotate: -2, scale: 0.84 },
-  { x: -45, y: -5, rotate: -1, scale: 0.86 },
-  { x: 5, y: 18, rotate: 0, scale: 0.88 },
-  { x: 55, y: -2, rotate: 2, scale: 0.86 },
-  { x: 105, y: 15, rotate: 3, scale: 0.84 },
-  { x: 155, y: -5, rotate: 5, scale: 0.82 },
+  { x: -105, y: -5, rotate: -3, scale: 0.92 },
+  { x: -30, y: 15, rotate: -1, scale: 0.95 },
+  { x: 45, y: -5, rotate: 1, scale: 0.92 },
+  { x: 120, y: 15, rotate: 3, scale: 0.95 },
+  { x: -50, y: 160, rotate: 2, scale: 0.7 },
+  { x: 30, y: 170, rotate: 3, scale: 0.7 },
+  { x: 110, y: 160, rotate: 5, scale: 0.7 },
 ];
 
 function lerp(a: number, b: number, t: number) {
@@ -146,6 +147,9 @@ export default function HeroSection() {
     : Math.max(0, 1 - scrollP / 0.5);
 
   const phase2Opacity = !autoDone ? 0 : (scrollP < 1.3 ? 0 : Math.min(1, (scrollP - 1.3) / 0.3));
+
+  // Domestic cards (indices 4-6) fade out during spread phase
+  const domesticFadeOut = !autoDone ? 0 : Math.min(1, Math.max(0, (scrollP - 1.0) / 0.5));
 
   const cardW = mobile ? 120 : 140;
   const cardH = mobile ? 150 : 175;
@@ -216,7 +220,7 @@ export default function HeroSection() {
                         <stop offset="100%" stopColor="#c7d2fe" stopOpacity="0.2" />
                       </linearGradient>
                     </defs>
-                    {linePositions.map((pos, i) => {
+                    {linePositions.slice(0, 4).map((pos, i) => {
                       const cardCenterX = pos.x + lineCardHalfW;
                       const cardTopY = pos.y - 10;
                       return (
@@ -251,13 +255,15 @@ export default function HeroSection() {
 
             {CARDS.map((card, i) => {
               const pos = getCardPos(i);
+              const isDomestic = i >= 4;
+              const cardOpacity = autoPhase >= 1 ? (isDomestic ? 1 - domesticFadeOut : 1) : 0;
               return (
                 <motion.div
                   key={card.label}
                   className="absolute top-0 left-0 rounded-2xl shadow-2xl overflow-hidden"
                   style={{ backgroundColor: card.color, width: cardW, height: cardH }}
                   initial={{ x: HIDDEN[i].x, y: HIDDEN[i].y, rotate: HIDDEN[i].rotate, scale: HIDDEN[i].scale, opacity: 0 }}
-                  animate={{ x: pos.x, y: pos.y, rotate: pos.rotate, scale: pos.scale, opacity: autoPhase >= 1 ? 1 : 0 }}
+                  animate={{ x: pos.x, y: pos.y, rotate: pos.rotate, scale: pos.scale, opacity: cardOpacity }}
                   transition={!autoDone ? { type: "spring", stiffness: 70, damping: 18 } : { type: "spring", stiffness: 100, damping: 22 }}
                 >
                   <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
