@@ -15,6 +15,8 @@
     "penalty": "Penalty for non-reporting",
     "criminal": "10~20% penalty on unreported amount, criminal charges if over ₩5B",
     "source": "International Tax Coordination Act Art. 62, Tax Crime Punishment Act Art. 16",
+    "step1Source": "International Tax Coordination Act Art. 62",
+    "step2Source": "Tax Crime Punishment Act Art. 16",
     "step1Label": "Penalty",
     "step1Value": "10~20% of\nunreported amount",
     "step2Label": "Criminal · Over ₩5B unreported",

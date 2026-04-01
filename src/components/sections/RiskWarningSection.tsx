@@ -129,14 +129,14 @@ export default function RiskWarningSection() {
           </motion.p>
         </motion.div>
 
-        {/* Source — pinned to bottom */}
+        {/* Source — pinned to bottom, changes per step */}
         <motion.p
           className="absolute bottom-10 left-0 right-0 text-center text-sm text-slate-400 font-medium"
           initial={{ opacity: 0 }}
           animate={{ opacity: currentStep >= 1 ? 1 : 0 }}
           transition={{ duration: 0.3, delay: 0.4 }}
         >
-          {t("source")}
+          {currentStep === 1 ? t("step1Source") : currentStep === 2 ? t("step2Source") : t("source")}
         </motion.p>
       </motion.div>
     </div>
