@@ -277,7 +277,7 @@ export default function ExchangeAssetSection() {
               <div
                 className="absolute left-3 right-3 md:left-5 md:right-5"
                 style={{
-                  top: mobile ? 65 : 100,
+                  top: mobile ? 78 : 100,
                   opacity: assetP * (1 - assetFadeOut),
                 }}
               >
@@ -295,7 +295,7 @@ export default function ExchangeAssetSection() {
               </div>
 
               {/* Bottom — same position, content transitions */}
-              <div className="absolute bottom-5 left-4 right-4 md:bottom-8 md:left-7 md:right-7">
+              <div className="absolute bottom-3 left-4 right-4 md:bottom-8 md:left-7 md:right-7">
                 {/* "연결하기" fades out in place, balance fades in same spot */}
                 <div className="relative">
                   <div
