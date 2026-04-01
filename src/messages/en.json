@@ -88,7 +88,7 @@
       { "question": "Which exchanges are supported?", "answer": "We support 4 overseas (Binance, Bybit, OKX, Coinbase) and 4 domestic (Upbit, Bithumb, Coinone, Korbit) exchanges — 8 total." },
       { "question": "How much does it cost?", "answer": "The app download, exchange linking, and asset viewing are all free. Tax filing service fees are provided separately." },
       { "question": "Is my data safe?", "answer": "Absolutely. ZKAP can only view your assets — it's impossible to move or trade your coins." },
-      { "question": "When is the reporting deadline?", "answer": "Every June. Missing the deadline results in immediate penalties, so start early." },
+      { "question": "When is the reporting deadline?", "answer": "June 1–30 every year. Missing the deadline results in immediate penalties, so start early." },
       { "question": "What happens if I don't report?", "answer": "You could face penalties of 10~20% of the unreported amount. If unreported amount exceeds ₩5B, criminal charges (up to 2 years imprisonment or 13~20% fine) may apply." }
     ]
   },
