@@ -49,16 +49,16 @@ export default function ReliefFolderSection() {
   const backP = Math.max(0, Math.min(1, (progress - 0.5) / 0.5));
   const diagOpacity = diagFadeIn;
 
-  const folderFadeOut = Math.max(0, Math.min(1, (progress - 2.0) / 0.4));
+  const folderFadeOut = Math.max(0, Math.min(1, (progress - 1.7) / 0.4));
   const sectionOneOpacity = 1 - folderFadeOut;
 
-  const reliefFadeIn = Math.max(0, Math.min(1, (progress - 2.3) / 0.4));
-  const reliefFadeOut = Math.max(0, Math.min(1, (progress - 3.7) / 0.3));
+  const reliefFadeIn = Math.max(0, Math.min(1, (progress - 2.0) / 0.4));
+  const reliefFadeOut = Math.max(0, Math.min(1, (progress - 3.8) / 0.2));
   const reliefOpacity = reliefFadeIn * (1 - reliefFadeOut);
-  const reliefY = progress < 2.3
+  const reliefY = progress < 2.0
     ? 60
-    : progress > 3.7
-      ? -(progress - 3.7) * 100
+    : progress > 3.8
+      ? -(progress - 3.8) * 100
       : (1 - reliefFadeIn) * 60;
 
   const folderScale = mobile ? 0.7 : 1;
