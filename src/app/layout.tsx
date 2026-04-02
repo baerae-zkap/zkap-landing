@@ -14,11 +14,20 @@ export const metadata: Metadata = {
     siteName: "ZKAP",
     type: "website",
     locale: "ko_KR",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ZKAP - 해외 가상자산 세금 신고",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "ZKAP - 해외 가상자산 세금 신고",
     description: "해외 거래소 자산, 쉽고 정확하게 신고하세요.",
+    images: ["/images/og-image.jpg"],
   },
 };
 
