@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -21,12 +22,12 @@ export default function Footer() {
           {/* Right — Links + Social */}
           <div className="flex flex-col items-start lg:items-end lg:justify-end gap-4">
             <div className="flex items-center gap-6 text-sm">
-              <a href="/privacy" className="text-slate-600 font-medium hover:text-slate-800 transition-colors">
+              <Link href="/privacy" className="text-slate-600 font-medium hover:text-slate-800 transition-colors">
                 {t("privacy")}
-              </a>
-              <a href="/terms" className="text-slate-600 font-medium hover:text-slate-800 transition-colors">
+              </Link>
+              <Link href="/terms" className="text-slate-600 font-medium hover:text-slate-800 transition-colors">
                 {t("terms")}
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center gap-3">
