@@ -72,7 +72,7 @@ export default function LegalPageLayout({
           )}
         </div>
 
-        <article className="prose prose-slate max-w-none prose-headings:text-slate-900 prose-h2:text-xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-base prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600">
+        <article className="legal-prose prose prose-slate max-w-none prose-headings:text-slate-900 prose-h2:text-lg prose-h2:font-bold prose-h3:text-base prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-600 prose-p:leading-[1.8] prose-li:text-slate-600 prose-li:leading-[1.8] prose-ol:my-3 prose-ul:my-3">
           {children}
         </article>
       </main>

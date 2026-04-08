@@ -41,6 +41,28 @@
   }
 }
 
+/* Legal prose — article-level visual rhythm */
+.legal-prose h2 {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.875rem;
+  border-top: 1px solid #e2e8f0;
+  border-left: 3px solid #334155;
+  margin-bottom: 1rem;
+}
+
+.legal-prose h2:first-of-type {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.legal-prose h3 {
+  padding-left: 0.875rem;
+  border-left: 2px solid #cbd5e1;
+}
+
 /* Hide scrollbar but keep scroll functionality */
 .scrollbar-hide {
   -ms-overflow-style: none;
