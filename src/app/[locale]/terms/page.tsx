@@ -11,7 +11,7 @@ export default function TermsPage() {
     <LegalPageLayout
       title={t("title")}
       config={LEGAL_DOCS.terms}
-      currentVersionKey="v2_0"
+      currentVersionKey="v1_0"
     >
       <p className="text-slate-500 text-sm mb-8">{t("effectiveDate")}</p>
 

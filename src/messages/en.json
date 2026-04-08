@@ -25,11 +25,26 @@
   "diagnosis": {
     "title": "Could You Be Required to Report?",
     "items": [
-      { "title": "Overseas Exchange Assets", "description": "You hold crypto assets on exchanges like Binance, Bybit, or OKX" },
-      { "title": "Assets Over ₩500M", "description": "Your total overseas financial assets exceeded ₩500M at any point last year" },
-      { "title": "Spread Across Exchanges", "description": "Assets are scattered across multiple exchanges, making totals hard to track" },
-      { "title": "Currency Conversion", "description": "Complex USD/USDT exchange rates make it hard to know exact KRW amounts" },
-      { "title": "Never Filed Before", "description": "You have never reported overseas financial assets to the tax office" }
+      {
+        "title": "Overseas Exchange Assets",
+        "description": "You hold crypto assets on exchanges like Binance, Bybit, or OKX"
+      },
+      {
+        "title": "Assets Over ₩500M",
+        "description": "Your total overseas financial assets exceeded ₩500M at any point last year"
+      },
+      {
+        "title": "Spread Across Exchanges",
+        "description": "Assets are scattered across multiple exchanges, making totals hard to track"
+      },
+      {
+        "title": "Currency Conversion",
+        "description": "Complex USD/USDT exchange rates make it hard to know exact KRW amounts"
+      },
+      {
+        "title": "Never Filed Before",
+        "description": "You have never reported overseas financial assets to the tax office"
+      }
     ],
     "conclusion": "If any of these apply, it's time to check now"
   },
@@ -43,7 +58,12 @@
   "exchange": {
     "title": "Connect Once,\nSee Everything",
     "subtitle": "Binance, Bybit, OKX, Coinbase\nOne login and your assets flow right in",
-    "exchanges": ["Binance", "Bybit", "OKX", "Coinbase"],
+    "exchanges": [
+      "Binance",
+      "Bybit",
+      "OKX",
+      "Coinbase"
+    ],
     "connect": "Connect →",
     "step1Label": "Connect",
     "step2Label": "Review",
@@ -56,10 +76,22 @@
     "filingYear": "FY 2025 · Due June 2026",
     "filingDone": "Filed!",
     "filingSteps": [
-      { "label": "Collect exchange assets", "sub": "4 exchanges · 12 coins" },
-      { "label": "Convert & aggregate", "sub": "Total ₩823,450,000" },
-      { "label": "Expert tax review", "sub": "Crypto-specialized CPA" },
-      { "label": "Tax accountant files to NTS", "sub": "CPA proxy filing" }
+      {
+        "label": "Collect exchange assets",
+        "sub": "4 exchanges · 12 coins"
+      },
+      {
+        "label": "Convert & aggregate",
+        "sub": "Total ₩823,450,000"
+      },
+      {
+        "label": "Expert tax review",
+        "sub": "Crypto-specialized CPA"
+      },
+      {
+        "label": "Tax accountant files to NTS",
+        "sub": "CPA proxy filing"
+      }
     ],
     "stepDone": "Done",
     "stepActive": "In progress"
@@ -67,29 +99,68 @@
   "process": {
     "title": "File Your Taxes in 3 Steps",
     "steps": [
-      { "number": "1", "title": "Connect Exchange", "description": "One login to sync" },
-      { "number": "2", "title": "Review Assets", "description": "See everything at a glance" },
-      { "number": "3", "title": "File with Expert", "description": "Tax pro handles the rest" }
+      {
+        "number": "1",
+        "title": "Connect Exchange",
+        "description": "One login to sync"
+      },
+      {
+        "number": "2",
+        "title": "Review Assets",
+        "description": "See everything at a glance"
+      },
+      {
+        "number": "3",
+        "title": "File with Expert",
+        "description": "Tax pro handles the rest"
+      }
     ]
   },
   "trust": {
     "title": "Expert Tax Professionals\nHandle Everything",
     "subtitle": "Leave the complex paperwork to the experts",
     "badges": [
-      { "title": "Matched Tax Expert", "description": "Crypto-specialized tax professionals handle your filing" },
-      { "title": "Your Coins Are Safe", "description": "ZKAP only views assets. Moving or trading coins is impossible" },
-      { "title": "Accurate Filing", "description": "Auto-collected data ensures nothing is missed" }
+      {
+        "title": "Matched Tax Expert",
+        "description": "Crypto-specialized tax professionals handle your filing"
+      },
+      {
+        "title": "Your Coins Are Safe",
+        "description": "ZKAP only views assets. Moving or trading coins is impossible"
+      },
+      {
+        "title": "Accurate Filing",
+        "description": "Auto-collected data ensures nothing is missed"
+      }
     ]
   },
   "faq": {
     "title": "Frequently Asked Questions",
     "items": [
-      { "question": "How do I know if I need to report?", "answer": "If your combined overseas financial account balances exceed ₩500M at any month-end during the year, you are required to report. Link your exchanges on ZKAP to check automatically." },
-      { "question": "Which exchanges are supported?", "answer": "We support 4 overseas (Binance, Bybit, OKX, Coinbase) and 4 domestic (Upbit, Bithumb, Coinone, Korbit) exchanges — 8 total." },
-      { "question": "How much does it cost?", "answer": "The app download, exchange linking, and asset viewing are all free. Tax filing service fees are provided separately." },
-      { "question": "Is my data safe?", "answer": "Absolutely. ZKAP can only view your assets — it's impossible to move or trade your coins." },
-      { "question": "When is the reporting deadline?", "answer": "June 1–30 every year. Missing the deadline results in immediate penalties, so start early." },
-      { "question": "What happens if I don't report?", "answer": "You could face penalties of 10~20% of the unreported amount. If unreported amount exceeds ₩5B, criminal charges (up to 2 years imprisonment or 13~20% fine) may apply." }
+      {
+        "question": "How do I know if I need to report?",
+        "answer": "If your combined overseas financial account balances exceed ₩500M at any month-end during the year, you are required to report. Link your exchanges on ZKAP to check automatically."
+      },
+      {
+        "question": "Which exchanges are supported?",
+        "answer": "We support 4 overseas (Binance, Bybit, OKX, Coinbase) and 4 domestic (Upbit, Bithumb, Coinone, Korbit) exchanges — 8 total."
+      },
+      {
+        "question": "How much does it cost?",
+        "answer": "The app download, exchange linking, and asset viewing are all free. Tax filing service fees are provided separately."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Absolutely. ZKAP can only view your assets — it's impossible to move or trade your coins."
+      },
+      {
+        "question": "When is the reporting deadline?",
+        "answer": "June 1–30 every year. Missing the deadline results in immediate penalties, so start early."
+      },
+      {
+        "question": "What happens if I don't report?",
+        "answer": "You could face penalties of 10~20% of the unreported amount. If unreported amount exceeds ₩5B, criminal charges (up to 2 years imprisonment or 13~20% fine) may apply."
+      }
     ]
   },
   "finalCta": {
@@ -108,123 +179,6 @@
     "terms": "Terms of Service",
     "consent": "Personal Info Consent",
     "marketingConsent": "Marketing Consent"
-  },
-  "terms_v1_0": {
-    "title": "Terms of Service",
-    "effectiveDate": "Effective Date: March 16, 2026",
-    "intro": "Thank you for using the ZKAP service.",
-    "agreement": "These Terms govern the rights, obligations, and responsibilities between ZKAP (hereinafter \"the Company\") and members regarding the use of the mobile application and related services (hereinafter \"the Service\"). By agreeing to these Terms, members may use the Service.",
-    "article1": {
-      "title": "Article 1. Purpose",
-      "content": "These Terms aim to define the rights, obligations, and responsibilities between the Company and members regarding the use of the Service provided by the Company."
-    },
-    "article2": {
-      "title": "Article 2. Service Description",
-      "intro": "The Company provides the following services:",
-      "items": [
-        "Integration of bank and cryptocurrency exchange account information",
-        "Asset viewing and unified management",
-        "Exchange price comparison",
-        "Cryptocurrency trade execution support",
-        "Other related services provided by the Company"
-      ],
-      "disclaimer1": "The Company is not a financial institution or cryptocurrency exchange and does not provide investment advice, financial product brokerage, or asset management services.",
-      "disclaimer2": "Information provided by the Company is for reference purposes only. The final decision and responsibility for investments lies with the member.",
-      "disclaimer3": "The Company may modify or discontinue part or all of the Service."
-    },
-    "article3": {
-      "title": "Article 3. Registration",
-      "intro": "Members may register for the Service through the following methods:",
-      "methods": ["Kakao Login", "Google Login", "Apple Login"],
-      "notice": "Members must provide accurate information. Service access may be restricted if false information is provided."
-    },
-    "article4": {
-      "title": "Article 4. Account Linking & Data Collection",
-      "intro": "Members may link their bank or cryptocurrency exchange accounts to use the Service.",
-      "consent": "With member consent, the following information may be collected:",
-      "items": ["Account balance information", "Transaction history", "Asset information"],
-      "purpose": "This information is used solely for the purpose of providing the Service."
-    },
-    "article5": {
-      "title": "Article 5. Liability for Trade Execution",
-      "content1": "The Company provides trade information and trade execution support features.",
-      "content2": "The Company is not a financial institution or cryptocurrency exchange, and the member bears final responsibility for their trades.",
-      "content3": "The Company is not liable for the following:",
-      "items": ["Exchange system errors", "Losses due to price fluctuations", "Trade failures", "Third-party service disruptions"]
-    },
-    "article6": {
-      "title": "Article 6. Service Restrictions",
-      "intro": "The Company may restrict Service usage in the following cases:",
-      "items": ["Violation of Terms", "Illegal use of Service", "System abuse"]
-    },
-    "article7": {
-      "title": "Article 7. Service Modification & Suspension",
-      "content": "The Company may modify or discontinue part or all of the Service for improvement or operational needs."
-    },
-    "article8": {
-      "title": "Article 8. Disclaimer",
-      "intro": "The Company is not liable for the following:",
-      "items": ["Service disruptions of exchanges or financial institutions", "Incorrect trading decisions by members", "Market price fluctuations", "Third-party system errors"]
-    },
-    "article9": {
-      "title": "Article 9. Dispute Resolution",
-      "content": "Disputes related to these Terms shall be governed by the laws of the Republic of Korea."
-    }
-  },
-  "privacy_v1_0": {
-    "title": "Privacy Policy",
-    "effectiveDate": "Effective Date: March 16, 2026",
-    "intro": "ZKAP (hereinafter \"the Company\") values users' personal information and complies with relevant privacy protection laws.",
-    "section1": {
-      "title": "1. Personal Information Collected",
-      "requiredTitle": "Required Information",
-      "required": ["Email", "Social login identifier (Kakao, Google, Apple)", "Service usage records", "Device information"],
-      "optionalTitle": "Optional Information",
-      "optional": ["Marketing consent status"]
-    },
-    "section2": {
-      "title": "2. Financial Data Collection",
-      "intro": "The following information may be collected to provide the Service:",
-      "items": ["Exchange asset information", "Transaction history", "Account balance information"],
-      "consent": "This information is collected with the member's explicit consent."
-    },
-    "section3": {
-      "title": "3. Purpose of Use",
-      "items": ["Member authentication", "Service provision", "Trade feature support", "Service improvement", "Customer inquiry response"]
-    },
-    "section4": {
-      "title": "4. Retention Period",
-      "intro": "Personal information is deleted without delay upon membership withdrawal. However, the following records may be retained for a certain period in accordance with relevant laws:",
-      "items": ["Contract-related records: 5 years", "Consumer dispute resolution records: 3 years", "Access logs: 3 months"]
-    },
-    "section5": {
-      "title": "5. Consent to Collection and Use",
-      "collectTitle": "Items Collected",
-      "collectItems": ["Email", "Social login identifier", "Service usage records", "Device information"],
-      "purposeTitle": "Purpose of Use",
-      "purposeItems": ["Member authentication", "Service provision", "Customer inquiry response"],
-      "retentionTitle": "Retention Period",
-      "retention": "Retained until membership withdrawal, then deleted",
-      "refusal": "Members have the right to refuse consent to the collection and use of personal information. However, refusal may result in restricted access to the Service."
-    },
-    "section6": {
-      "title": "6. Marketing Information Consent",
-      "intro": "The Company may use personal information for the following purposes:",
-      "purposes": ["New service announcements", "Event and promotion notifications", "Personalized service delivery", "Customer satisfaction surveys"],
-      "collectTitle": "Items Collected",
-      "collectItems": ["Email", "Service usage records"],
-      "retentionTitle": "Retention Period",
-      "retention": "Until consent is withdrawn",
-      "optOut": "Members may opt out of marketing communications at any time, and this will not affect service usage."
-    },
-    "section7": {
-      "title": "7. Account Linking & Financial Data Access Consent",
-      "intro": "Members may link their bank and cryptocurrency exchange accounts to use the Service.",
-      "consent": "Members consent to the Company collecting and processing the following information:",
-      "items": ["Account balance information", "Transaction history", "Asset information"],
-      "purpose": "This information is used solely for the purpose of providing the Service.",
-      "disconnect": "Members may unlink their accounts at any time."
-    }
   },
   "terms": {
     "title": "Terms of Service",
@@ -450,10 +404,26 @@
       "title": "Article 10 (Remedies for Infringement of Rights)",
       "intro": "If you require relief or consultation regarding personal information infringement, you may contact the following organizations.",
       "agencies": [
-        { "name": "Personal Information Infringement Report Center (operated by Korea Internet & Security Agency)", "website": "privacy.kisa.or.kr", "phone": "118 (no area code)" },
-        { "name": "Personal Information Dispute Mediation Committee", "website": "www.kopico.go.kr", "phone": "1833-6972 (no area code)" },
-        { "name": "Supreme Prosecutors' Office", "website": "www.spo.go.kr", "phone": "1301 (no area code)" },
-        { "name": "National Police Agency Cyber Investigation Bureau", "website": "ecrm.cyber.go.kr", "phone": "182 (no area code)" }
+        {
+          "name": "Personal Information Infringement Report Center (operated by Korea Internet & Security Agency)",
+          "website": "privacy.kisa.or.kr",
+          "phone": "118 (no area code)"
+        },
+        {
+          "name": "Personal Information Dispute Mediation Committee",
+          "website": "www.kopico.go.kr",
+          "phone": "1833-6972 (no area code)"
+        },
+        {
+          "name": "Supreme Prosecutors' Office",
+          "website": "www.spo.go.kr",
+          "phone": "1301 (no area code)"
+        },
+        {
+          "name": "National Police Agency Cyber Investigation Bureau",
+          "website": "ecrm.cyber.go.kr",
+          "phone": "182 (no area code)"
+        }
       ]
     },
     "article11": {
