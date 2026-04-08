@@ -21,12 +21,18 @@ export default function Footer() {
 
           {/* Right — Links + Social */}
           <div className="flex flex-col items-start lg:items-end lg:justify-end gap-4">
-            <div className="flex items-center gap-6 text-sm">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
               <Link href="/privacy" className="text-slate-600 font-medium hover:text-slate-800 transition-colors">
                 {t("privacy")}
               </Link>
               <Link href="/terms" className="text-slate-600 font-medium hover:text-slate-800 transition-colors">
                 {t("terms")}
+              </Link>
+              <Link href="/consent" className="text-slate-600 hover:text-slate-800 transition-colors">
+                {t("consent")}
+              </Link>
+              <Link href="/marketing-consent" className="text-slate-600 hover:text-slate-800 transition-colors">
+                {t("marketingConsent")}
               </Link>
             </div>
 

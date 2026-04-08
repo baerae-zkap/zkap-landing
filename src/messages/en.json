@@ -105,9 +105,11 @@
     "contact": "cs.zkap@baerae.com",
     "copyright": "© 2026 Baerae Co., Ltd. All rights reserved.",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "consent": "Personal Info Consent",
+    "marketingConsent": "Marketing Consent"
   },
-  "terms": {
+  "terms_v1_0": {
     "title": "Terms of Service",
     "effectiveDate": "Effective Date: March 16, 2026",
     "intro": "Thank you for using the ZKAP service.",
@@ -169,7 +171,7 @@
       "content": "Disputes related to these Terms shall be governed by the laws of the Republic of Korea."
     }
   },
-  "privacy": {
+  "privacy_v1_0": {
     "title": "Privacy Policy",
     "effectiveDate": "Effective Date: March 16, 2026",
     "intro": "ZKAP (hereinafter \"the Company\") values users' personal information and complies with relevant privacy protection laws.",
@@ -222,6 +224,296 @@
       "items": ["Account balance information", "Transaction history", "Asset information"],
       "purpose": "This information is used solely for the purpose of providing the Service.",
       "disconnect": "Members may unlink their accounts at any time."
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "effectiveDate": "Effective Date: April 10, 2026",
+    "article1": {
+      "title": "Article 1 (Purpose)",
+      "content": "These Terms and Conditions are intended to set forth the rights, obligations, and responsibilities between Baerae Co., Ltd. (hereinafter referred to as the \"Company\") and its Members in connection with the use of the mobile application, website, and all related services known as ZKAP (hereinafter referred to as \"ZKAP\") provided by the Company."
+    },
+    "article2": {
+      "title": "Article 2 (Definitions)",
+      "intro": "The definitions of terms used in these Terms and Conditions are as follows.",
+      "items": [
+        "\"Member\" refers to a person who agrees to these Terms and Conditions and uses the services provided by the Company.",
+        "\"Service\" refers to the functionality that enables Members to register and link digital asset exchange information and other data they hold or manage, in order to view asset holdings, transaction history, or related information.",
+        "\"Third-Party Service\" refers to any service, system, or infrastructure provided by parties other than the Company, such as digital asset exchanges and wallet providers.",
+        "\"Linked Account\" refers to a digital asset exchange or other Third-Party Service account that a Member has connected within the Service for the purpose of viewing, managing, or utilizing such account.",
+        "\"Inquiry Function\" refers to the functionality that enables Members to view digital asset price information, asset holdings, and other data in connection with Third-Party Services."
+      ]
+    },
+    "article3": {
+      "title": "Article 3 (Posting and Amendment of Terms)",
+      "items": [
+        "The \"Company\" shall post the contents of these Terms and Conditions within the \"Service\" or through linked screens so that \"Members\" can easily access them.",
+        "The \"Company\" may amend these Terms and Conditions as necessary, to the extent not in violation of applicable laws and regulations.",
+        "When the \"Company\" amends these Terms and Conditions, it shall specify the amended content and the effective date and provide public notice or individual notice starting no later than 30 days prior to the effective date.",
+        "If the \"Company\" clearly states in its public notice or individual notice that failure by a \"Member\" to express an objection by the day before the effective date shall be deemed as consent, and the \"Member\" does not expressly object, the \"Member\" shall be deemed to have consented to the amended Terms and Conditions.",
+        "A \"Member\" who does not agree to the amended Terms and Conditions may express their objection to the \"Company\" at any time and terminate the service agreement. However, in such case, the amended Terms and Conditions shall apply to the \"Member\" from the effective date of the amendment until the date of termination."
+      ]
+    },
+    "article4": {
+      "title": "Article 4 (Interpretation of Terms)",
+      "items": [
+        "The \"Company\" may specify detailed matters in operating policies, usage guides, and similar documents within the scope set forth in these Terms and Conditions.",
+        "Any matters not stipulated herein or any questions of interpretation shall be governed by applicable laws and regulations."
+      ]
+    },
+    "article5": {
+      "title": "Article 5 (Execution of Service Agreement)",
+      "items": [
+        "The service agreement is executed when an \"Applicant\" agrees to the Terms and Conditions provided by the \"Company,\" completes the registration application, and the \"Company\" approves such application.",
+        "The \"Company\" may refuse to approve an \"Applicant's\" application if any of the following grounds exist, and may revoke its approval or terminate the service agreement if any of the following grounds are confirmed after registration."
+      ],
+      "rejectionReasons": [
+        "The \"Applicant\" has previously lost \"Member\" status under these Terms and Conditions.",
+        "A fictitious name or another person's identity has been used.",
+        "False or incorrect information has been provided, or information required by the \"Company\" has not been submitted.",
+        "Approval is not possible due to reasons attributable to the \"Applicant,\" or the application violates any provisions set forth in these Terms and Conditions.",
+        "The intention is to use the \"Service\" for fraudulent purposes or for the pursuit of profit.",
+        "The application is made for purposes that violate applicable laws or may undermine public order or social morals.",
+        "The application is confirmed to be in violation of these Terms and Conditions, unlawful, or improper, or the \"Company\" reasonably deems it necessary."
+      ],
+      "conclusion": "The service agreement shall be deemed to have been formed at the time the \"Company's\" expression of approval reaches the \"Applicant.\""
+    },
+    "article6": {
+      "title": "Article 6 (Obligations of Members)",
+      "intro": "Members shall comply with applicable laws and regulations, these Terms and Conditions, operating policies, and the Company's guidelines.",
+      "subIntro": "Members shall not engage in any of the following acts.",
+      "items": [
+        "Entering false information or misappropriating another person's information.",
+        "Registering, linking, or viewing another person's account or asset information without authorization.",
+        "Interfering with the normal operation of the Service or abusing the system.",
+        "Using the Service through automated means, abnormal access, reverse engineering, or other improper methods.",
+        "Infringing upon the rights, reputation, credit, or other interests of the Company or third parties."
+      ]
+    },
+    "article7": {
+      "title": "Article 7 (Notices to \"Members\")",
+      "items": [
+        "When the \"Company\" provides notice to a \"Member,\" it may do so via the email address provided by the \"Member,\" messages within the \"Service,\" or other means.",
+        "When the \"Company\" provides notice to all \"Members,\" it may substitute individual notice by posting a public notice on the bulletin board within the \"Service\" for no less than 30 days.",
+        "The \"Company\" shall provide advance notice or public notice of its expression of approval of a registration application and expressions of use restrictions. However, if there are unavoidable reasons preventing advance notice, the \"Company\" may provide notice after the fact."
+      ]
+    },
+    "article8": {
+      "title": "Article 8 (Restrictions on Use)",
+      "items": [
+        "The Company may restrict or suspend the use of the Service if any of the following grounds arise."
+      ],
+      "reasons": [
+        "Violation of these Terms and Conditions.",
+        "Engaging in or attempting to engage in acts that obstruct the smooth operation of the \"Service\" provided by the Company.",
+        "Other cases where the \"Company\" reasonably determines that it is necessary to refuse to provide the \"Service.\""
+      ],
+      "procedures": [
+        "When the Company takes measures pursuant to Paragraph 1, it shall provide advance notice to the Member of the grounds for such measures and guidance on the appeals procedure. However, if there is an urgent need to protect the legitimate interests of the Company or other Members, the Company may exceptionally restrict or suspend the relevant Member's use of the Service and provide notice without delay after the fact.",
+        "If the Member successfully demonstrates the grounds and the cause for the measures is resolved, the Company shall lift the restriction, suspension, or other measures.",
+        "When the Company lifts service use restrictions, suspensions, or other measures, it shall provide notice to the Member without delay."
+      ]
+    },
+    "article9": {
+      "title": "Article 9 (Modification and Suspension of Service)",
+      "intro": "The Company may modify or suspend all or part of the Service if any of the following grounds exist.",
+      "reasons": [
+        "Service improvement, system inspection, expansion, replacement, or maintenance.",
+        "Discontinuation of or policy changes to Third-Party Services.",
+        "Natural disasters, power outages, network failures, hacking, or other comparable force majeure events.",
+        "Other cases where operational necessity exists."
+      ],
+      "notice": "The Company shall endeavor to provide advance notice in the event of a significant modification or suspension of the Service. However, notice may be provided after the fact in the event of an urgent system failure or security necessity."
+    },
+    "article10": {
+      "title": "Article 10 (Intellectual Property Rights)",
+      "items": [
+        "All intellectual property rights related to the Company's Service belong to the Company.",
+        "Members may not use information obtained through the use of this Service for commercial purposes, such as processing, providing, or selling such information, or allow third parties to use it."
+      ]
+    },
+    "article11": {
+      "title": "Article 11 (Protection of Personal Information)",
+      "content": "The Company protects Members' personal information in accordance with applicable laws and regulations. Matters concerning the collection, use, provision, storage, and destruction of personal information shall be governed by the separately posted Privacy Policy."
+    },
+    "article12": {
+      "title": "Article 12 (Disclaimers)",
+      "items": [
+        "The Company shall not be liable in connection with services provided free of charge, unless otherwise specifically provided by applicable laws.",
+        "The Company has no obligation to intervene in disputes arising between a Member and a third party through the Service, and shall not be liable for any damages resulting therefrom.",
+        "The Company does not warrant the accuracy, completeness, timeliness, or fitness for a particular purpose of the information displayed on the Service.",
+        "Notwithstanding Paragraphs 1 through 3, the Company shall be liable in accordance with applicable laws if damages are incurred by a Member due to the Company's willful misconduct or gross negligence."
+      ]
+    },
+    "article13": {
+      "title": "Article 13 (Governing Law and Jurisdiction)",
+      "items": [
+        "These Terms and Conditions shall be interpreted and applied in accordance with the laws of the Republic of Korea.",
+        "In the event that a lawsuit is filed regarding a dispute between the Company and a Member, the Seoul Central District Court shall have exclusive agreed jurisdiction as the court of first instance."
+      ]
+    },
+    "addendum": "These Terms and Conditions shall take effect from April 10, 2026."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "effectiveDate": "Effective Date: April 10, 2026",
+    "article1": {
+      "title": "Article 1 (Purpose and Items of Personal Information Processing)",
+      "intro": "Baerae Co., Ltd. (hereinafter \"Company\") collects and processes users' personal information for the following purposes. Personal information being processed shall not be used for purposes other than those set forth below, and if the purpose of use changes, the Company will take necessary measures such as obtaining separate consent in accordance with Article 18 of the Personal Information Protection Act.",
+      "categories": [
+        {
+          "name": "1. Member Registration and Management",
+          "purpose": "Identity verification, conclusion and performance of service agreements, prevention of fraudulent use",
+          "items": "Email address, social login identifier (Kakao, Google, Apple, etc.), phone number"
+        },
+        {
+          "name": "2. Information Automatically Generated and Collected During Service Provision",
+          "purpose": "Maintaining and improving service quality, error analysis, security management",
+          "items": "Access date and time, access logs, service usage records, visit records, device information (OS, device model, app version, advertising identifier, IP address, cookies or similar identifiers), error logs, performance logs, push notification settings"
+        },
+        {
+          "name": "3. Items Collected When Using the Digital Asset Inquiry Service",
+          "purpose": "Integration with digital asset exchanges and provision of asset status inquiry services",
+          "items": "Name of digital asset exchange"
+        },
+        {
+          "name": "4. Marketing Purposes (Optional Collection)",
+          "purpose": "Providing information on events and promotions and offering benefits",
+          "items": "Marketing consent status, additional information collected upon event participation (subject to separate notice and consent)"
+        }
+      ]
+    },
+    "article2": {
+      "title": "Article 2 (Retention and Processing Period of Personal Information)",
+      "intro": "The Company processes and retains personal information within the retention and processing period stipulated by applicable law, or within the period consented to by the user at the time of collection.",
+      "periods": [
+        "Information related to member registration and management: until membership withdrawal",
+        "Automatically collected information from service provision: until membership withdrawal",
+        "Information related to the digital asset inquiry service: until membership withdrawal",
+        "Information related to marketing purposes: until the relevant event ends or membership withdrawal"
+      ],
+      "notice": "In accordance with the Company's internal policies, the minimum amount of information necessary for the prevention of fraudulent use, security response, and dispute prevention may be stored separately for a certain period."
+    },
+    "article3": {
+      "title": "Article 3 (Provision of Personal Information to Third Parties)",
+      "intro": "As a principle, the Company does not provide users' personal information to external parties. However, the following cases are exceptions.",
+      "items": [
+        "Where the user has given separate prior consent",
+        "Where there is a special provision in applicable law, or where there is a lawful request from an investigative authority, supervisory authority, or other relevant authority",
+        "Where necessary for statistical compilation, academic research, or market research, and where the information is provided in a form that cannot identify a specific individual"
+      ]
+    },
+    "article4": {
+      "title": "Article 4 (Entrustment of Personal Information Processing)",
+      "items": [
+        "The Company may entrust part of its personal information processing operations to external specialized firms for the smooth provision of services. In such cases, the Company takes necessary measures in accordance with applicable law.",
+        "The scope of entrusted operations and the entrusted parties may change, and any such changes will be communicated through this Policy or a separate notice."
+      ]
+    },
+    "article5": {
+      "title": "Article 5 (Procedure and Method for Destruction of Personal Information)",
+      "items": [
+        "When personal information becomes unnecessary due to the expiration of the retention period, achievement of the processing purpose, or similar reasons, the Company destroys the relevant personal information without delay.",
+        "Personal information in electronic file format is deleted using methods that prevent recovery or restoration, and personal information recorded or stored in paper documents is destroyed by shredding or incineration."
+      ]
+    },
+    "article6": {
+      "title": "Article 6 (User Rights and How to Exercise Them)",
+      "items": [
+        "Users may at any time request access to, correction of, deletion of, or suspension of processing of their personal information, and may withdraw consent previously given.",
+        "Users may request account unlinking, membership withdrawal, or withdrawal of marketing consent through the in-app settings, customer support center, or other methods guided by the Company.",
+        "However, immediate deletion or suspension of processing of certain information may be restricted in accordance with applicable law."
+      ]
+    },
+    "article7": {
+      "title": "Article 7 (Measures to Ensure Security of Personal Information)",
+      "items": [
+        "The Company takes administrative, technical, and physical measures to ensure the security of personal information.",
+        "The Company implements measures including access rights management, establishment of internal management plans, retention of access records, encryption, operation of security programs, and minimum access control for authorized personnel."
+      ]
+    },
+    "article8": {
+      "title": "Article 8 (Installation and Operation of Automatic Data Collection Devices Such as Cookies)",
+      "content": "The Company may use cookies or similar technologies to provide users with more convenient services. Users may refuse the storage of cookies through browser or device settings; however, in such cases, certain services may be restricted."
+    },
+    "article9": {
+      "title": "Article 9 (Data Protection Officer and Contact Information)",
+      "intro": "The Company has designated a Data Protection Officer to take overall responsibility for the handling of personal information processing matters, and to address user inquiries, complaints, and requests for remedies related to personal information.",
+      "officer": {
+        "name": "Junghyun Kim",
+        "title": "Data Protection Officer",
+        "contact": "010-4306-0030, privacy@baerae.com"
+      },
+      "notice": "Inquiries, complaints, and requests for remedies related to personal information may be submitted to the officer above."
+    },
+    "article10": {
+      "title": "Article 10 (Remedies for Infringement of Rights)",
+      "intro": "If you require relief or consultation regarding personal information infringement, you may contact the following organizations.",
+      "agencies": [
+        { "name": "Personal Information Infringement Report Center (operated by Korea Internet & Security Agency)", "website": "privacy.kisa.or.kr", "phone": "118 (no area code)" },
+        { "name": "Personal Information Dispute Mediation Committee", "website": "www.kopico.go.kr", "phone": "1833-6972 (no area code)" },
+        { "name": "Supreme Prosecutors' Office", "website": "www.spo.go.kr", "phone": "1301 (no area code)" },
+        { "name": "National Police Agency Cyber Investigation Bureau", "website": "ecrm.cyber.go.kr", "phone": "182 (no area code)" }
+      ]
+    },
+    "article11": {
+      "title": "Article 11 (Changes to the Privacy Policy)",
+      "content": "When the Company amends this Privacy Policy, it will continuously disclose the timing of the changes and their effective date, as well as the amended content, and will publish a comparison of the before and after versions so that users can easily review the changes."
+    },
+    "addendum": "This Privacy Policy is effective from April 10, 2026."
+  },
+  "consent": {
+    "title": "Consent to Collection and Use of Personal Information (Required)",
+    "effectiveDate": "Effective Date: April 10, 2026",
+    "intro": "Baerae Co., Ltd. collects and uses personal information for membership registration and service provision as described below.",
+    "table": {
+      "purpose": {
+        "label": "Purpose of Collection and Use",
+        "items": [
+          "Identity verification, execution and performance of service agreements, and prevention of fraudulent use",
+          "Maintenance and improvement of service quality, error analysis, and security management",
+          "Integration with digital asset exchanges and provision of asset status inquiry services"
+        ]
+      },
+      "collected": {
+        "label": "Items Collected",
+        "items": [
+          "Email address, social login identifier (Kakao, Google, Apple, etc.), phone number",
+          "Access date and time, access logs, service usage records, visit history, device information (OS, device model, app version, advertising identifier, IP address, cookies or similar identifiers), error logs, performance logs, push notification settings",
+          "Name of digital asset exchange"
+        ]
+      },
+      "retention": {
+        "label": "Retention and Use Period",
+        "content": "Until account termination (provided that, where retention is required under applicable laws and regulations, the information will be retained for the period prescribed therein)"
+      },
+      "refusal": {
+        "label": "Right to Refuse and Consequences",
+        "content": "You may refuse this consent; however, doing so may restrict your ability to register as a member and use basic services."
+      }
+    }
+  },
+  "marketingConsent": {
+    "title": "Consent to Collection and Use of Personal Information for Marketing Purposes (Optional)",
+    "effectiveDate": "Effective Date: April 10, 2026",
+    "intro": "Baerae Co., Ltd. may additionally collect and use your personal information for the following purposes.",
+    "table": {
+      "purpose": {
+        "label": "Purpose of Collection and Use",
+        "content": "Providing event and promotional information and offering benefits"
+      },
+      "collected": {
+        "label": "Items Collected",
+        "content": "Email address, social login identifier (Kakao, Google, Apple, etc.), phone number"
+      },
+      "retention": {
+        "label": "Retention and Use Period",
+        "content": "Until withdrawal of consent or account termination (provided that, where retention is required under applicable laws and regulations, the information will be retained for the period prescribed therein)"
+      },
+      "refusal": {
+        "label": "Right to Refuse and Consequences",
+        "content": "You may refuse this consent. Refusal will not restrict your use of the service; however, certain personalized services such as event and benefit notifications may not be available."
+      }
     }
   }
 }

@@ -1,141 +1,136 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState } from "react";
-import Link from "next/link";
-import { ChevronLeft, ChevronDown } from "lucide-react";
-
-const VERSIONS = [
-  { key: "v1_0", label: "v1.0 (2026.03.16)" },
-] as const;
-
-type VersionKey = (typeof VERSIONS)[number]["key"];
+import LegalPageLayout from "@/components/LegalPageLayout";
+import { LEGAL_DOCS } from "@/config/legal-versions";
 
 export default function TermsPage() {
   const t = useTranslations("terms");
-  const [version, setVersion] = useState<VersionKey>("v1_0");
-  const [open, setOpen] = useState(false);
-
-  const current = VERSIONS.find((v) => v.key === version)!;
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="sticky top-0 z-10 bg-white border-b border-slate-200">
-        <div className="max-w-3xl mx-auto px-6 h-14 flex items-center gap-3">
-          <Link href="/" className="text-slate-500 hover:text-slate-800 transition-colors">
-            <ChevronLeft className="w-5 h-5" />
-          </Link>
-          <h1 className="text-lg font-semibold text-slate-900">{t("title")}</h1>
-        </div>
-      </header>
+    <LegalPageLayout
+      title={t("title")}
+      config={LEGAL_DOCS.terms}
+      currentVersionKey="v2_0"
+    >
+      <p className="text-slate-500 text-sm mb-8">{t("effectiveDate")}</p>
 
-      <main className="max-w-3xl mx-auto px-6 py-8">
-        {/* Version dropdown */}
-        <div className="relative mb-8">
-          <button
-            onClick={() => setOpen(!open)}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
-          >
-            {current.label}
-            <ChevronDown className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`} />
-          </button>
-          {open && (
-            <div className="absolute top-full mt-1 bg-white border border-slate-200 rounded-lg shadow-lg z-10 min-w-[200px]">
-              {VERSIONS.map((v) => (
-                <button
-                  key={v.key}
-                  onClick={() => { setVersion(v.key); setOpen(false); }}
-                  className={`w-full text-left px-4 py-2.5 text-sm hover:bg-slate-50 transition-colors ${
-                    v.key === version ? "text-blue-600 font-medium" : "text-slate-700"
-                  }`}
-                >
-                  {v.label}
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
+      {/* 제1조 목적 */}
+      <h2>{t("article1.title")}</h2>
+      <p>{t("article1.content")}</p>
 
-        {/* Content */}
-        {version === "v1_0" && (
-          <article className="prose prose-slate max-w-none prose-headings:text-slate-900 prose-h2:text-xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-base prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600">
-            <p className="text-slate-500 text-sm mb-8">{t("effectiveDate")}</p>
+      {/* 제2조 정의 */}
+      <h2>{t("article2.title")}</h2>
+      <p>{t("article2.intro")}</p>
+      <ol>
+        {[0, 1, 2, 3, 4].map((i) => (
+          <li key={i}>{t(`article2.items.${i}`)}</li>
+        ))}
+      </ol>
 
-            <p>{t("intro")}</p>
-            <p>{t("agreement")}</p>
+      {/* 제3조 약관의 게시와 개정 */}
+      <h2>{t("article3.title")}</h2>
+      {[0, 1, 2, 3, 4].map((i) => (
+        <p key={i}>
+          {"①②③④⑤"[i]} {t(`article3.items.${i}`)}
+        </p>
+      ))}
 
-            <h2>{t("article1.title")}</h2>
-            <p>{t("article1.content")}</p>
+      {/* 제4조 약관의 해석 */}
+      <h2>{t("article4.title")}</h2>
+      {[0, 1].map((i) => (
+        <p key={i}>
+          {"①②"[i]} {t(`article4.items.${i}`)}
+        </p>
+      ))}
 
-            <h2>{t("article2.title")}</h2>
-            <p>{t("article2.intro")}</p>
-            <ul>
-              <li>{t("article2.items.0")}</li>
-              <li>{t("article2.items.1")}</li>
-              <li>{t("article2.items.2")}</li>
-              <li>{t("article2.items.3")}</li>
-              <li>{t("article2.items.4")}</li>
-            </ul>
-            <p>{t("article2.disclaimer1")}</p>
-            <p>{t("article2.disclaimer2")}</p>
-            <p>{t("article2.disclaimer3")}</p>
+      {/* 제5조 이용계약 체결 */}
+      <h2>{t("article5.title")}</h2>
+      {[0, 1].map((i) => (
+        <p key={i}>
+          {"①②"[i]} {t(`article5.items.${i}`)}
+        </p>
+      ))}
+      <ol>
+        {[0, 1, 2, 3, 4, 5, 6].map((i) => (
+          <li key={i}>{t(`article5.rejectionReasons.${i}`)}</li>
+        ))}
+      </ol>
+      <p>③ {t("article5.conclusion")}</p>
 
-            <h2>{t("article3.title")}</h2>
-            <p>{t("article3.intro")}</p>
-            <ul>
-              <li>{t("article3.methods.0")}</li>
-              <li>{t("article3.methods.1")}</li>
-              <li>{t("article3.methods.2")}</li>
-            </ul>
-            <p>{t("article3.notice")}</p>
+      {/* 제6조 회원의 의무 */}
+      <h2>{t("article6.title")}</h2>
+      <p>① {t("article6.intro")}</p>
+      <p>② {t("article6.subIntro")}</p>
+      <ol>
+        {[0, 1, 2, 3, 4].map((i) => (
+          <li key={i}>{t(`article6.items.${i}`)}</li>
+        ))}
+      </ol>
 
-            <h2>{t("article4.title")}</h2>
-            <p>{t("article4.intro")}</p>
-            <p>{t("article4.consent")}</p>
-            <ul>
-              <li>{t("article4.items.0")}</li>
-              <li>{t("article4.items.1")}</li>
-              <li>{t("article4.items.2")}</li>
-            </ul>
-            <p>{t("article4.purpose")}</p>
+      {/* 제7조 회원에 대한 통지 */}
+      <h2>{t("article7.title")}</h2>
+      {[0, 1, 2].map((i) => (
+        <p key={i}>
+          {"①②③"[i]} {t(`article7.items.${i}`)}
+        </p>
+      ))}
 
-            <h2>{t("article5.title")}</h2>
-            <p>{t("article5.content1")}</p>
-            <p>{t("article5.content2")}</p>
-            <p>{t("article5.content3")}</p>
-            <ul>
-              <li>{t("article5.items.0")}</li>
-              <li>{t("article5.items.1")}</li>
-              <li>{t("article5.items.2")}</li>
-              <li>{t("article5.items.3")}</li>
-            </ul>
+      {/* 제8조 이용 제한 등 */}
+      <h2>{t("article8.title")}</h2>
+      <p>① {t("article8.items.0")}</p>
+      <ol>
+        {[0, 1, 2].map((i) => (
+          <li key={i}>{t(`article8.reasons.${i}`)}</li>
+        ))}
+      </ol>
+      {[0, 1, 2].map((i) => (
+        <p key={i}>
+          {"②③④"[i]} {t(`article8.procedures.${i}`)}
+        </p>
+      ))}
 
-            <h2>{t("article6.title")}</h2>
-            <p>{t("article6.intro")}</p>
-            <ul>
-              <li>{t("article6.items.0")}</li>
-              <li>{t("article6.items.1")}</li>
-              <li>{t("article6.items.2")}</li>
-            </ul>
+      {/* 제9조 서비스 변경 및 중단 */}
+      <h2>{t("article9.title")}</h2>
+      <p>① {t("article9.intro")}</p>
+      <ol>
+        {[0, 1, 2, 3].map((i) => (
+          <li key={i}>{t(`article9.reasons.${i}`)}</li>
+        ))}
+      </ol>
+      <p>② {t("article9.notice")}</p>
 
-            <h2>{t("article7.title")}</h2>
-            <p>{t("article7.content")}</p>
+      {/* 제10조 지식재산권 */}
+      <h2>{t("article10.title")}</h2>
+      {[0, 1].map((i) => (
+        <p key={i}>
+          {"①②"[i]} {t(`article10.items.${i}`)}
+        </p>
+      ))}
 
-            <h2>{t("article8.title")}</h2>
-            <p>{t("article8.intro")}</p>
-            <ul>
-              <li>{t("article8.items.0")}</li>
-              <li>{t("article8.items.1")}</li>
-              <li>{t("article8.items.2")}</li>
-              <li>{t("article8.items.3")}</li>
-            </ul>
+      {/* 제11조 개인정보 보호 */}
+      <h2>{t("article11.title")}</h2>
+      <p>{t("article11.content")}</p>
 
-            <h2>{t("article9.title")}</h2>
-            <p>{t("article9.content")}</p>
-          </article>
-        )}
-      </main>
-    </div>
+      {/* 제12조 면책 */}
+      <h2>{t("article12.title")}</h2>
+      {[0, 1, 2, 3].map((i) => (
+        <p key={i}>
+          {"①②③④"[i]} {t(`article12.items.${i}`)}
+        </p>
+      ))}
+
+      {/* 제13조 준거법 및 재판관할 */}
+      <h2>{t("article13.title")}</h2>
+      {[0, 1].map((i) => (
+        <p key={i}>
+          {"①②"[i]} {t(`article13.items.${i}`)}
+        </p>
+      ))}
+
+      {/* 부칙 */}
+      <h2>부칙</h2>
+      <p>{t("addendum")}</p>
+    </LegalPageLayout>
   );
 }
