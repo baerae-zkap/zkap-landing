@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002F[locale]","\u002F[locale]\u002Fconsent","\u002F[locale]\u002Fmarketing-consent","\u002F[locale]\u002Fprivacy","\u002F[locale]\u002Fprivacy\u002Fv1_0","\u002F[locale]\u002Fterms","\u002F[locale]\u002Fterms\u002Fv1_0"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
