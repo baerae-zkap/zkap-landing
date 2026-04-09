@@ -1,0 +1,13 @@
+{
+  "/[locale]/consent/page": "app/[locale]/consent/page.js",
+  "/[locale]/marketing-consent/page": "app/[locale]/marketing-consent/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/privacy/page": "app/[locale]/privacy/page.js",
+  "/[locale]/privacy/v1_0/page": "app/[locale]/privacy/v1_0/page.js",
+  "/[locale]/terms/page": "app/[locale]/terms/page.js",
+  "/[locale]/terms/v1_0/page": "app/[locale]/terms/v1_0/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js"
+}

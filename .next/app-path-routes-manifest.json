@@ -1,0 +1,13 @@
+{
+  "/[locale]/consent/page": "/[locale]/consent",
+  "/[locale]/marketing-consent/page": "/[locale]/marketing-consent",
+  "/[locale]/page": "/[locale]",
+  "/[locale]/privacy/page": "/[locale]/privacy",
+  "/[locale]/privacy/v1_0/page": "/[locale]/privacy/v1_0",
+  "/[locale]/terms/page": "/[locale]/terms",
+  "/[locale]/terms/v1_0/page": "/[locale]/terms/v1_0",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/sitemap.xml/route": "/sitemap.xml"
+}
