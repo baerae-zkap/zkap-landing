@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/og-image.png",
-        width: 1200,
-        height: 630,
+        width: 1024,
+        height: 500,
         alt: "ZKAP - 해외 가상자산 세금 신고",
       },
     ],
