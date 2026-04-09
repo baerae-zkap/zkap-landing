@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import { setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -9,7 +10,13 @@ const ExchangeAssetSection = dynamic(() => import("@/components/sections/Exchang
 const FAQSection = dynamic(() => import("@/components/sections/FAQSection"));
 const FinalCTASection = dynamic(() => import("@/components/sections/FinalCTASection"));
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <Header />
