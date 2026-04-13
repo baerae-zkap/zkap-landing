@@ -134,6 +134,52 @@
       }
     ]
   },
+  "taxAgent": {
+    "eyebrow": "Partner accountants",
+    "title": "Your filing, handled by real experts",
+    "subtitle": "Not AI. Certified Korean tax accountants with real names and track records. Reach them now by KakaoTalk, SMS, or phone.",
+    "agentSuffix": "CPA",
+    "kakao": "Kakao",
+    "sms": "SMS",
+    "call": "Call",
+    "trust": [
+      "KACPTA registered",
+      "Liability insurance",
+      "Crypto filing specialists"
+    ],
+    "agents": [
+      {
+        "id": "agent-1",
+        "name": "Minsoo Kim",
+        "firm": "J-One Tax Firm",
+        "badge": "Crypto specialist",
+        "bio": "15 years of experience, 500+ overseas exchange filings. Specializes in Binance, Bybit, and OKX — even complex cases handled cleanly.",
+        "phone": "+82 10-1234-5678",
+        "sms": "+821012345678",
+        "kakao": "https://pf.kakao.com/_mockAgent1"
+      },
+      {
+        "id": "agent-2",
+        "name": "Seohyun Lee",
+        "firm": "Seohyun Tax & Accounting",
+        "badge": "High-net-worth",
+        "bio": "10 years in Daechi-dong, dedicated to 5B~100B KRW asset holders. Covers foreign financial account reporting together.",
+        "phone": "+82 10-2345-6789",
+        "sms": "+821023456789",
+        "kakao": "https://pf.kakao.com/_mockAgent2"
+      },
+      {
+        "id": "agent-3",
+        "name": "Junho Park",
+        "firm": "Junho Tax",
+        "badge": "First-time filer",
+        "bio": "Guides first-time filers kindly. Mobile-only communication, guaranteed response within 3 hours any day of the week.",
+        "phone": "+82 10-3456-7890",
+        "sms": "+821034567890",
+        "kakao": "https://pf.kakao.com/_mockAgent3"
+      }
+    ]
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "items": [
