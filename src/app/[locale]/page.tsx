@@ -7,8 +7,10 @@ const HeroSection = dynamic(() => import("@/components/sections/HeroSection"));
 const RiskWarningSection = dynamic(() => import("@/components/sections/RiskWarningSection"));
 const ReliefFolderSection = dynamic(() => import("@/components/sections/ReliefFolderSection"));
 const ExchangeAssetSection = dynamic(() => import("@/components/sections/ExchangeAssetSection"));
+const TaxAgentSection = dynamic(() => import("@/components/sections/TaxAgentSection"));
 const FAQSection = dynamic(() => import("@/components/sections/FAQSection"));
 const FinalCTASection = dynamic(() => import("@/components/sections/FinalCTASection"));
+const NewsletterSection = dynamic(() => import("@/components/sections/NewsletterSection"));
 
 export default async function Home({
   params,
@@ -25,8 +27,10 @@ export default async function Home({
         <RiskWarningSection />
         <ReliefFolderSection />
         <ExchangeAssetSection />
+        <TaxAgentSection />
         <FAQSection />
         <FinalCTASection />
+        <NewsletterSection />
       </main>
       <Footer />
     </>

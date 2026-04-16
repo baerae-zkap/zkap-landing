@@ -38,39 +38,41 @@ export default function LegalPageLayout({
       </header>
 
       <main className="max-w-3xl mx-auto px-6 py-8">
-        {config.versions.length > 1 && (
-          <div className="relative mb-8">
-            <button
-              onClick={() => setOpen(!open)}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
-            >
-              {current.label}
+        <div className="relative mb-8">
+          <button
+            onClick={() => config.versions.length > 1 && setOpen(!open)}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 text-sm text-slate-700 transition-colors ${
+              config.versions.length > 1 ? "hover:bg-slate-50 cursor-pointer" : "cursor-default"
+            }`}
+          >
+            {current.label}
+            {config.versions.length > 1 && (
               <ChevronDown
                 className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`}
               />
-            </button>
-            {open && (
-              <div className="absolute top-full mt-1 bg-white border border-slate-200 rounded-lg shadow-lg z-10 min-w-[200px]">
-                {config.versions.map((v) => (
-                  <Link
-                    key={v.key}
-                    href={`/${locale}${v.path}`}
-                    onClick={() => setOpen(false)}
-                    className={`block w-full text-left px-4 py-2.5 text-sm hover:bg-slate-50 transition-colors ${
-                      v.key === currentVersionKey
-                        ? "text-blue-600 font-medium"
-                        : "text-slate-700"
-                    }`}
-                  >
-                    {v.label}
-                  </Link>
-                ))}
-              </div>
             )}
-          </div>
-        )}
+          </button>
+          {open && config.versions.length > 1 && (
+            <div className="absolute top-full mt-1 bg-white border border-slate-200 rounded-lg shadow-lg z-10 min-w-[200px]">
+              {config.versions.map((v) => (
+                <Link
+                  key={v.key}
+                  href={`/${locale}${v.path}`}
+                  onClick={() => setOpen(false)}
+                  className={`block w-full text-left px-4 py-2.5 text-sm hover:bg-slate-50 transition-colors ${
+                    v.key === currentVersionKey
+                      ? "text-blue-600 font-medium"
+                      : "text-slate-700"
+                  }`}
+                >
+                  {v.label}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
 
-        <article className="prose prose-slate max-w-none prose-headings:text-slate-900 prose-h2:text-xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-base prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600">
+        <article className="legal-prose prose prose-slate max-w-none prose-headings:text-slate-900 prose-h2:text-lg prose-h2:font-bold prose-h3:text-base prose-h3:mt-6 prose-h3:mb-2 prose-p:text-slate-600 prose-p:leading-[1.8] prose-li:text-slate-600 prose-li:leading-[1.8] prose-ol:my-3 prose-ul:my-3">
           {children}
         </article>
       </main>

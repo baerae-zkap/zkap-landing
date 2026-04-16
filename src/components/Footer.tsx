@@ -28,10 +28,10 @@ export default function Footer() {
               <Link href="/terms" className="text-slate-600 font-medium hover:text-slate-800 transition-colors">
                 {t("terms")}
               </Link>
-              <Link href="/consent" className="text-slate-600 hover:text-slate-800 transition-colors">
+              <Link href="/consent" className="text-slate-600 font-medium hover:text-slate-800 transition-colors">
                 {t("consent")}
               </Link>
-              <Link href="/marketing-consent" className="text-slate-600 hover:text-slate-800 transition-colors">
+              <Link href="/marketing-consent" className="text-slate-600 font-medium hover:text-slate-800 transition-colors">
                 {t("marketingConsent")}
               </Link>
             </div>

@@ -4,7 +4,7 @@ export interface LegalVersion {
   key: string;
   label: string;
   translationNamespace: string;
-  path: string; // relative path from locale root, e.g. "/terms" or "/terms/v1_0"
+  path: string;
 }
 
 export interface LegalDocConfig {
@@ -17,16 +17,10 @@ export const LEGAL_DOCS: Record<LegalDocType, LegalDocConfig> = {
     type: "terms",
     versions: [
       {
-        key: "v2_0",
-        label: "v2.0 (2026.04.10)",
+        key: "v1_0",
+        label: "v1.0 (2026.04.10)",
         translationNamespace: "terms",
         path: "/terms",
-      },
-      {
-        key: "v1_0",
-        label: "v1.0 (2026.03.16)",
-        translationNamespace: "terms_v1_0",
-        path: "/terms/v1_0",
       },
     ],
   },
@@ -34,16 +28,10 @@ export const LEGAL_DOCS: Record<LegalDocType, LegalDocConfig> = {
     type: "privacy",
     versions: [
       {
-        key: "v2_0",
-        label: "v2.0 (2026.04.10)",
+        key: "v1_0",
+        label: "v1.0 (2026.04.10)",
         translationNamespace: "privacy",
         path: "/privacy",
-      },
-      {
-        key: "v1_0",
-        label: "v1.0 (2026.03.16)",
-        translationNamespace: "privacy_v1_0",
-        path: "/privacy/v1_0",
       },
     ],
   },

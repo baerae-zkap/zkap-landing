@@ -5,6 +5,8 @@ import { routing } from "@/i18n/routing";
 import GAProvider from "@/components/GAProvider";
 import "../globals.css";
 
+export const dynamic = "force-static";
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }

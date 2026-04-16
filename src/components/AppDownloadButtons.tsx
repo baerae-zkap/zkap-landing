@@ -39,10 +39,10 @@ function GooglePlayIcon({ size }: { size: number }) {
 }
 
 function getStoreUrl() {
-  if (typeof navigator === "undefined") return "https://apps.apple.com";
+  if (typeof navigator === "undefined") return "https://apps.apple.com/kr/app/zkap-overseas-crypto-tax/id6761711444";
   const ua = navigator.userAgent.toLowerCase();
   if (/android/i.test(ua)) return "https://play.google.com";
-  return "https://apps.apple.com";
+  return "https://apps.apple.com/kr/app/zkap-overseas-crypto-tax/id6761711444";
 }
 
 export default function AppDownloadButtons({
@@ -71,7 +71,7 @@ export default function AppDownloadButtons({
   return (
     <div className={`flex flex-row items-center gap-3 ${className}`}>
       <a
-        href="https://apps.apple.com"
+        href="https://apps.apple.com/kr/app/zkap-overseas-crypto-tax/id6761711444"
         target="_blank"
         rel="noopener noreferrer"
         className={`inline-flex items-center justify-center ${btnClass} bg-white border-2 border-primary-600 text-primary-700 font-semibold rounded-xl hover:bg-primary-50 transition-colors min-w-[160px]`}

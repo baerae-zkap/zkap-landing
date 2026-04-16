@@ -7,13 +7,13 @@ export default function Header() {
   const t = useTranslations("header");
   const locale = useLocale();
   const [dark, setDark] = useState(false);
-  const [storeUrl, setStoreUrl] = useState("https://apps.apple.com");
+  const [storeUrl, setStoreUrl] = useState("https://apps.apple.com/kr/app/zkap-overseas-crypto-tax/id6761711444");
 
   const switchHref = locale === "ko" ? "/en" : "/ko";
 
   useEffect(() => {
     const ua = navigator.userAgent.toLowerCase();
-    setStoreUrl(/android/i.test(ua) ? "https://play.google.com" : "https://apps.apple.com");
+    setStoreUrl(/android/i.test(ua) ? "https://play.google.com" : "https://apps.apple.com/kr/app/zkap-overseas-crypto-tax/id6761711444");
   }, []);
 
   useEffect(() => {
