@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Phone, MessageSquare, BadgeCheck } from "lucide-react";
+import { Phone, MessageSquare, BadgeCheck, Globe } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 type TaxAgent = {
@@ -10,9 +10,13 @@ type TaxAgent = {
   firm: string;
   badge: string;
   bio: string;
+  image: string;
   phone: string;
   sms: string;
-  kakao: string;
+  kakao?: string;
+  blog?: string;
+  website?: string;
+  contact?: string;
 };
 
 type TaxAgentCopy = {
@@ -22,30 +26,29 @@ type TaxAgentCopy = {
   agentSuffix: string;
   agents: TaxAgent[];
   kakao: string;
+  blog: string;
+  website: string;
   sms: string;
   call: string;
   trust: string[];
 };
 
 function AgentCard({ agent, copy }: { agent: TaxAgent; copy: TaxAgentCopy }) {
-  // Generate initials fallback from agent name (first char only)
-  const initial = agent.name.trim().charAt(0);
-
   return (
-    <div className="group relative flex flex-col rounded-3xl bg-white border border-primary-100 p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_48px_-16px_rgba(51,61,75,0.15)] hover:border-primary-200">
+    <div className="group relative flex flex-col h-full rounded-3xl bg-white border border-primary-100 p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_48px_-16px_rgba(51,61,75,0.15)] hover:border-primary-200">
       {/* Badge */}
       <div className="inline-flex items-center self-start gap-1 px-3 py-1 text-[11px] font-bold text-primary-600 bg-primary-50 border border-primary-100 rounded-full mb-5">
         <BadgeCheck className="w-3 h-3" />
         <span>{agent.badge}</span>
       </div>
 
-      {/* Profile image placeholder */}
-      <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden bg-gradient-to-br from-primary-100 to-primary-50 border border-primary-100 mb-5 flex items-center justify-center">
-        <span className="text-3xl sm:text-4xl font-bold text-primary-400 select-none">
-          {initial}
-        </span>
-        {/* Subtle "사진 영역" hint marker (dev mockup) */}
-        <div className="absolute bottom-1 right-1 w-2 h-2 rounded-full bg-primary-200" aria-hidden />
+      {/* Profile image */}
+      <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden bg-gradient-to-br from-primary-100 to-primary-50 border border-primary-100 mb-5">
+        <img
+          src={agent.image}
+          alt={`${agent.name} ${copy.agentSuffix}`}
+          className="absolute inset-0 w-full h-full object-cover object-top"
+        />
       </div>
 
       {/* Name + firm */}
@@ -64,19 +67,14 @@ function AgentCard({ agent, copy }: { agent: TaxAgent; copy: TaxAgentCopy }) {
       {/* Divider */}
       <div className="border-t border-primary-100 -mx-6 sm:-mx-7 mb-4" />
 
-      {/* Phone number line */}
-      <p className="text-xs text-primary-400 mb-3 font-mono tracking-tight">{agent.phone}</p>
-
       {/* CTA buttons */}
-      <div className="grid grid-cols-3 gap-2">
+      <div className={`grid gap-2 ${agent.kakao || agent.blog || agent.website ? "grid-cols-3" : "grid-cols-2"}`}>
         <a
-          href={agent.kakao}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center gap-1 py-3 rounded-xl bg-[#FEE500] text-[#3C1E1E] text-[12px] font-bold transition-transform active:scale-95 hover:brightness-95"
+          href={`tel:${agent.phone.replace(/[^\d+]/g, "")}`}
+          className="flex flex-col items-center justify-center gap-1 py-3 rounded-xl bg-primary-600 text-white text-[12px] font-bold transition-transform active:scale-95 hover:bg-primary-700"
         >
-          <KakaoIcon className="w-4 h-4" />
-          <span>{copy.kakao}</span>
+          <Phone className="w-4 h-4" />
+          <span>{copy.call}</span>
         </a>
         <a
           href={`sms:${agent.sms}`}
@@ -85,15 +83,47 @@ function AgentCard({ agent, copy }: { agent: TaxAgent; copy: TaxAgentCopy }) {
           <MessageSquare className="w-4 h-4" />
           <span>{copy.sms}</span>
         </a>
-        <a
-          href={`tel:${agent.phone.replace(/[^\d+]/g, "")}`}
-          className="flex flex-col items-center justify-center gap-1 py-3 rounded-xl bg-primary-600 text-white text-[12px] font-bold transition-transform active:scale-95 hover:bg-primary-700"
-        >
-          <Phone className="w-4 h-4" />
-          <span>{copy.call}</span>
-        </a>
+        {agent.kakao ? (
+          <a
+            href={agent.kakao}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center justify-center gap-1 py-3 rounded-xl bg-[#FEE500] text-[#3C1E1E] text-[12px] font-bold transition-transform active:scale-95 hover:brightness-95"
+          >
+            <KakaoIcon className="w-4 h-4" />
+            <span>{copy.kakao}</span>
+          </a>
+        ) : agent.blog ? (
+          <a
+            href={agent.blog}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center justify-center gap-1 py-3 rounded-xl bg-[#E9F6EE] text-[#03C75A] text-[12px] font-bold border border-[#C8E6D0] transition-transform active:scale-95 hover:bg-[#D9F0E1]"
+          >
+            <NaverBlogIcon className="w-4 h-4" />
+            <span>{copy.blog}</span>
+          </a>
+        ) : agent.website ? (
+          <a
+            href={agent.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center justify-center gap-1 py-3 rounded-xl bg-[#EEF2F7] text-[#4A6FA5] text-[12px] font-bold border border-[#D4DDE9] transition-transform active:scale-95 hover:bg-[#E2E9F1]"
+          >
+            <Globe className="w-4 h-4" />
+            <span>{copy.website}</span>
+          </a>
+        ) : null}
       </div>
     </div>
+  );
+}
+
+function NaverBlogIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="-3 -3 30 30" fill="currentColor" aria-hidden>
+      <path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845Z" />
+    </svg>
   );
 }
 
@@ -114,6 +144,8 @@ export default function TaxAgentSection() {
     agentSuffix: t("agentSuffix"),
     agents: t.raw("agents") as TaxAgent[],
     kakao: t("kakao"),
+    blog: t("blog"),
+    website: t("website"),
     sms: t("sms"),
     call: t("call"),
     trust: t.raw("trust") as string[],
@@ -138,7 +170,7 @@ export default function TaxAgentSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-5xl mx-auto">
           {copy.agents.map((agent, i) => (
-            <ScrollReveal key={agent.id} delay={i * 0.12}>
+            <ScrollReveal key={agent.id} delay={i * 0.12} className="h-full">
               <AgentCard agent={agent} copy={copy} />
             </ScrollReveal>
           ))}

@@ -140,6 +140,8 @@
     "subtitle": "Not AI. Certified Korean tax accountants with real names and track records. Reach them now by KakaoTalk, SMS, or phone.",
     "agentSuffix": "CPA",
     "kakao": "Kakao",
+    "blog": "Blog",
+    "website": "Website",
     "sms": "SMS",
     "call": "Call",
     "trust": [
@@ -149,34 +151,39 @@
     ],
     "agents": [
       {
-        "id": "agent-1",
-        "name": "Minsoo Kim",
-        "firm": "J-One Tax Firm",
-        "badge": "Crypto specialist",
-        "bio": "15 years of experience, 500+ overseas exchange filings. Specializes in Binance, Bybit, and OKX — even complex cases handled cleanly.",
-        "phone": "+82 10-1234-5678",
-        "sms": "+821012345678",
-        "kakao": "https://pf.kakao.com/_mockAgent1"
+        "id": "lee-jongmin",
+        "name": "Lee Jong Min",
+        "firm": "Sewung Tax & Accounting",
+        "badge": "Crypto filing specialist",
+        "bio": "Thorough review of crypto tax issues with tailored filing advice. Known for fast communication and meticulous feedback.",
+        "image": "/images/agents/lee-jongmin.jpeg",
+        "phone": "02-6013-6708",
+        "sms": "0260136708",
+        "blog": "https://blog.naver.com/swngtax"
       },
       {
-        "id": "agent-2",
-        "name": "Seohyun Lee",
-        "firm": "Seohyun Tax & Accounting",
-        "badge": "High-net-worth",
-        "bio": "10 years in Daechi-dong, dedicated to 5B~100B KRW asset holders. Covers foreign financial account reporting together.",
-        "phone": "+82 10-2345-6789",
-        "sms": "+821023456789",
-        "kakao": "https://pf.kakao.com/_mockAgent2"
+        "id": "sung-yeolgeon",
+        "name": "Sung Yeol Geon",
+        "firm": "Hangil Tax Corporation",
+        "badge": "Crypto audit experience · NTS retiree network",
+        "bio": "Enhances filing accuracy and reliability through crypto audit experience and collaboration with former NTS officials.",
+        "image": "/images/agents/sung-yeolgeon.jpeg",
+        "phone": "010-2817-4653",
+        "sms": "01028174653",
+        "contact": "Director Jeong Hae-in",
+        "website": "https://hangiltax.com/"
       },
       {
-        "id": "agent-3",
-        "name": "Junho Park",
-        "firm": "Junho Tax",
-        "badge": "First-time filer",
-        "bio": "Guides first-time filers kindly. Mobile-only communication, guaranteed response within 3 hours any day of the week.",
-        "phone": "+82 10-3456-7890",
-        "sms": "+821034567890",
-        "kakao": "https://pf.kakao.com/_mockAgent3"
+        "id": "kim-heeyeon",
+        "name": "Kim Hee Yeon",
+        "firm": "Design Tax & Accounting",
+        "badge": "Foreign account reporting · Crypto filing",
+        "bio": "15 years of experience in overseas financial account and crypto asset reporting — handled with precision.",
+        "image": "/images/agents/kim-heeyeon.jpeg",
+        "phone": "02-785-1249",
+        "sms": "027851249",
+        "contact": "Director Byun Ki-sung",
+        "website": "https://디자인택스.com/"
       }
     ]
   },
@@ -208,6 +215,15 @@
         "answer": "You could face penalties of 10~20% of the unreported amount. If unreported amount exceeds ₩5B, criminal charges (up to 2 years imprisonment or 13~20% fine) may apply."
       }
     ]
+  },
+  "newsletter": {
+    "title": "Stay in the loop with ZKAP",
+    "subtitle": "Get filing season alerts, tax tips, and product updates — straight to your inbox.",
+    "placeholder": "Enter your email",
+    "cta": "Subscribe",
+    "success": "Thanks for subscribing!",
+    "error": "Something went wrong. Please try again.",
+    "consent": "By subscribing, you consent to the collection and use of your email for newsletter delivery."
   },
   "finalCta": {
     "title": "June is coming.\nDon't wait",

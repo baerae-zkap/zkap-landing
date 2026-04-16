@@ -9,6 +9,7 @@ const ExchangeAssetSection = dynamic(() => import("@/components/sections/Exchang
 const TaxAgentSection = dynamic(() => import("@/components/sections/TaxAgentSection"));
 const FAQSection = dynamic(() => import("@/components/sections/FAQSection"));
 const FinalCTASection = dynamic(() => import("@/components/sections/FinalCTASection"));
+const NewsletterSection = dynamic(() => import("@/components/sections/NewsletterSection"));
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <TaxAgentSection />
         <FAQSection />
         <FinalCTASection />
+        <NewsletterSection />
       </main>
       <Footer />
     </>
