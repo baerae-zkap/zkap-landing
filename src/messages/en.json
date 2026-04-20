@@ -138,7 +138,6 @@
     "eyebrow": "Partner accountants",
     "title": "Your filing, handled by real experts",
     "subtitle": "Not AI. Certified Korean tax accountants with real names and track records. Reach them now by KakaoTalk, SMS, or phone.",
-    "agentSuffix": "CPA",
     "kakao": "Kakao",
     "blog": "Blog",
     "website": "Website",
@@ -151,19 +150,9 @@
     ],
     "agents": [
       {
-        "id": "lee-jongmin",
-        "name": "Lee Jong Min",
-        "firm": "Sewung Tax & Accounting",
-        "badge": "Crypto filing specialist",
-        "bio": "Thorough review of crypto tax issues with tailored filing advice. Known for fast communication and meticulous feedback.",
-        "image": "/images/agents/lee-jongmin.jpeg",
-        "phone": "02-6013-6708",
-        "sms": "0260136708",
-        "blog": "https://blog.naver.com/swngtax"
-      },
-      {
         "id": "sung-yeolgeon",
         "name": "Sung Yeol Geon",
+        "title": "Tax Accountant",
         "firm": "Hangil Tax Corporation",
         "badge": "Crypto audit experience · NTS retiree network",
         "bio": "Enhances filing accuracy and reliability through crypto audit experience and collaboration with former NTS officials.",
@@ -176,14 +165,27 @@
       {
         "id": "kim-heeyeon",
         "name": "Kim Hee Yeon",
+        "title": "CPA",
         "firm": "Design Tax & Accounting",
         "badge": "Foreign account reporting · Crypto filing",
-        "bio": "15 years of experience in overseas financial account and crypto asset reporting — handled with precision.",
+        "bio": "15-year veteran CPA and host of the 130K-subscriber tax YouTube channel 'Jeolse Minyeo' — precise filing for foreign financial accounts and crypto assets.",
         "image": "/images/agents/kim-heeyeon.jpeg",
         "phone": "02-785-1249",
         "sms": "027851249",
         "contact": "Director Byun Ki-sung",
         "website": "https://디자인택스.com/"
+      },
+      {
+        "id": "lee-jongmin",
+        "name": "Lee Jong Min",
+        "title": "Tax Accountant",
+        "firm": "Sewung Tax & Accounting",
+        "badge": "Crypto filing specialist",
+        "bio": "Thorough review of crypto tax issues with tailored filing advice. Known for fast communication and meticulous feedback.",
+        "image": "/images/agents/lee-jongmin.jpeg",
+        "phone": "02-6013-6708",
+        "sms": "0260136708",
+        "blog": "https://blog.naver.com/swngtax"
       }
     ]
   },

@@ -7,6 +7,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 type TaxAgent = {
   id: string;
   name: string;
+  title: string;
   firm: string;
   badge: string;
   bio: string;
@@ -23,7 +24,6 @@ type TaxAgentCopy = {
   eyebrow: string;
   title: string;
   subtitle: string;
-  agentSuffix: string;
   agents: TaxAgent[];
   kakao: string;
   blog: string;
@@ -46,7 +46,7 @@ function AgentCard({ agent, copy }: { agent: TaxAgent; copy: TaxAgentCopy }) {
       <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden bg-gradient-to-br from-primary-100 to-primary-50 border border-primary-100 mb-5">
         <img
           src={agent.image}
-          alt={`${agent.name} ${copy.agentSuffix}`}
+          alt={`${agent.name} ${agent.title}`}
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
       </div>
@@ -54,7 +54,7 @@ function AgentCard({ agent, copy }: { agent: TaxAgent; copy: TaxAgentCopy }) {
       {/* Name + firm */}
       <div className="mb-3">
         <h3 className="text-xl sm:text-2xl font-bold text-primary-600 leading-tight">
-          {agent.name} <span className="text-primary-400 font-medium text-base">{copy.agentSuffix}</span>
+          {agent.name} <span className="text-primary-400 font-medium text-base">{agent.title}</span>
         </h3>
         <p className="text-sm text-primary-500 mt-1">{agent.firm}</p>
       </div>
@@ -141,7 +141,6 @@ export default function TaxAgentSection() {
     eyebrow: t("eyebrow"),
     title: t("title"),
     subtitle: t("subtitle"),
-    agentSuffix: t("agentSuffix"),
     agents: t.raw("agents") as TaxAgent[],
     kakao: t("kakao"),
     blog: t("blog"),
