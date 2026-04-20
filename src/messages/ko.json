@@ -138,7 +138,6 @@
     "eyebrow": "제휴 세무사",
     "title": "당신의 신고, 이 사람들이 맡습니다",
     "subtitle": "AI가 아닙니다. 실명·경력 공개된 세무사가 직접 신고를 대행해요. 지금 바로 카톡·문자·전화로 질문하세요.",
-    "agentSuffix": "세무사",
     "kakao": "카톡",
     "blog": "블로그",
     "website": "홈페이지",
@@ -151,19 +150,9 @@
     ],
     "agents": [
       {
-        "id": "lee-jongmin",
-        "name": "이종민",
-        "firm": "세무회계 세웅",
-        "badge": "가상자산 신고 전문",
-        "bio": "가상자산 세무 이슈를 면밀히 검토하고, 맞춤형 신고 자문을 제공합니다. 빠른 소통과 꼼꼼한 피드백이 강점입니다.",
-        "image": "/images/agents/lee-jongmin.jpeg",
-        "phone": "02-6013-6708",
-        "sms": "0260136708",
-        "blog": "https://blog.naver.com/swngtax"
-      },
-      {
         "id": "sung-yeolgeon",
         "name": "성열건",
+        "title": "세무사",
         "firm": "세무법인 한길택스",
         "badge": "가상자산 조사 경험 · 국세청 퇴직자 협업",
         "bio": "가상자산 조사 경험과 국세청 퇴직자 협업을 통해 신고의 정확성과 안정성을 높여드립니다.",
@@ -176,14 +165,27 @@
       {
         "id": "kim-heeyeon",
         "name": "김희연",
+        "title": "회계사",
         "firm": "디자인택스 세무회계",
         "badge": "해외금융계좌신고 · 가상자산신고",
-        "bio": "해외금융계좌, 가상자산 신고, 15년 경력으로 정확하게 처리합니다.",
+        "bio": "15년차 13만 세금유튜브 '절세미녀'의 대표회계사로 해외금융계좌, 가상자산 신고를 정확하게 처리합니다.",
         "image": "/images/agents/kim-heeyeon.jpeg",
         "phone": "02-785-1249",
         "sms": "027851249",
         "contact": "변기성 이사",
         "website": "https://디자인택스.com/"
+      },
+      {
+        "id": "lee-jongmin",
+        "name": "이종민",
+        "title": "세무사",
+        "firm": "세무회계 세웅",
+        "badge": "가상자산 신고 전문",
+        "bio": "가상자산 세무 이슈를 면밀히 검토하고, 맞춤형 신고 자문을 제공합니다. 빠른 소통과 꼼꼼한 피드백이 강점입니다.",
+        "image": "/images/agents/lee-jongmin.jpeg",
+        "phone": "02-6013-6708",
+        "sms": "0260136708",
+        "blog": "https://blog.naver.com/swngtax"
       }
     ]
   },
