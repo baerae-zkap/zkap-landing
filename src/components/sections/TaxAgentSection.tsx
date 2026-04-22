@@ -31,6 +31,7 @@ type TaxAgentCopy = {
   sms: string;
   call: string;
   trust: string[];
+  disclaimer: string;
 };
 
 function AgentCard({ agent, copy }: { agent: TaxAgent; copy: TaxAgentCopy }) {
@@ -148,6 +149,7 @@ export default function TaxAgentSection() {
     sms: t("sms"),
     call: t("call"),
     trust: t.raw("trust") as string[],
+    disclaimer: t("disclaimer"),
   };
 
   return (
@@ -185,6 +187,13 @@ export default function TaxAgentSection() {
               </span>
             ))}
           </div>
+        </ScrollReveal>
+
+        {/* Regulatory disclaimer */}
+        <ScrollReveal delay={0.5}>
+          <p className="mt-6 text-[11px] sm:text-xs text-primary-400/80 leading-relaxed text-center max-w-2xl mx-auto px-4">
+            {copy.disclaimer}
+          </p>
         </ScrollReveal>
       </div>
     </section>
