@@ -71,7 +71,7 @@
     "phase2Title": "We collect and organize\nyour exchange assets",
     "phase2Subtitle": "Month-end balances are automatically fetched\nand converted to KRW",
     "phase3Title": "Leave the rest\nto the tax pro",
-    "phase3Subtitle": "Just hand over your asset data.\nOur partner tax firm handles the filing",
+    "phase3Subtitle": "Just hand over your asset data.\nFiling handled through our partner tax experts",
     "filingTitle": "Overseas Account Filing",
     "filingYear": "FY 2025 · Due June 2026",
     "filingDone": "Filed!",
@@ -135,9 +135,9 @@
     ]
   },
   "taxAgent": {
-    "eyebrow": "Partner accountants",
+    "eyebrow": "Partner tax experts",
     "title": "Your filing, handled by real experts",
-    "subtitle": "Not AI. Certified Korean tax accountants with real names and track records. Reach them now by KakaoTalk, SMS, or phone.",
+    "subtitle": "Not AI. Filings are submitted through certified tax experts with real names and published track records. Reach them now by KakaoTalk, SMS, or phone.",
     "kakao": "Kakao",
     "blog": "Blog",
     "website": "Website",
