@@ -163,7 +163,7 @@ export default function TaxAgentSection() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-600 leading-tight mb-4">
               {copy.title}
             </h2>
-            <p className="text-base sm:text-lg text-primary-500 max-w-2xl mx-auto leading-relaxed">
+            <p className="whitespace-pre-line text-base sm:text-lg text-primary-500 max-w-2xl mx-auto leading-relaxed">
               {copy.subtitle}
             </p>
           </div>
@@ -191,7 +191,7 @@ export default function TaxAgentSection() {
 
         {/* Regulatory disclaimer */}
         <ScrollReveal delay={0.5}>
-          <p className="mt-6 text-[11px] sm:text-xs text-primary-400/80 leading-relaxed text-center max-w-2xl mx-auto px-4">
+          <p className="whitespace-pre-line mt-6 text-[11px] sm:text-xs text-primary-400/80 leading-relaxed text-center max-w-2xl mx-auto px-4">
             {copy.disclaimer}
           </p>
         </ScrollReveal>

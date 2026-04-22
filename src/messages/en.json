@@ -137,7 +137,7 @@
   "taxAgent": {
     "eyebrow": "Partner tax experts",
     "title": "Your filing, handled by real experts",
-    "subtitle": "Not AI. Filings are submitted through certified tax experts with real names and published track records. Reach them now by KakaoTalk, SMS, or phone.",
+    "subtitle": "Not AI. Filings are submitted through certified tax experts with real names and published track records.\nReach them now by KakaoTalk, SMS, or phone.",
     "kakao": "Kakao",
     "blog": "Blog",
     "website": "Website",
@@ -148,7 +148,7 @@
       "Liability insurance",
       "Crypto filing specialists"
     ],
-    "disclaimer": "This app provides data optimization tools for filing. Actual filing is carried out by qualified partner tax experts in accordance with applicable laws.",
+    "disclaimer": "This app provides data optimization tools for filing.\nActual filing is carried out by qualified partner tax experts in accordance with applicable laws.",
     "agents": [
       {
         "id": "sung-yeolgeon",
