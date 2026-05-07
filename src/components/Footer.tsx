@@ -34,6 +34,9 @@ export default function Footer() {
               <Link href="/marketing-consent" className="text-slate-600 font-medium hover:text-slate-800 transition-colors">
                 {t("marketingConsent")}
               </Link>
+              <Link href="/marketing-receive" className="text-slate-600 font-medium hover:text-slate-800 transition-colors">
+                {t("marketingReceive")}
+              </Link>
             </div>
 
             <div className="flex items-center gap-3">

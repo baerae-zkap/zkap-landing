@@ -243,7 +243,8 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "consent": "Personal Info Consent",
-    "marketingConsent": "Marketing Consent"
+    "marketingConsent": "Marketing Consent",
+    "marketingReceive": "Marketing & Benefit Notifications"
   },
   "terms": {
     "title": "Terms of Service",
@@ -550,5 +551,10 @@
         "content": "You may refuse this consent. Refusal will not restrict your use of the service; however, certain personalized services such as event and benefit notifications may not be available."
       }
     }
+  },
+  "marketingReceive": {
+    "title": "Consent to Receive Marketing & Benefit Notifications (Optional)",
+    "effectiveDate": "Effective Date: April 10, 2026",
+    "content": "You may receive marketing information from Baerae Co., Ltd. (such as benefits, events, and product news) via phone, SMS, email, and app push notifications."
   }
 }

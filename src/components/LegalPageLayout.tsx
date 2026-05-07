@@ -21,7 +21,13 @@ export default function LegalPageLayout({
 }: LegalPageLayoutProps) {
   const [open, setOpen] = useState(false);
   const locale = useLocale();
-  const current = config.versions.find((v) => v.key === currentVersionKey)!;
+  // EN locale only has v1.0 content; hide v2.0 from dropdown
+  const visibleVersions = locale === "ko"
+    ? config.versions
+    : config.versions.filter((v) => v.key === "v1_0");
+  const current =
+    visibleVersions.find((v) => v.key === currentVersionKey) ??
+    visibleVersions[0];
 
   return (
     <div className="min-h-screen bg-white">
@@ -40,21 +46,21 @@ export default function LegalPageLayout({
       <main className="max-w-3xl mx-auto px-6 py-8">
         <div className="relative mb-8">
           <button
-            onClick={() => config.versions.length > 1 && setOpen(!open)}
+            onClick={() => visibleVersions.length > 1 && setOpen(!open)}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 text-sm text-slate-700 transition-colors ${
-              config.versions.length > 1 ? "hover:bg-slate-50 cursor-pointer" : "cursor-default"
+              visibleVersions.length > 1 ? "hover:bg-slate-50 cursor-pointer" : "cursor-default"
             }`}
           >
             {current.label}
-            {config.versions.length > 1 && (
+            {visibleVersions.length > 1 && (
               <ChevronDown
                 className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`}
               />
             )}
           </button>
-          {open && config.versions.length > 1 && (
+          {open && visibleVersions.length > 1 && (
             <div className="absolute top-full mt-1 bg-white border border-slate-200 rounded-lg shadow-lg z-10 min-w-[200px]">
-              {config.versions.map((v) => (
+              {visibleVersions.map((v) => (
                 <Link
                   key={v.key}
                   href={`/${locale}${v.path}`}

@@ -1,9 +1,8 @@
-export type LegalDocType = "terms" | "privacy" | "consent" | "marketing-consent";
+export type LegalDocType = "terms" | "privacy" | "consent" | "marketing-consent" | "marketing-receive";
 
 export interface LegalVersion {
   key: string;
   label: string;
-  translationNamespace: string;
   path: string;
 }
 
@@ -16,45 +15,35 @@ export const LEGAL_DOCS: Record<LegalDocType, LegalDocConfig> = {
   terms: {
     type: "terms",
     versions: [
-      {
-        key: "v1_0",
-        label: "v1.0 (2026.04.10)",
-        translationNamespace: "terms",
-        path: "/terms",
-      },
+      { key: "v2_0", label: "v2.0 (2026.04.10)", path: "/terms" },
+      { key: "v1_0", label: "v1.0 (2026.04.10)", path: "/terms/v1" },
     ],
   },
   privacy: {
     type: "privacy",
     versions: [
-      {
-        key: "v1_0",
-        label: "v1.0 (2026.04.10)",
-        translationNamespace: "privacy",
-        path: "/privacy",
-      },
+      { key: "v2_0", label: "v2.0 (2026.04.10)", path: "/privacy" },
+      { key: "v1_0", label: "v1.0 (2026.04.10)", path: "/privacy/v1" },
     ],
   },
   consent: {
     type: "consent",
     versions: [
-      {
-        key: "v1_0",
-        label: "v1.0 (2026.04.10)",
-        translationNamespace: "consent",
-        path: "/consent",
-      },
+      { key: "v2_0", label: "v2.0 (2026.04.10)", path: "/consent" },
+      { key: "v1_0", label: "v1.0 (2026.04.10)", path: "/consent/v1" },
     ],
   },
   "marketing-consent": {
     type: "marketing-consent",
     versions: [
-      {
-        key: "v1_0",
-        label: "v1.0 (2026.04.10)",
-        translationNamespace: "marketingConsent",
-        path: "/marketing-consent",
-      },
+      { key: "v2_0", label: "v2.0 (2026.04.10)", path: "/marketing-consent" },
+      { key: "v1_0", label: "v1.0 (2026.04.10)", path: "/marketing-consent/v1" },
+    ],
+  },
+  "marketing-receive": {
+    type: "marketing-receive",
+    versions: [
+      { key: "v1_0", label: "v1.0 (2026.04.10)", path: "/marketing-receive" },
     ],
   },
 };
