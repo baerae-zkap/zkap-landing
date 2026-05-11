@@ -49,6 +49,17 @@ const CARDS = [
   { ghost: true, x: 420, y: 280 },
 ] as const;
 
+type ExchangeCardData = {
+  label: string;
+  color: string;
+  logo: string;
+  balance: string;
+};
+
+function isExchangeCardData(card: (typeof CARDS)[number]): card is (typeof CARDS)[number] & ExchangeCardData {
+  return !("ghost" in card);
+}
+
 const SELECTED = E.binance;
 
 const ASSETS = [
@@ -83,7 +94,6 @@ export default function ExchangeAssetSection() {
 
   // === Phase 2: Selection (1.3→2.3) — Binance grows, then click ===
   const selectP = Math.min(1, Math.max(0, (progress - 1.3) / 1.0));
-  const surroundDim = lerp(0.6, 0.25, selectP);
 
   // Selection: hold → click(dip) → grow continuously while balance animates
   let centerGrow: number;
@@ -196,7 +206,7 @@ export default function ExchangeAssetSection() {
         <div className="relative" style={{ width: "100vw", height: "80vh" }}>
           {/* Surrounding cards */}
           {CARDS.map((card, idx) => {
-            const isGhost = "ghost" in card;
+            const isExchange = isExchangeCardData(card);
             const posScale = mobile ? 0.38 : 1;
             return (
               <div
@@ -208,17 +218,17 @@ export default function ExchangeAssetSection() {
                   marginLeft: -70,
                   marginTop: -88,
                   transform: `translate(${card.x * spreadP * posScale}px, ${card.y * spreadP * posScale}px) scale(${(mobile ? 0.55 : 0.7) + 0.3 * spreadP})`,
-                  zIndex: isGhost ? 1 : 5,
-                  opacity: surroundOpacity * (isGhost ? 0.5 : 1),
+                  zIndex: isExchange ? 5 : 1,
+                  opacity: surroundOpacity * (isExchange ? 1 : 0.5),
                 }}
               >
                 <ExchangeCard
-                  label={isGhost ? "" : (card as any).label}
-                  color={isGhost ? "" : (card as any).color}
-                  logo={isGhost ? "" : (card as any).logo}
-                  balance={isGhost ? undefined : (card as any).balance}
-                  ghost={isGhost}
-                  locked={!isGhost}
+                  label={isExchange ? card.label : ""}
+                  color={isExchange ? card.color : ""}
+                  logo={isExchange ? card.logo : ""}
+                  balance={isExchange ? card.balance : undefined}
+                  ghost={!isExchange}
+                  locked={isExchange}
                 />
               </div>
             );

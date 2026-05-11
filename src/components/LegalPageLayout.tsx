@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useLocale } from "next-intl";
 import { ChevronLeft, ChevronDown } from "lucide-react";
-import { type LegalDocConfig, type LegalVersion } from "@/config/legal-versions";
+import { type LegalDocConfig } from "@/config/legal-versions";
 
 interface LegalPageLayoutProps {
   title: string;
