@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -23,7 +23,13 @@ export default function ScrollReveal({
   delay = 0,
   direction = "up",
 }: ScrollRevealProps) {
-  const offset = directionMap[direction];
+  const [isKakao, setIsKakao] = useState(false);
+
+  useEffect(() => {
+    setIsKakao(/KAKAOTALK/i.test(navigator.userAgent));
+  }, []);
+
+  const offset = isKakao ? {} : directionMap[direction];
 
   return (
     <motion.div
