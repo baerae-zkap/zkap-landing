@@ -11,10 +11,10 @@ interface ScrollRevealProps {
 }
 
 const directionMap = {
-  up: { y: 40 },
-  down: { y: -40 },
-  left: { x: 40 },
-  right: { x: -40 },
+  up: { y: 16 },
+  down: { y: -16 },
+  left: { x: 16 },
+  right: { x: -16 },
 };
 
 export default function ScrollReveal({

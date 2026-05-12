@@ -34,6 +34,7 @@
 
   body {
     @apply bg-white text-slate-900;
+    overscroll-behavior-y: none;
   }
 
   p, li, span {
