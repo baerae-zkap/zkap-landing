@@ -41,7 +41,7 @@ function GooglePlayIcon({ size }: { size: number }) {
 function getStoreUrl() {
   if (typeof navigator === "undefined") return "https://apps.apple.com/kr/app/zkap-overseas-crypto-tax/id6761711444";
   const ua = navigator.userAgent.toLowerCase();
-  if (/android/i.test(ua)) return "https://play.google.com";
+  if (/android/i.test(ua)) return "https://play.google.com/store/apps/details?id=com.baerae.zkap";
   return "https://apps.apple.com/kr/app/zkap-overseas-crypto-tax/id6761711444";
 }
 
@@ -80,7 +80,7 @@ export default function AppDownloadButtons({
         App Store
       </a>
       <a
-        href="https://play.google.com"
+        href="https://play.google.com/store/apps/details?id=com.baerae.zkap"
         target="_blank"
         rel="noopener noreferrer"
         className={`inline-flex items-center justify-center ${btnClass} bg-white border-2 border-primary-600 text-primary-700 font-semibold rounded-xl hover:bg-primary-50 transition-colors min-w-[160px]`}
