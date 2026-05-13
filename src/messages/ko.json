@@ -160,7 +160,9 @@
         "image": "/images/agents/sung-yeolgeon.jpeg",
         "phone": "010-2817-4653",
         "sms": "01028174653",
+        "email": "plusomega@naver.com",
         "contact": "정해인 전무",
+        "contactEmail": "eliot8865@gmail.com",
         "website": "https://hangiltax.com/"
       },
       {
@@ -186,6 +188,7 @@
         "image": "/images/agents/lee-jongmin.jpeg",
         "phone": "02-6013-6708",
         "sms": "0260136708",
+        "email": "swngtax@naver.com",
         "blog": "https://blog.naver.com/swngtax"
       }
     ]

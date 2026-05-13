@@ -160,7 +160,9 @@
         "image": "/images/agents/sung-yeolgeon.jpeg",
         "phone": "010-2817-4653",
         "sms": "01028174653",
-        "contact": "Senior Vice President",
+        "email": "plusomega@naver.com",
+        "contact": "Jung Haein, Senior Vice President",
+        "contactEmail": "eliot8865@gmail.com",
         "website": "https://hangiltax.com/"
       },
       {
@@ -180,12 +182,13 @@
         "id": "lee-jongmin",
         "name": "Lee Jong Min",
         "title": "Tax Accountant",
-        "firm": "Sewung Tax & Accounting",
+        "firm": "Tax Accounting Sewoong",
         "badge": "Crypto filing specialist",
         "bio": "Thorough review of crypto tax issues with tailored filing advice. Known for fast communication and meticulous feedback.",
         "image": "/images/agents/lee-jongmin.jpeg",
         "phone": "02-6013-6708",
         "sms": "0260136708",
+        "email": "swngtax@naver.com",
         "blog": "https://blog.naver.com/swngtax"
       }
     ]
