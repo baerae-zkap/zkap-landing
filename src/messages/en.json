@@ -152,7 +152,7 @@
     "agents": [
       {
         "id": "sung-yeolgeon",
-        "name": "Sung Yeol Geon",
+        "name": "Sung Yeolgeon",
         "title": "Tax Accountant",
         "firm": "Hangil Tax Service",
         "badge": "#CryptoAuditExperience, #NTS retiree network",
@@ -167,7 +167,7 @@
       },
       {
         "id": "kim-heeyeon",
-        "name": "Kim Hee Yeon",
+        "name": "Kim Heeyeon",
         "title": "CPA",
         "firm": "Designtax",
         "badge": "#ForeignAccountReporting, #Crypto Filing",
@@ -175,12 +175,14 @@
         "image": "/images/agents/kim-heeyeon.jpeg",
         "phone": "02-785-1249",
         "sms": "027851249",
-        "contact": "Director",
+        "email": "designtax8899@naver.com",
+        "contact": "Byeon Kisung",
+        "contactEmail": "designtax8899@naver.com",
         "website": "https://디자인택스.com/"
       },
       {
         "id": "lee-jongmin",
-        "name": "Lee Jong Min",
+        "name": "Lee Jongmin",
         "title": "Tax Accountant",
         "firm": "Tax Accounting Sewoong",
         "badge": "Crypto filing specialist",
