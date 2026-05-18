@@ -4,7 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 
 const IOS_STORE_URL = "https://apps.apple.com/kr/app/zkap-overseas-crypto-tax/id6761711444";
-const ANDROID_STORE_URL = "https://play.google.com";
+const ANDROID_STORE_URL = "https://play.google.com/store/apps/details?id=com.baerae.zkap";
 
 export default function Header() {
   const t = useTranslations("header");
