@@ -169,7 +169,7 @@ export default function TaxAgentSection() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 max-w-5xl mx-auto">
           {copy.agents.map((agent, i) => (
             <ScrollReveal key={agent.id} delay={i * 0.12} className="h-full">
               <AgentCard agent={agent} copy={copy} />

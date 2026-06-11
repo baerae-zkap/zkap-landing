@@ -192,6 +192,19 @@
         "sms": "0260136708",
         "email": "swngtax@naver.com",
         "blog": "https://blog.naver.com/swngtax"
+      },
+      {
+        "id": "kim-ilhun",
+        "name": "김일훈",
+        "title": "회계사",
+        "firm": "한울회계법인",
+        "badge": "#자산가코인절세, #법인가상자산",
+        "bio": "고액자산가와 기업을 위한 가상자산 세무 전략을 제시합니다. 해외계좌 신고부터 2027년 과세 대비까지 한 번에 해결합니다.",
+        "image": "/images/agents/kim-ilhun.jpeg",
+        "phone": "010-5056-6846",
+        "sms": "01050566846",
+        "email": "ih.kim@hanulac.co.kr",
+        "website": "https://www.crowe.com/kr"
       }
     ]
   },

@@ -192,6 +192,19 @@
         "sms": "0260136708",
         "email": "swngtax@naver.com",
         "blog": "https://blog.naver.com/swngtax"
+      },
+      {
+        "id": "kim-ilhun",
+        "name": "Ilhun Kim",
+        "title": "CPA",
+        "firm": "Crowe Hanul Accounting Corporation",
+        "badge": "#CryptoTaxStrategies, #CorporateCrypto",
+        "bio": "Crypto tax strategies for high-net-worth individuals and corporations: a comprehensive solution from foreign account reporting to 2027 tax preparedness.",
+        "image": "/images/agents/kim-ilhun.jpeg",
+        "phone": "010-5056-6846",
+        "sms": "01050566846",
+        "email": "ih.kim@hanulac.co.kr",
+        "website": "https://www.crowe.com/kr"
       }
     ]
   },
