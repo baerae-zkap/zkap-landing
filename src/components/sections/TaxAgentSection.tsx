@@ -13,7 +13,7 @@ type TaxAgent = {
   bio: string;
   image: string;
   phone: string;
-  sms: string;
+  sms?: string;
   kakao?: string;
   blog?: string;
   website?: string;
@@ -69,7 +69,13 @@ function AgentCard({ agent, copy }: { agent: TaxAgent; copy: TaxAgentCopy }) {
       <div className="border-t border-primary-100 -mx-6 sm:-mx-7 mb-4" />
 
       {/* CTA buttons */}
-      <div className={`grid gap-2 ${agent.kakao || agent.blog || agent.website ? "grid-cols-3" : "grid-cols-2"}`}>
+      <div
+        className={`grid gap-2 ${
+          ["grid-cols-1", "grid-cols-2", "grid-cols-3"][
+            (agent.sms ? 1 : 0) + (agent.kakao || agent.blog || agent.website ? 1 : 0)
+          ]
+        }`}
+      >
         <a
           href={`tel:${agent.phone.replace(/[^\d+]/g, "")}`}
           className="flex flex-col items-center justify-center gap-1 py-3 rounded-xl bg-primary-600 text-white text-[12px] font-bold transition-transform active:scale-95 hover:bg-primary-700"
@@ -77,13 +83,15 @@ function AgentCard({ agent, copy }: { agent: TaxAgent; copy: TaxAgentCopy }) {
           <Phone className="w-4 h-4" />
           <span>{copy.call}</span>
         </a>
-        <a
-          href={`sms:${agent.sms}`}
-          className="flex flex-col items-center justify-center gap-1 py-3 rounded-xl bg-primary-50 text-primary-600 text-[12px] font-bold border border-primary-100 transition-transform active:scale-95 hover:bg-primary-100"
-        >
-          <MessageSquare className="w-4 h-4" />
-          <span>{copy.sms}</span>
-        </a>
+        {agent.sms && (
+          <a
+            href={`sms:${agent.sms}`}
+            className="flex flex-col items-center justify-center gap-1 py-3 rounded-xl bg-primary-50 text-primary-600 text-[12px] font-bold border border-primary-100 transition-transform active:scale-95 hover:bg-primary-100"
+          >
+            <MessageSquare className="w-4 h-4" />
+            <span>{copy.sms}</span>
+          </a>
+        )}
         {agent.kakao ? (
           <a
             href={agent.kakao}
