@@ -17,6 +17,11 @@ const nextConfig: NextConfig = {
           { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
         ],
       },
+      {
+        // Apple account-driven device enrollment (Google MDM) — must be served as JSON
+        source: "/.well-known/com.apple.remotemanagement",
+        headers: [{ key: "Content-Type", value: "application/json" }],
+      },
     ];
   },
 };
