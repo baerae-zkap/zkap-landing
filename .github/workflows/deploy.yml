@@ -1,8 +1,8 @@
 name: Deploy to GitHub Pages
 
+# Deprecated: 배포는 Vercel로 이전됨. push 자동 트리거 제거.
+# 전환기 폴백용으로 수동 실행(workflow_dispatch)만 남겨둠.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
