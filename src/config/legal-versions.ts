@@ -22,7 +22,8 @@ export const LEGAL_DOCS: Record<LegalDocType, LegalDocConfig> = {
   privacy: {
     type: "privacy",
     versions: [
-      { key: "v2_0", label: "v2.0 (2026.05.07)", path: "/privacy" },
+      { key: "v2_1", label: "v2.1 (2026.11.20)", path: "/privacy" },
+      { key: "v2_0", label: "v2.0 (2026.05.07)", path: "/privacy/v2" },
       { key: "v1_0", label: "v1.0 (2026.04.10)", path: "/privacy/v1" },
     ],
   },

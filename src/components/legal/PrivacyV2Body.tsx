@@ -19,7 +19,7 @@ const TH_CLASS = "border border-slate-300 px-3 py-2 text-left font-semibold bg-s
 const TD_CLASS = "border border-slate-300 px-3 py-2 align-top";
 
 export default function PrivacyV2Body({
-  namespace = "privacy",
+  namespace = "privacy_v2",
 }: {
   namespace?: string;
 }) {
