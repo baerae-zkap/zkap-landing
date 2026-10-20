@@ -242,7 +242,16 @@
     "cta": "Subscribe",
     "success": "Thanks for subscribing!",
     "error": "Something went wrong. Please try again.",
-    "consent": "By subscribing, you consent to the collection and use of your email for newsletter delivery."
+    "consent": {
+      "required": "(Required)",
+      "label": "I agree to the collection and use of my personal information",
+      "show": "View",
+      "hide": "Hide",
+      "items": { "label": "Collected", "value": "Email address" },
+      "purpose": { "label": "Purpose", "value": "Sending the newsletter" },
+      "retention": { "label": "Retention", "value": "Until you unsubscribe or withdraw consent" },
+      "refusal": "You may decline, but you won't be able to receive the newsletter."
+    }
   },
   "finalCta": {
     "title": "June is coming.\nDon't wait",
