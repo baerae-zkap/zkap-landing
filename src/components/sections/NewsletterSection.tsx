@@ -9,7 +9,8 @@ import ScrollReveal from "@/components/ScrollReveal";
 const GOOGLE_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycby62DWdA6b4_2JTOs72zzzwmhPuiFWdK-bZgEqMvAvJ6B6KqCWQjUZ04ATSXanUnnOO/exec";
 
-const CONSENT_DETAILS = ["items", "purpose", "retention"] as const;
+const CONSENT_ROWS = [0, 1, 2] as const;
+const CONSENT_FIELDS = ["purpose", "items", "retention"] as const;
 
 export default function NewsletterSection() {
   const t = useTranslations("newsletter");
@@ -129,17 +130,22 @@ export default function NewsletterSection() {
                       {detailsOpen && (
                         <div
                           id="newsletter-consent-details"
-                          className="mt-3 ml-7 border-t border-primary-100 pt-3 text-[12px] leading-relaxed text-primary-400"
+                          tabIndex={0}
+                          className="mt-3 ml-7 max-h-64 overflow-y-auto pr-1 border-t border-primary-100 pt-3 text-[12px] leading-relaxed text-primary-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400/40"
                         >
-                          <dl className="space-y-1">
-                            {CONSENT_DETAILS.map((key) => (
-                              <div key={key} className="flex gap-3">
-                                <dt className="w-16 shrink-0 font-medium text-primary-500">{t(`consent.${key}.label`)}</dt>
-                                <dd>{t(`consent.${key}.value`)}</dd>
-                              </div>
-                            ))}
-                          </dl>
-                          <p className="mt-2">{t("consent.refusal")}</p>
+                          <p>{t("consent.intro")}</p>
+                          {CONSENT_ROWS.map((row) => (
+                            <dl key={row} className="mt-2 border-t border-primary-100 pt-2 space-y-1">
+                              {CONSENT_FIELDS.map((field) => (
+                                <div key={field}>
+                                  <dt className="font-medium text-primary-500">{t(`consent.headers.${field}`)}</dt>
+                                  <dd>{t(`consent.rows.${row}.${field}`)}</dd>
+                                </div>
+                              ))}
+                            </dl>
+                          ))}
+                          <p className="mt-3 font-medium text-primary-500">{t("consent.refusalTitle")}</p>
+                          <p>{t("consent.refusal")}</p>
                         </div>
                       )}
                     </div>

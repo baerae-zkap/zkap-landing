@@ -247,10 +247,31 @@
       "label": "I agree to the collection and use of my personal information",
       "show": "View",
       "hide": "Hide",
-      "items": { "label": "Collected", "value": "Email address" },
-      "purpose": { "label": "Purpose", "value": "Sending the newsletter" },
-      "retention": { "label": "Retention", "value": "Until you unsubscribe or withdraw consent" },
-      "refusal": "You may decline, but you won't be able to receive the newsletter."
+      "intro": "Baerae Inc. collects and uses personal information as follows for account registration and service provision.",
+      "headers": {
+        "purpose": "Purpose",
+        "items": "Items collected",
+        "retention": "Retention period"
+      },
+      "rows": [
+        {
+          "purpose": "Identity verification, conclusion and performance of the service agreement, fraud prevention, customer support",
+          "items": "Email address, social login identifier (Kakao, Google, Apple, etc.), phone number, passkey credentials, records of misuse, information generated during customer support",
+          "retention": "Until account deletion or withdrawal of consent (or for the period required by applicable law, if longer)"
+        },
+        {
+          "purpose": "Maintaining and improving service quality, error analysis, security management",
+          "items": "Access time, access logs, service usage records, visit records, device information (OS, device model, app version, advertising ID, IP address, cookies or similar identifiers), error logs, performance logs, push notification settings, records of misuse, information generated during customer support",
+          "retention": "14 months (or for the period required by applicable law, if longer)"
+        },
+        {
+          "purpose": "Linking digital asset exchanges and providing asset overview services",
+          "items": "Exchange name, access token information (token issue time, validity period), exchange connection status (connected or not, scheduled expiry)",
+          "retention": "Until account deletion or withdrawal of consent (or for the period required by applicable law, if longer)"
+        }
+      ],
+      "refusalTitle": "Right to refuse and consequences",
+      "refusal": "This consent is required to provide the service. If you decline, you may not be able to sign up or use the service."
     }
   },
   "finalCta": {
