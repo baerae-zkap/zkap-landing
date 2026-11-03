@@ -20,7 +20,7 @@ const TD_CLASS = "border border-slate-300 px-3 py-2 align-top";
 const COOKIE_GROUP_SIZES = [2, 3];
 
 export default function PrivacyV21Body({
-  namespace = "privacy",
+  namespace = "privacy_v2_1",
 }: {
   namespace?: string;
 }) {
@@ -39,36 +39,38 @@ export default function PrivacyV21Body({
       <Clause num="②">{t("article1.intro2")}</Clause>
       <Clause num="③">{t("article1.intro3")}</Clause>
 
-      <p className="font-semibold text-slate-700 mt-6 mb-2">{t("article1.tableCaption")}</p>
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr>
-              {[0, 1, 2, 3].map((i) => (
-                <th key={i} className={TH_CLASS}>{t(`article1.tableHeaders.${i}`)}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {[0, 1, 2].map((i) => (
-              <tr key={i}>
-                <td className={`${TD_CLASS} font-medium whitespace-nowrap`}>{t(`article1.rows.${i}.type`)}</td>
-                <td className={TD_CLASS}>{t(`article1.rows.${i}.purpose`)}</td>
-                <td className={TD_CLASS}>{t(`article1.rows.${i}.items`)}</td>
-                <td className={TD_CLASS}>{t(`article1.rows.${i}.retention`)}</td>
+      <div className="ml-7">
+        <h3 className="mt-6">1. {t("article1.tableCaption")}</h3>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                {[0, 1, 2, 3].map((i) => (
+                  <th key={i} className={TH_CLASS}>{t(`article1.tableHeaders.${i}`)}</th>
+                ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {[0, 1, 2].map((i) => (
+                <tr key={i}>
+                  <td className={`${TD_CLASS} font-medium whitespace-nowrap`}>{t(`article1.rows.${i}.type`)}</td>
+                  <td className={TD_CLASS}>{t(`article1.rows.${i}.purpose`)}</td>
+                  <td className={TD_CLASS}>{t(`article1.rows.${i}.items`)}</td>
+                  <td className={TD_CLASS}>{t(`article1.rows.${i}.retention`)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-      <h3 className="mt-8">{t("article1.methodsTitle")}</h3>
-      <p>{t("article1.methodsIntro")}</p>
-      <ul>
-        {[0, 1, 2, 3, 4].map((i) => (
-          <li key={i}>{t(`article1.methods.${i}`)}</li>
-        ))}
-      </ul>
+        <h3 className="mt-8">2. {t("article1.methodsTitle")}</h3>
+        <p>{t("article1.methodsIntro")}</p>
+        <ul>
+          {[0, 1, 2, 3, 4].map((i) => (
+            <li key={i}>{t(`article1.methods.${i}`)}</li>
+          ))}
+        </ul>
+      </div>
       <Clause num="④">{t("article1.deviceNotice")}</Clause>
       <Clause num="⑤">{t("article1.retentionExceptionIntro")}</Clause>
       <ol>
@@ -193,9 +195,9 @@ export default function PrivacyV21Body({
       <h2>{t("article9.title")}</h2>
       <Clause num="①">{t("article9.intro")}</Clause>
       <div className="my-4 rounded-lg bg-slate-50 p-4 text-sm text-slate-700 space-y-1 not-prose">
-        <div><span className="text-slate-400 w-14 inline-block">성명</span>{t("article9.officer.name")}</div>
-        <div><span className="text-slate-400 w-14 inline-block">직책</span>{t("article9.officer.title")}</div>
-        <div><span className="text-slate-400 w-14 inline-block">연락처</span>{t("article9.officer.contact")}</div>
+        <div><span className="text-slate-400 w-14 inline-block">{t("article9.labels.name")}</span>{t("article9.officer.name")}</div>
+        <div><span className="text-slate-400 w-14 inline-block">{t("article9.labels.title")}</span>{t("article9.officer.title")}</div>
+        <div><span className="text-slate-400 w-14 inline-block">{t("article9.labels.contact")}</span>{t("article9.officer.contact")}</div>
       </div>
       <Clause num="②">{t("article9.notice")}</Clause>
 
@@ -228,7 +230,7 @@ export default function PrivacyV21Body({
               {t(`article10.agencies.${i}.name`)}
             </p>
             <p className="text-slate-500">
-              홈페이지: {t(`article10.agencies.${i}.website`)} &middot; 전화: {t(`article10.agencies.${i}.phone`)}
+              {t("article10.labels.website")}: {t(`article10.agencies.${i}.website`)} &middot; {t("article10.labels.phone")}: {t(`article10.agencies.${i}.phone`)}
             </p>
           </div>
         ))}
@@ -237,7 +239,7 @@ export default function PrivacyV21Body({
       <h2>{t("article11.title")}</h2>
       <p>{t("article11.content")}</p>
 
-      <h2>부칙</h2>
+      <h2>{t("addendumTitle")}</h2>
       <p>{t("addendum")}</p>
     </LegalPageLayout>
   );
