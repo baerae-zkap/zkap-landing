@@ -64,6 +64,32 @@
   border-left: 2px solid #cbd5e1;
 }
 
+/* Utilities (e.g. list-disc pl-4) take precedence over these defaults */
+@layer components {
+  .legal-prose ul,
+  .legal-prose ol {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .legal-prose ul {
+    list-style: disc;
+  }
+
+  .legal-prose ol {
+    list-style: decimal;
+  }
+
+  .legal-prose li {
+    margin: 0.25rem 0;
+    padding-left: 0.25rem;
+  }
+
+  .legal-prose li::marker {
+    color: #94a3b8;
+  }
+}
+
 /* Hide scrollbar but keep scroll functionality */
 .scrollbar-hide {
   -ms-overflow-style: none;
