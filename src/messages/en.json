@@ -420,7 +420,7 @@
     },
     "addendum": "These Terms and Conditions shall take effect from April 10, 2026."
   },
-  "privacy": {
+  "privacy_v1": {
     "title": "Privacy Policy",
     "effectiveDate": "Effective Date: April 10, 2026",
     "article1": {
@@ -543,6 +543,525 @@
       "content": "When the Company amends this Privacy Policy, it will continuously disclose the timing of the changes and their effective date, as well as the amended content, and will publish a comparison of the before and after versions so that users can easily review the changes."
     },
     "addendum": "This Privacy Policy is effective from April 10, 2026."
+  },
+  "privacy_v2_1": {
+    "title": "Privacy Policy",
+    "effectiveDate": "Effective Date: October 20, 2026",
+    "article1": {
+      "title": "Article 1 (Purposes of Processing, Items Collected, and Retention Periods)",
+      "intro1": "In accordance with Article 31 of the Personal Information Protection Act, Baerae Co., Ltd. (hereinafter the \"Company\") informs users of its procedures and standards for processing personal information, and collects and processes users' personal information for the following purposes.",
+      "intro2": "Users' personal information will not be used for any purpose other than those set forth below. If the purposes or items of use change, the Company will take necessary measures, such as obtaining separate prior consent from users in accordance with Article 18 of the Personal Information Protection Act.",
+      "intro3": "The Company processes and retains personal information within the processing and retention period prescribed by law or the period consented to by the user at the time of collection.",
+      "tableCaption": "Personal information processed with the consent of the data subject",
+      "tableHeaders": [
+        "Category",
+        "Purpose",
+        "Items",
+        "Retention and Use Period"
+      ],
+      "rows": [
+        {
+          "type": "Member registration and management",
+          "purpose": "Identity verification, conclusion and performance of the service agreement, prevention of fraudulent use, customer support",
+          "items": "Email address, social login identifier (Kakao, Google, Apple, etc.), phone number, passkey credentials, records of misuse, information generated during customer support",
+          "retention": "Until account deletion or withdrawal of consent (or for the period required by applicable law, if retention is required)"
+        },
+        {
+          "type": "Digital asset inquiry service",
+          "purpose": "Integration with digital asset exchanges and provision of asset status inquiry services",
+          "items": "Digital asset exchange name, access token information (token issue time, validity period), exchange connection status (connected or not, scheduled expiry)",
+          "retention": "Until account deletion or withdrawal of consent (or for the period required by applicable law, if retention is required)"
+        },
+        {
+          "type": "Marketing",
+          "purpose": "Providing information on events and promotions and offering benefits",
+          "items": "Marketing consent status, email address, social login identifier (Kakao, Google, Apple, etc.), phone number",
+          "retention": "1 year from the end date of the event"
+        }
+      ],
+      "methodsTitle": "Methods of Collecting Personal Information",
+      "methodsIntro": "The Company collects users' personal information through the following methods to provide the service.",
+      "methods": [
+        "Information entered directly by users for member registration and use of the service",
+        "Social login identifiers and profile information received from third-party services consented to by the member",
+        "Information collected or generated during consultations and complaint handling",
+        "Collection through online and offline events, surveys, etc.",
+        "Information automatically collected in the course of using the service"
+      ],
+      "deviceNotice": "Information such as digital asset transaction histories retrieved or generated through the service is not transmitted to or stored on the Company's servers, and is stored only on the user's device (app). Such information is not transmitted to external servers and is deleted from the device immediately when the app is deleted.",
+      "retentionExceptionIntro": "Notwithstanding Paragraph 3, the Company may retain the relevant personal information until the following grounds cease to exist.",
+      "retentionExceptions": [
+        "Where an investigation, inquiry, or judicial proceeding regarding a violation of applicable law is in progress: until the proceeding is concluded",
+        "Where claims, debts, or settlements arising from the use of the service remain outstanding: until such claims, debts, or settlements are resolved",
+        "Where litigation or dispute proceedings are in progress: until such proceedings are finalized or concluded",
+        "Where other laws require personal information to be retained for a certain period: for the period prescribed by such laws"
+      ]
+    },
+    "article2": {
+      "title": "Article 2 (Provision of Personal Information to Third Parties)",
+      "intro": "In principle, the Company does not provide users' personal information to third parties, except in the following cases.",
+      "items": [
+        "Where the user has given separate prior consent",
+        "Where special provisions exist in law, or where there is a lawful request from a relevant authority such as an investigative or supervisory agency"
+      ]
+    },
+    "article3": {
+      "title": "Article 3 (Entrustment of Personal Information Processing)",
+      "delegationIntro": "The Company may entrust part of its personal information processing to external specialized companies for smooth service provision, and currently entrusts personal information processing as follows.",
+      "delegationHeaders": [
+        "Trustee",
+        "Entrusted Tasks"
+      ],
+      "delegationRows": [
+        {
+          "company": "Google LLC",
+          "scope": "Operation of cloud servers and data storage for service provision"
+        },
+        {
+          "company": "Google LLC",
+          "scope": "Analysis of service usage records and preparation of statistics"
+        }
+      ],
+      "overseasIntro": "The Company transfers personal information collected from users overseas as follows, in accordance with Article 28-8(1)(3) of the Personal Information Protection Act (entrustment of processing and storage for the performance of a contract). To refuse the overseas transfer of personal information while using the service, you may download and install the browser add-on for your current web browser at tools.google.com/dlpage/gaoptout to opt out of Google's processing of information.",
+      "overseas": [
+        "Recipient and contact: Google LLC (https://analytics.google.com/)",
+        "Destination country: United States",
+        "Date, time, and method of transfer: Transmitted over the network when visitors use the service on the website",
+        "Personal information transferred: Cookies, device and browser data, IP address, site/app activity (no personally identifiable information is transmitted)",
+        "Recipient's purpose of use: Statistical measurement of user interactions, storage of user and event data",
+        "Retention and use period: 14 months"
+      ],
+      "supervision": "When concluding an entrustment agreement, the Company specifies in the contract or other documents, in accordance with Article 26 of the Personal Information Protection Act, matters regarding the prohibition of processing personal information for purposes other than performing the entrusted tasks, technical and administrative safeguards, restrictions on re-entrustment, management and supervision of the trustee, and liability such as compensation for damages, and supervises whether the trustee processes personal information safely. If the trustee changes, the Company will post the name of the new trustee on the Privacy Policy page.",
+      "change": "The entrusted tasks and trustees may change, and any changes will be announced through this Policy or a separate notice."
+    },
+    "article4": {
+      "title": "Article 4 (Procedures and Methods for Destroying Personal Information)",
+      "items": [
+        "The Company destroys personal information without delay when it is no longer needed, such as when the retention period has expired or the purpose of processing has been achieved.",
+        "The Company selects the personal information for which grounds for destruction have arisen and destroys it with the approval of the Data Protection Officer.",
+        "Personal information recorded and stored in electronic files is deleted using methods that prevent the records from being recovered or reproduced, and personal information recorded and stored in paper documents is destroyed by shredding or incineration.",
+        "Where personal information must continue to be retained under other laws, it is stored and managed separately from other personal information. In this case, the legal basis, items, and period of retention are described in Article 1."
+      ]
+    },
+    "article5": {
+      "title": "Article 5 (Rights of Users and How to Exercise Them)",
+      "items": [
+        "Users may at any time request access to, correction, deletion, or suspension of processing of their personal information, and may withdraw any consent they have given.",
+        "Users may request to unlink their accounts, delete their accounts, or withdraw consent to receive marketing communications through the in-app settings, the customer center, or other methods provided by the Company.",
+        "The data subject's rights to request access and suspension of processing may be restricted under Article 35(4) and Article 37(2) of the Personal Information Protection Act.",
+        "Requests for correction or deletion of personal information cannot be made where other laws specify such personal information as subject to collection."
+      ]
+    },
+    "article6": {
+      "title": "Article 6 (Measures to Ensure the Security of Personal Information)",
+      "intro": "The Company takes the following administrative, technical, and physical measures to ensure the security of personal information.",
+      "measures": [
+        {
+          "label": "Administrative measures",
+          "content": "Establishment and implementation of personal information protection guidelines, operation of a dedicated organization, regular employee training"
+        },
+        {
+          "label": "Technical measures",
+          "content": "Management of access rights to personal information processing systems, installation of access control systems, encryption of personal information, installation and updating of security programs, access control through internal and cloud firewalls"
+        },
+        {
+          "label": "Physical measures",
+          "content": "Operation of personal information processing systems through information security-certified cloud services, access control to office spaces, control over the removal and introduction of auxiliary storage media"
+        }
+      ],
+      "additional": "The Company implements measures such as access rights management, establishment of an internal management plan, retention of access records, encryption, operation of security programs, and minimum access control for authorized personnel."
+    },
+    "article7": {
+      "title": "Article 7 (Installation and Operation of Automatic Collection Devices such as Cookies)",
+      "intro": "The Company may use cookies or similar technologies to provide users with more convenient services. Users may refuse the storage of cookies through browser or device settings as described below, but in this case, the use of some services may be restricted.",
+      "groups": [
+        {
+          "title": "How to block cookies in web browsers",
+          "browsers": [
+            {
+              "label": "Chrome",
+              "path": "Select '⁝' at the top right of the web browser > New Incognito window (shortcut: Ctrl+Shift+N)"
+            },
+            {
+              "label": "Edge",
+              "path": "Select '‧‧‧' at the top right of the web browser > New InPrivate window (shortcut: Ctrl+Shift+N)"
+            }
+          ]
+        },
+        {
+          "title": "How to block cookies in mobile browsers",
+          "browsers": [
+            {
+              "label": "Chrome",
+              "path": "Select '⁝' at the top right of the mobile browser > New Incognito tab"
+            },
+            {
+              "label": "Safari",
+              "path": "Device Settings > Apps > Safari > Advanced > Block All Cookies"
+            },
+            {
+              "label": "Samsung Internet",
+              "path": "Select the 'Tabs' icon at the bottom of the mobile browser > Turn on Secret mode > Start"
+            }
+          ]
+        }
+      ]
+    },
+    "article8": {
+      "title": "Article 8 (Collection, Use, and Refusal of Behavioral Information)",
+      "items": [
+        "The Company collects and uses behavioral information in the course of service use to provide data subjects with optimized personalized services and benefits, online personalized advertising, and the like.",
+        "The Company collects behavioral information as follows."
+      ],
+      "tableHeaders": [
+        "Behavioral Information Collected",
+        "Collection Method",
+        "Purpose of Collection",
+        "Retention Period and Subsequent Processing"
+      ],
+      "tableRow": {
+        "items": "Records of users' access to the web/app service and usage records such as clicks (app version, country, region, mobile carrier, device information, device operating system, device language setting, etc.)",
+        "method": "Automatically collected and transmitted through a data collection tool for key actions performed within the user's web/app",
+        "purpose": "Service quality improvement and statistical purposes",
+        "retention": "Retained until the purpose is achieved, then deleted"
+      },
+      "adIntro": "The Company collects and uses advertising identifiers in its mobile app for online personalized advertising. Data subjects may block or allow personalized advertising in the app by changing the settings on their mobile device.",
+      "adGuides": [
+        {
+          "label": "Android",
+          "path": "Settings → Privacy → Ads → Reset advertising ID or Delete advertising ID"
+        },
+        {
+          "label": "iPhone",
+          "path": "Settings → Privacy → Tracking → Turn off 'Allow Apps to Request to Track'"
+        }
+      ],
+      "adNote": "※ Menus and methods may vary slightly depending on the mobile OS version."
+    },
+    "article9": {
+      "title": "Article 9 (Data Protection Officer and Contact Information)",
+      "intro": "The Company has designated a Data Protection Officer to take overall responsibility for personal information processing and to handle user inquiries, complaints, and requests for remedies related to personal information.",
+      "officer": {
+        "name": "Junghyun Kim",
+        "title": "CPO",
+        "contact": "010-4306-0030, privacy@baerae.com"
+      },
+      "labels": {
+        "name": "Name",
+        "title": "Title",
+        "contact": "Contact"
+      },
+      "notice": "Inquiries, complaints, and requests for remedies related to personal information may be directed to the officer above."
+    },
+    "article10": {
+      "title": "Article 10 (Remedies for Infringement of Rights)",
+      "intro": "The Company guarantees data subjects' right to self-determination over their personal information and strives to provide consultation and remedies for damages caused by personal information infringement. If you need to make a report or seek consultation, please contact the department below.",
+      "internalHeaders": [
+        "Service",
+        "Privacy Department",
+        "Phone",
+        "Email"
+      ],
+      "internalRow": {
+        "category": "ZKAP",
+        "department": "Information Security Team",
+        "phone": "010-4306-0030",
+        "email": "privacy@baerae.com"
+      },
+      "agenciesIntro": "If you require relief or consultation regarding personal information infringement, you may contact the following organizations.",
+      "agencies": [
+        {
+          "name": "Personal Information Infringement Report Center (operated by Korea Internet & Security Agency)",
+          "website": "privacy.kisa.or.kr",
+          "phone": "118 (no area code)"
+        },
+        {
+          "name": "Personal Information Dispute Mediation Committee",
+          "website": "www.kopico.go.kr",
+          "phone": "1833-6972 (no area code)"
+        },
+        {
+          "name": "Supreme Prosecutors' Office",
+          "website": "www.spo.go.kr",
+          "phone": "1301 (no area code)"
+        },
+        {
+          "name": "National Police Agency Cyber Investigation Bureau",
+          "website": "ecrm.cyber.go.kr",
+          "phone": "182 (no area code)"
+        }
+      ],
+      "labels": {
+        "website": "Website",
+        "phone": "Phone"
+      }
+    },
+    "article11": {
+      "title": "Article 11 (Changes to the Privacy Policy)",
+      "content": "When the Company amends this Privacy Policy, it will continuously disclose the timing of the changes and their effective date, as well as the amended content, and will publish a comparison of the before and after versions so that users can easily review the changes."
+    },
+    "addendumTitle": "Addendum",
+    "addendum": "This Privacy Policy is effective from October 20, 2026."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "effectiveDate": "Effective Date: November 3, 2026",
+    "article1": {
+      "title": "Article 1 (Purposes of Processing, Items Collected, and Retention Periods)",
+      "intro1": "In accordance with Article 31 of the Personal Information Protection Act, Baerae Co., Ltd. (hereinafter the \"Company\") informs users of its procedures and standards for processing personal information, and collects and processes users' personal information for the following purposes.",
+      "intro2": "Users' personal information will not be used for any purpose other than those set forth below. If the purposes or items of use change, the Company will take necessary measures, such as obtaining separate prior consent from users in accordance with Article 18 of the Personal Information Protection Act.",
+      "intro3": "The Company processes and retains personal information within the processing and retention period prescribed by law or the period consented to by the user at the time of collection.",
+      "tableCaption": "Personal information processed with the consent of the data subject",
+      "tableHeaders": [
+        "Category",
+        "Purpose",
+        "Items",
+        "Retention and Use Period"
+      ],
+      "rows": [
+        {
+          "type": "Member registration and management",
+          "purpose": "Identity verification, conclusion and performance of the service agreement, prevention of fraudulent use, customer support",
+          "items": "Email address, social login identifier (Kakao, Google, Apple, etc.), phone number, passkey credentials, records of misuse, information generated during customer support",
+          "retention": "Until account deletion or withdrawal of consent (or for the period required by applicable law, if retention is required)"
+        },
+        {
+          "type": "Digital asset inquiry service",
+          "purpose": "Integration with digital asset exchanges and provision of asset status inquiry services",
+          "items": "Digital asset exchange name, access token information (token issue time, validity period), exchange connection status (connected or not, scheduled expiry)",
+          "retention": "Until account deletion or withdrawal of consent (or for the period required by applicable law, if retention is required)"
+        },
+        {
+          "type": "Marketing",
+          "purpose": "Providing information on events and promotions and offering benefits",
+          "items": "Marketing consent status, email address, social login identifier (Kakao, Google, Apple, etc.), phone number",
+          "retention": "1 year from the end date of the event"
+        }
+      ],
+      "methodsTitle": "Methods of Collecting Personal Information",
+      "methodsIntro": "The Company collects users' personal information through the following methods to provide the service.",
+      "methods": [
+        "Information entered directly by users for member registration and use of the service",
+        "Social login identifiers and profile information received from third-party services consented to by the member",
+        "Information collected or generated during consultations and complaint handling",
+        "Collection through online and offline events, surveys, etc.",
+        "Information automatically collected in the course of using the service"
+      ],
+      "deviceNotice": "Information such as digital asset transaction histories retrieved or generated through the service is not transmitted to or stored on the Company's servers, and is stored only on the user's device (app). Such information is not transmitted to external servers and is deleted from the device immediately when the app is deleted.",
+      "retentionExceptionIntro": "Notwithstanding Paragraph 3, the Company may retain the relevant personal information until the following grounds cease to exist.",
+      "retentionExceptions": [
+        "Where an investigation, inquiry, or judicial proceeding regarding a violation of applicable law is in progress: until the proceeding is concluded",
+        "Where claims, debts, or settlements arising from the use of the service remain outstanding: until such claims, debts, or settlements are resolved",
+        "Where litigation or dispute proceedings are in progress: until such proceedings are finalized or concluded",
+        "Where other laws require personal information to be retained for a certain period: for the period prescribed by such laws"
+      ]
+    },
+    "article2": {
+      "title": "Article 2 (Provision of Personal Information to Third Parties)",
+      "intro": "In principle, the Company does not provide users' personal information to third parties, except in the following cases.",
+      "items": [
+        "Where the user has given separate prior consent",
+        "Where special provisions exist in law, or where there is a lawful request from a relevant authority such as an investigative or supervisory agency",
+        "Where the data subject or their legal representative is unable to express their intention, or prior consent cannot be obtained due to an unknown address or similar reasons, and the provision is clearly deemed necessary to protect the imminent life, body, or property interests of the data subject or a third party"
+      ]
+    },
+    "article3": {
+      "title": "Article 3 (Entrustment of Personal Information Processing)",
+      "delegationIntro": "The Company may entrust part of its personal information processing to external specialized companies for smooth service provision, and currently entrusts personal information processing as follows.",
+      "delegationHeaders": [
+        "Trustee",
+        "Entrusted Tasks"
+      ],
+      "delegationRows": [
+        {
+          "company": "Google LLC",
+          "scope": "Operation of cloud servers and data storage for service provision"
+        },
+        {
+          "company": "Google LLC",
+          "scope": "Analysis of service usage records and preparation of statistics"
+        }
+      ],
+      "overseasIntro": "The Company transfers personal information collected from users overseas as follows, in accordance with Article 28-8(1)(3) of the Personal Information Protection Act (entrustment of processing and storage for the performance of a contract). To refuse the overseas transfer of personal information while using the service, you may download and install the browser add-on for your current web browser at tools.google.com/dlpage/gaoptout to opt out of Google's processing of information.",
+      "overseas": [
+        "Recipient and contact: Google LLC (https://analytics.google.com/)",
+        "Destination country: United States",
+        "Date, time, and method of transfer: Transmitted over the network when visitors use the service on the website",
+        "Personal information transferred: Cookies, device and browser data, IP address, site/app activity (no personally identifiable information is transmitted)",
+        "Recipient's purpose of use: Statistical measurement of user interactions, storage of user and event data",
+        "Retention and use period: 14 months"
+      ],
+      "supervision": "When concluding an entrustment agreement, the Company specifies in the contract or other documents, in accordance with Article 26 of the Personal Information Protection Act, matters regarding the prohibition of processing personal information for purposes other than performing the entrusted tasks, technical and administrative safeguards, restrictions on re-entrustment, management and supervision of the trustee, and liability such as compensation for damages, and supervises whether the trustee processes personal information safely. If the trustee changes, the Company will post the name of the new trustee on the Privacy Policy page.",
+      "change": "The entrusted tasks and trustees may change, and any changes will be announced through this Policy or a separate notice."
+    },
+    "article4": {
+      "title": "Article 4 (Procedures and Methods for Destroying Personal Information)",
+      "items": [
+        "The Company destroys personal information without delay when it is no longer needed, such as when the retention period has expired or the purpose of processing has been achieved.",
+        "The Company selects the personal information for which grounds for destruction have arisen and destroys it with the approval of the Data Protection Officer.",
+        "Personal information recorded and stored in electronic files is deleted using methods that prevent the records from being recovered or reproduced, and personal information recorded and stored in paper documents is destroyed by shredding or incineration.",
+        "Where personal information must continue to be retained under other laws, it is stored and managed separately from other personal information. In this case, the legal basis, items, and period of retention are described in Article 1."
+      ]
+    },
+    "article5": {
+      "title": "Article 5 (Rights of Users and How to Exercise Them)",
+      "items": [
+        "Users may at any time request access to, correction, deletion, or suspension of processing of their personal information, and may withdraw any consent they have given.",
+        "Users may request to unlink their accounts, delete their accounts, or withdraw consent to receive marketing communications through the in-app settings, the customer center, or other methods provided by the Company.",
+        "The data subject's rights to request access and suspension of processing may be restricted under Article 35(4) and Article 37(2) of the Personal Information Protection Act.",
+        "Requests for correction or deletion of personal information cannot be made where other laws specify such personal information as subject to collection."
+      ]
+    },
+    "article6": {
+      "title": "Article 6 (Measures to Ensure the Security of Personal Information)",
+      "intro": "The Company takes the following administrative, technical, and physical measures to ensure the security of personal information.",
+      "measures": [
+        {
+          "label": "Administrative measures",
+          "content": "Establishment and implementation of personal information protection guidelines, operation of a dedicated organization, regular employee training"
+        },
+        {
+          "label": "Technical measures",
+          "content": "Management of access rights to personal information processing systems, installation of access control systems, encryption of personal information, installation and updating of security programs, access control through internal and cloud firewalls"
+        },
+        {
+          "label": "Physical measures",
+          "content": "Operation of personal information processing systems through information security-certified cloud services, access control to office spaces, control over the removal and introduction of auxiliary storage media"
+        }
+      ],
+      "additional": "The Company implements measures such as access rights management, establishment of an internal management plan, retention of access records, encryption, operation of security programs, and minimum access control for authorized personnel."
+    },
+    "article7": {
+      "title": "Article 7 (Installation and Operation of Automatic Collection Devices such as Cookies)",
+      "intro": "The Company may use cookies or similar technologies to provide users with more convenient services. Users may refuse the storage of cookies through browser or device settings as described below, but in this case, the use of some services may be restricted.",
+      "groups": [
+        {
+          "title": "How to block cookies in web browsers",
+          "browsers": [
+            {
+              "label": "Chrome",
+              "path": "Select '⁝' at the top right of the web browser > New Incognito window (shortcut: Ctrl+Shift+N)"
+            },
+            {
+              "label": "Edge",
+              "path": "Select '‧‧‧' at the top right of the web browser > New InPrivate window (shortcut: Ctrl+Shift+N)"
+            }
+          ]
+        },
+        {
+          "title": "How to block cookies in mobile browsers",
+          "browsers": [
+            {
+              "label": "Chrome",
+              "path": "Select '⁝' at the top right of the mobile browser > New Incognito tab"
+            },
+            {
+              "label": "Safari",
+              "path": "Device Settings > Apps > Safari > Advanced > Block All Cookies"
+            },
+            {
+              "label": "Samsung Internet",
+              "path": "Select the 'Tabs' icon at the bottom of the mobile browser > Turn on Secret mode > Start"
+            }
+          ]
+        }
+      ]
+    },
+    "article8": {
+      "title": "Article 8 (Collection, Use, and Refusal of Behavioral Information)",
+      "items": [
+        "The Company collects and uses behavioral information in the course of service use to provide data subjects with optimized personalized services and benefits, online personalized advertising, and the like.",
+        "The Company collects behavioral information as follows."
+      ],
+      "tableHeaders": [
+        "Behavioral Information Collected",
+        "Collection Method",
+        "Purpose of Collection",
+        "Retention Period and Subsequent Processing"
+      ],
+      "tableRow": {
+        "items": "Records of users' access to the web/app service and usage records such as clicks (app version, country, region, mobile carrier, device information, device operating system, device language setting, etc.)",
+        "method": "Automatically collected and transmitted through a data collection tool for key actions performed within the user's web/app",
+        "purpose": "Service quality improvement and statistical purposes",
+        "retention": "Retained until the purpose is achieved, then deleted"
+      },
+      "adIntro": "The Company collects and uses advertising identifiers in its mobile app for online personalized advertising. Data subjects may block or allow personalized advertising in the app by changing the settings on their mobile device.",
+      "adGuides": [
+        {
+          "label": "Android",
+          "path": "Settings → Privacy → Ads → Reset advertising ID or Delete advertising ID"
+        },
+        {
+          "label": "iPhone",
+          "path": "Settings → Privacy → Tracking → Turn off 'Allow Apps to Request to Track'"
+        }
+      ],
+      "adNote": "※ Menus and methods may vary slightly depending on the mobile OS version."
+    },
+    "article9": {
+      "title": "Article 9 (Data Protection Officer and Contact Information)",
+      "intro": "The Company has designated a Data Protection Officer to take overall responsibility for personal information processing and to handle user inquiries, complaints, and requests for remedies related to personal information.",
+      "officer": {
+        "name": "Junghyun Kim",
+        "title": "CPO",
+        "contact": "010-4306-0030, privacy@baerae.com"
+      },
+      "labels": {
+        "name": "Name",
+        "title": "Title",
+        "contact": "Contact"
+      },
+      "notice": "Inquiries, complaints, and requests for remedies related to personal information may be directed to the officer above."
+    },
+    "article10": {
+      "title": "Article 10 (Remedies for Infringement of Rights)",
+      "intro": "The Company guarantees data subjects' right to self-determination over their personal information and strives to provide consultation and remedies for damages caused by personal information infringement. If you need to make a report or seek consultation, please contact the department below.",
+      "internalHeaders": [
+        "Service",
+        "Privacy Department",
+        "Phone",
+        "Email"
+      ],
+      "internalRow": {
+        "category": "ZKAP",
+        "department": "Information Security Team",
+        "phone": "010-4306-0030",
+        "email": "privacy@baerae.com"
+      },
+      "agenciesIntro": "If you require relief or consultation regarding personal information infringement, you may contact the following organizations.",
+      "agencies": [
+        {
+          "name": "Personal Information Infringement Report Center (operated by Korea Internet & Security Agency)",
+          "website": "privacy.kisa.or.kr",
+          "phone": "118 (no area code)"
+        },
+        {
+          "name": "Personal Information Dispute Mediation Committee",
+          "website": "www.kopico.go.kr",
+          "phone": "1833-6972 (no area code)"
+        },
+        {
+          "name": "Supreme Prosecutors' Office",
+          "website": "www.spo.go.kr",
+          "phone": "1301 (no area code)"
+        },
+        {
+          "name": "National Police Agency Cyber Investigation Bureau",
+          "website": "ecrm.cyber.go.kr",
+          "phone": "182 (no area code)"
+        }
+      ],
+      "labels": {
+        "website": "Website",
+        "phone": "Phone"
+      }
+    },
+    "article11": {
+      "title": "Article 11 (Changes to the Privacy Policy)",
+      "content": "When the Company amends this Privacy Policy, it will continuously disclose the timing of the changes and their effective date, as well as the amended content, and will publish a comparison of the before and after versions so that users can easily review the changes."
+    },
+    "addendumTitle": "Addendum",
+    "addendum": "This Privacy Policy is effective from November 3, 2026."
   },
   "consent": {
     "title": "Consent to Collection and Use of Personal Information (Required)",

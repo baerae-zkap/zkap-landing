@@ -1178,6 +1178,7 @@
         "title": "CPO",
         "contact": "010-4306-0030, privacy@baerae.com"
       },
+      "labels": { "name": "성명", "title": "직책", "contact": "연락처" },
       "notice": "개인정보 관련 문의·불만·피해구제는 위 책임자에게 문의할 수 있습니다."
     },
     "article10": {
@@ -1217,12 +1218,14 @@
           "website": "ecrm.cyber.go.kr",
           "phone": "(국번 없이) 182"
         }
-      ]
+      ],
+      "labels": { "website": "홈페이지", "phone": "전화" }
     },
     "article11": {
       "title": "제11조 (개인정보처리방침 변경)",
       "content": "회사가 개인정보처리방침을 변경하는 경우에는 변경 및 시행의 시기, 변경된 내용을 지속적으로 공개하며, 변경된 내용은 이용자가 쉽게 확인할 수 있도록 변경 전·후를 비교하여 공개합니다."
     },
+    "addendumTitle": "부칙",
     "addendum": "본 개인정보처리방침은 2026년 10월 20일부터 적용됩니다."
   },
   "privacy": {
@@ -1428,6 +1431,7 @@
         "title": "CPO",
         "contact": "010-4306-0030, privacy@baerae.com"
       },
+      "labels": { "name": "성명", "title": "직책", "contact": "연락처" },
       "notice": "개인정보 관련 문의·불만·피해구제는 위 책임자에게 문의할 수 있습니다."
     },
     "article10": {
@@ -1467,12 +1471,14 @@
           "website": "ecrm.cyber.go.kr",
           "phone": "(국번 없이) 182"
         }
-      ]
+      ],
+      "labels": { "website": "홈페이지", "phone": "전화" }
     },
     "article11": {
       "title": "제11조 (개인정보처리방침 변경)",
       "content": "회사가 개인정보처리방침을 변경하는 경우에는 변경 및 시행의 시기, 변경된 내용을 지속적으로 공개하며, 변경된 내용은 이용자가 쉽게 확인할 수 있도록 변경 전·후를 비교하여 공개합니다."
     },
+    "addendumTitle": "부칙",
     "addendum": "본 개인정보처리방침은 2026년 11월 3일부터 적용됩니다."
   },
   "consent": {

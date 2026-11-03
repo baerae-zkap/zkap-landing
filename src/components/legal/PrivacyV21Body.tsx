@@ -193,9 +193,9 @@ export default function PrivacyV21Body({
       <h2>{t("article9.title")}</h2>
       <Clause num="①">{t("article9.intro")}</Clause>
       <div className="my-4 rounded-lg bg-slate-50 p-4 text-sm text-slate-700 space-y-1 not-prose">
-        <div><span className="text-slate-400 w-14 inline-block">성명</span>{t("article9.officer.name")}</div>
-        <div><span className="text-slate-400 w-14 inline-block">직책</span>{t("article9.officer.title")}</div>
-        <div><span className="text-slate-400 w-14 inline-block">연락처</span>{t("article9.officer.contact")}</div>
+        <div><span className="text-slate-400 w-14 inline-block">{t("article9.labels.name")}</span>{t("article9.officer.name")}</div>
+        <div><span className="text-slate-400 w-14 inline-block">{t("article9.labels.title")}</span>{t("article9.officer.title")}</div>
+        <div><span className="text-slate-400 w-14 inline-block">{t("article9.labels.contact")}</span>{t("article9.officer.contact")}</div>
       </div>
       <Clause num="②">{t("article9.notice")}</Clause>
 
@@ -228,7 +228,7 @@ export default function PrivacyV21Body({
               {t(`article10.agencies.${i}.name`)}
             </p>
             <p className="text-slate-500">
-              홈페이지: {t(`article10.agencies.${i}.website`)} &middot; 전화: {t(`article10.agencies.${i}.phone`)}
+              {t("article10.labels.website")}: {t(`article10.agencies.${i}.website`)} &middot; {t("article10.labels.phone")}: {t(`article10.agencies.${i}.phone`)}
             </p>
           </div>
         ))}
@@ -237,7 +237,7 @@ export default function PrivacyV21Body({
       <h2>{t("article11.title")}</h2>
       <p>{t("article11.content")}</p>
 
-      <h2>부칙</h2>
+      <h2>{t("addendumTitle")}</h2>
       <p>{t("addendum")}</p>
     </LegalPageLayout>
   );
