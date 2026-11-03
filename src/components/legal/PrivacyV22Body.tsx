@@ -39,36 +39,38 @@ export default function PrivacyV22Body({
       <Clause num="②">{t("article1.intro2")}</Clause>
       <Clause num="③">{t("article1.intro3")}</Clause>
 
-      <h3 className="mt-6">1. {t("article1.tableCaption")}</h3>
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr>
-              {[0, 1, 2, 3].map((i) => (
-                <th key={i} className={TH_CLASS}>{t(`article1.tableHeaders.${i}`)}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {[0, 1, 2].map((i) => (
-              <tr key={i}>
-                <td className={`${TD_CLASS} font-medium whitespace-nowrap`}>{t(`article1.rows.${i}.type`)}</td>
-                <td className={TD_CLASS}>{t(`article1.rows.${i}.purpose`)}</td>
-                <td className={TD_CLASS}>{t(`article1.rows.${i}.items`)}</td>
-                <td className={TD_CLASS}>{t(`article1.rows.${i}.retention`)}</td>
+      <div className="ml-7">
+        <h3 className="mt-6">1. {t("article1.tableCaption")}</h3>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr>
+                {[0, 1, 2, 3].map((i) => (
+                  <th key={i} className={TH_CLASS}>{t(`article1.tableHeaders.${i}`)}</th>
+                ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {[0, 1, 2].map((i) => (
+                <tr key={i}>
+                  <td className={`${TD_CLASS} font-medium whitespace-nowrap`}>{t(`article1.rows.${i}.type`)}</td>
+                  <td className={TD_CLASS}>{t(`article1.rows.${i}.purpose`)}</td>
+                  <td className={TD_CLASS}>{t(`article1.rows.${i}.items`)}</td>
+                  <td className={TD_CLASS}>{t(`article1.rows.${i}.retention`)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-      <h3 className="mt-8">2. {t("article1.methodsTitle")}</h3>
-      <p>{t("article1.methodsIntro")}</p>
-      <ul>
-        {[0, 1, 2, 3, 4].map((i) => (
-          <li key={i}>{t(`article1.methods.${i}`)}</li>
-        ))}
-      </ul>
+        <h3 className="mt-8">2. {t("article1.methodsTitle")}</h3>
+        <p>{t("article1.methodsIntro")}</p>
+        <ul>
+          {[0, 1, 2, 3, 4].map((i) => (
+            <li key={i}>{t(`article1.methods.${i}`)}</li>
+          ))}
+        </ul>
+      </div>
       <Clause num="④">{t("article1.deviceNotice")}</Clause>
       <Clause num="⑤">{t("article1.retentionExceptionIntro")}</Clause>
       <ol>
