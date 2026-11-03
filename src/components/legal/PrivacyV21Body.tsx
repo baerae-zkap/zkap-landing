@@ -39,7 +39,7 @@ export default function PrivacyV21Body({
       <Clause num="②">{t("article1.intro2")}</Clause>
       <Clause num="③">{t("article1.intro3")}</Clause>
 
-      <p className="font-semibold text-slate-700 mt-6 mb-2">{t("article1.tableCaption")}</p>
+      <h3 className="mt-6">1. {t("article1.tableCaption")}</h3>
       <div className="overflow-x-auto">
         <table className="w-full border-collapse text-sm">
           <thead>
@@ -62,7 +62,7 @@ export default function PrivacyV21Body({
         </table>
       </div>
 
-      <h3 className="mt-8">{t("article1.methodsTitle")}</h3>
+      <h3 className="mt-8">2. {t("article1.methodsTitle")}</h3>
       <p>{t("article1.methodsIntro")}</p>
       <ul>
         {[0, 1, 2, 3, 4].map((i) => (
