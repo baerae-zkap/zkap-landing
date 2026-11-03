@@ -21,10 +21,10 @@ export default function LegalPageLayout({
 }: LegalPageLayoutProps) {
   const [open, setOpen] = useState(false);
   const locale = useLocale();
-  // EN locale only has v1.0 content; hide v2.0 from dropdown
-  const visibleVersions = locale === "ko"
-    ? config.versions
-    : config.versions.filter((v) => v.key === "v1_0");
+  // Hide versions that have no translation for the current locale
+  const visibleVersions = config.versions.filter(
+    (v) => !v.locales || v.locales.includes(locale)
+  );
   const current =
     visibleVersions.find((v) => v.key === currentVersionKey) ??
     visibleVersions[0];
