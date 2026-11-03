@@ -20,7 +20,7 @@ const TD_CLASS = "border border-slate-300 px-3 py-2 align-top";
 const COOKIE_GROUP_SIZES = [2, 3];
 
 export default function PrivacyV21Body({
-  namespace = "privacy",
+  namespace = "privacy_v2_1",
 }: {
   namespace?: string;
 }) {
